@@ -2,9 +2,11 @@
 
 nav {
   width: 100%;
+  position: absolute;
   font-family: 'abril-text', serif;
   font-size: 1em;
-  font-weight: 700;  
+  font-weight: 700;
+  z-index: 2;
 }
 
 nav > ul {

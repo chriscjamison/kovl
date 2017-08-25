@@ -756,11 +756,12 @@ pre code {
 
 .container {
   position: relative;
+  top: 4.75em;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
-  z-index: -1;
+  z-index: 1;
 }
 
 @media (min-width: 576px) {
