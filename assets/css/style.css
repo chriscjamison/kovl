@@ -155,13 +155,15 @@ h3,
   line-height: 2em;
 }
 
-#description-border {
+#description-border, 
+#show_listing-border {
   width: 48.75em;
   height: 0.31em;
   margin: 1em auto;
 }
 
-.description-top_border {
+.description-top_border, 
+.show_listing-top_border {
   width: 48.75em;
   height: 0.12em;
   background-color: #a5bcbb;
@@ -171,7 +173,8 @@ h3,
  * separates the 'description' header from the 'description' text.
  */
 
-.description-bottom_border {
+.description-bottom_border, 
+.show_listing-bottom_border {
   width: 48.75em;
   height: 0.06em;
   margin-top: 0.06em;
@@ -181,6 +184,13 @@ h3,
  * A <div> which serves as the bottom horizontal line making up the spacer that 
  * separates the 'description' header from the 'description' text.
  */
+
+#show_listing-border, 
+.show_listing-top_border, 
+.show_listing-bottom_border {
+  width: 7.5em;
+}
+
 
 #show_listings {
   width: 100%;
@@ -205,7 +215,7 @@ h3,
   width: 15em;
   margin: 1.5em 0 0 1.5em;
   position: absolute;
-  transform: translate(70%, -5%);
+  transform: translate(70%, -10%);
   text-align: left;
 }
 /* A <div> which holds a text description of the show. */
@@ -213,6 +223,7 @@ h3,
 .show_listing-description span {
   padding: 0.25em 0;
   background-color: #2f3e55;
+  line-height: 2em;
   color: #9f9c99;
 }
 /* 
@@ -226,13 +237,22 @@ h3,
 /* A <img> which contains a splash image within each show listing */
 
 .show_listing-actions a {
-  margin: 1em;
+  margin: 1em 1em 0.25em 1em;
   display: inline-block;
 }
 /* 
  * Two <a> references which display icons and appear below the image 
  * contained within an individual show listing.
  */
+
+.show_listing-social_media {
+  margin-top: 1.5em;
+}
+
+.show_listing-social_media a {
+  margin: 0 0.5em;
+  display: inline-block;
+}
 
 @media screen and (min-width: 1290px) and (max-width: 1580px) {
   .nav-empty {
