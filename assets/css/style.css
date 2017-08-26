@@ -9,7 +9,8 @@ h3,
   font-family: 'abril-text', serif;
 }
 
-.carousel-item-content {
+.carousel-item-content, 
+.show_listing-description {
   font-family: 'los-feliz', sans-serif;
 }
 
@@ -165,6 +166,10 @@ h3,
   height: 0.12em;
   background-color: #a5bcbb;
 }
+/* 
+ * A <div> which serves as the top horizontal line making up the spacer that 
+ * separates the 'description' header from the 'description' text.
+ */
 
 .description-bottom_border {
   width: 48.75em;
@@ -172,7 +177,62 @@ h3,
   margin-top: 0.06em;
   background-color: #9f9c99;
 }
+/* 
+ * A <div> which serves as the bottom horizontal line making up the spacer that 
+ * separates the 'description' header from the 'description' text.
+ */
 
+#show_listings {
+  width: 100%;
+  height: 15.8em;
+  padding: 2em;
+  display: table;
+}
+/* A <div> which holds the HTML content including a photo for each individual show and 
+ * links for listening to audio and social media outlets.
+ */
+
+.show_listing {
+  width: 18.75em;
+  height: 25em;
+  margin: 0 auto;
+  display: table-cell;
+  text-align: center;
+}
+/* A <div> which holds the HTML content for an individual show. */
+
+.show_listing-description {
+  width: 15em;
+  margin: 1.5em 0 0 1.5em;
+  position: absolute;
+  transform: translate(70%, -5%);
+  text-align: left;
+}
+/* A <div> which holds a text description of the show. */
+
+.show_listing-description span {
+  padding: 0.25em 0;
+  background-color: #2f3e55;
+  color: #9f9c99;
+}
+/* 
+ * A <span> which holds the title of a show and appears on top of the 
+ * <img> contained within the <div> for .show_listing.
+ */
+
+.show_listing-description + img {
+  border: 10px solid #2f3e55;
+}
+/* A <img> which contains a splash image within each show listing */
+
+.show_listing-actions a {
+  margin: 1em;
+  display: inline-block;
+}
+/* 
+ * Two <a> references which display icons and appear below the image 
+ * contained within an individual show listing.
+ */
 
 @media screen and (min-width: 1290px) and (max-width: 1580px) {
   .nav-empty {
