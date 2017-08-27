@@ -5,7 +5,9 @@ nav,
 .carousel-listen_archive > span, 
 #email_newsletter a, 
 h3, 
-#description p {
+#description p, 
+.footer-archive, 
+.footer-actions {
   font-family: 'abril-text', serif;
 }
 
@@ -14,8 +16,18 @@ h3,
   font-family: 'los-feliz', sans-serif;
 }
 
+.footer-border_bot_med {
+  font-family: 'filson-soft', sans-serif;
+  font-weight: 300;
+}
+
+.footer-border_bot_med strong {
+  font-weight: 700;
+}
+
 nav {
   width: 100%;
+  height: 4.35em;
   position: absolute;
   font-size: 1em;
   font-weight: 700;
@@ -105,9 +117,9 @@ nav > ul > li > a {
 }
 
 #container-discussions {
-  width: 20.25em;
-  top: 9.5em;
-  left: 40.75em;
+  width: 19em;
+  top: 16em;
+  left: 44em;
 }
 
 #container-easy_treatment {
@@ -164,7 +176,6 @@ h3,
 
 .description-top_border, 
 .show_listing-top_border {
-  width: 48.75em;
   height: 0.12em;
   background-color: #a5bcbb;
 }
@@ -175,7 +186,6 @@ h3,
 
 .description-bottom_border, 
 .show_listing-bottom_border {
-  width: 48.75em;
   height: 0.06em;
   margin-top: 0.06em;
   background-color: #9f9c99;
@@ -191,10 +201,8 @@ h3,
   width: 7.5em;
 }
 
-
 #show_listings {
   width: 100%;
-  height: 15.8em;
   padding: 2em;
   display: table;
 }
@@ -248,10 +256,156 @@ h3,
 .show_listing-social_media {
   margin-top: 1.5em;
 }
+/* 
+ * Adds a slight space between the top of the social media icons 
+ * for an individual show listing.
+ */
 
 .show_listing-social_media a {
   margin: 0 0.5em;
   display: inline-block;
+}
+/* 
+ * Adds a slight space between the left and right of each social media icons 
+ * and sets the icons to appear in a row in each show listing.
+ */
+
+.footer-logo {
+  width: 100%;
+  height: 3.75em;
+  position: relative;
+}
+/* Formats a <div> which holds the logo which appears on top of the footer. */
+
+.footer-logo img {
+  margin: 0 auto;
+  display: block;
+}
+/* Formats an <img> which serves as the logo. */
+
+.footer-border_top_sm {
+  height: 0.63em;
+  background-color: #2b2c30;
+}
+/* Formats the line which appears at the top of the footer. */
+
+.footer-border_top_med {
+  height: 2.5em;
+  background-color: #2f3e55;
+}
+/* Formats the line which appears second from the top in the footer. */
+
+.footer-border_mid {
+  height: 10em;
+  background-image: url('../img/backgrounds/footer-mid.png');
+  background-repeat: repeat-x;
+}
+/* Formats the light blue block which appears within the footer. */ 
+
+.footer-archive {
+  height: 10em;
+  padding: 1em;
+  float: left;
+}
+/* Formats a <div> which holds links to Archives for each show's content. */
+
+.footer-archive > span {
+  padding: 0.25em;
+  background-color: #9f9c99;
+  font-weight: 700;
+  color: #2f3e55;
+}
+/* Formats a <span> which holds the section title, 'Archives'. */
+
+.footer-archive a, 
+.footer-actions a {
+  margin: 0.5em 0.25em;
+  display: block;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  letter-spacing: 0.6px;
+  color: #384883;
+}
+/* Formats the <a> elements which link to the individual show archives. */
+
+.footer-actions a:first-of-type {
+  margin-top: 0;
+}
+/* 
+ * Formats the <a> element which appears at the top of a list of links 
+ * which appear on the right-side of the footer. */
+ 
+.footer-actions {
+  padding: 1em;
+  float: right;
+  text-align: right;
+}
+/* 
+ * Formats a <div> which contains links to features of the site such as 
+ * the option to listen to a show. 
+ */
+
+.footer-border_bot_med {
+  height: 1.88em;
+  padding: 0.3em 1em 0 0;
+  background-image: url('../img/backgrounds/footer-bot.png');
+  background-repeat: repeat-x; 
+  text-align: right;
+  color: #fff;
+}
+/* Formats the line with appears second from the bottom in the footer. */
+
+.footer-border_bot_sm {
+  height: 0.3em;
+  background-color: #2b2c30;
+}
+/* Formats the line which appears at the bottom of the footer. */
+
+@media screen and (min-width: 970px) and (max-width: 1034px) {
+  .nav-empty {
+    width: 4.5%;
+  }
+
+  #container-discussions {
+    left: 13.5em;
+  }
+
+  #description {
+    height: inherit;
+    padding: 2em 2em 0 2em;
+  }
+
+  #description p {
+    width: 29em;
+  }
+
+  #description-border {
+    width: 32.25em;
+  }
+
+  .description-top_border, 
+  .description-bottom_border {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .show_listing-description {
+    transform: translate(2%, -10%);
+  }
+
+  .footer-archive {
+    width: 15em;
+  }
+}
+
+@media screen and (min-width: 1044px) and (max-width: 1260px) {
+  .nav-empty {
+    width: 17.25%;
+  }
+
+  #container-discussions {
+    left: 40em;
+  }
 }
 
 @media screen and (min-width: 1290px) and (max-width: 1580px) {
@@ -268,6 +422,6 @@ h3,
 
 @media screen and (min-width: 1910px) {
   .nav-empty {
-    width: 26.5%;
+    width: 26.88%;
   }
 }
