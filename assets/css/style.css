@@ -5,7 +5,9 @@ nav,
 .carousel-listen_archive > span, 
 #email_newsletter a, 
 h3, 
-#description p, 
+#description p,
+.show_listing-listen_now span, 
+.show_listing-listen_archive span,  
 .footer-archive, 
 .footer-actions {
   font-family: 'abril-text', serif;
@@ -116,13 +118,13 @@ nav > ul > li > a {
   margin: 0.5em 1em 0.5em 2.5em;
 }
 
-#container-discussions {
+#carousel-discussions {
   width: 19em;
   top: 16em;
   left: 44em;
 }
 
-#container-easy_treatment {
+#carousel-easy_treatment {
   width: 20.25em;
   top: 12.25em;
   left: 5.75em;
@@ -161,7 +163,7 @@ h3,
 }
 
 #description p {
-  width: 43em;
+  width: 80%;
   margin: 0 auto;
   font-size: 1.05em;
   line-height: 2em;
@@ -169,7 +171,7 @@ h3,
 
 #description-border, 
 #show_listing-border {
-  width: 48.75em;
+  width: 85%;
   height: 0.31em;
   margin: 1em auto;
 }
@@ -212,7 +214,7 @@ h3,
 
 .show_listing {
   width: 18.75em;
-  height: 25em;
+  height: inherit;
   margin: 0 auto;
   display: table-cell;
   text-align: center;
@@ -244,14 +246,35 @@ h3,
 }
 /* A <img> which contains a splash image within each show listing */
 
-.show_listing-actions a {
-  margin: 1em 1em 0.25em 1em;
+.show_listing-listen_now, 
+.show_listing-listen_archive {
   display: inline-block;
+  margin-top: 1.5em;
+}
+
+.show_listing-listen_now {
+  margin-right: 0.5em;  
+}
+
+.show_listing-listen_now span, 
+.show_listing-listen_archive span {
+  background-color: #a5bcbb;
+  color: #2f3e55;
+  font-weight: 700;
+}
+
+.show_listing-actions a {
+  margin: 0.5em 1em 0.25em 1.15em;
+  display: block;
 }
 /* 
  * Two <a> references which display icons and appear below the image 
  * contained within an individual show listing.
  */
+
+.show_listing-listen_archive a {
+  margin-left: 0.7em;
+}
 
 .show_listing-social_media {
   margin-top: 1.5em;
@@ -274,15 +297,34 @@ h3,
   width: 100%;
   height: 3.75em;
   position: relative;
+  z-index: 1;
 }
 /* Formats a <div> which holds the logo which appears on top of the footer. */
 
+.footer-logo > a {
+  width: 13.5em;
+  margin: 0 auto;
+  display: block;
+}
+/* 
+ * Formats the dimensions of the <a> tag that surrounds the logo near the 
+ * footer. 
+ */
+  
 .footer-logo img {
   margin: 0 auto;
   display: block;
 }
 /* Formats an <img> which serves as the logo. */
 
+#footer {
+  position: relative;
+}
+/* 
+ * Sets the blocks which make up the footer 'lower' on the page than the logo using 
+ * the selector '.footer-logo img'.
+ */
+  
 .footer-border_top_sm {
   height: 0.63em;
   background-color: #2b2c30;
@@ -361,13 +403,474 @@ h3,
 }
 /* Formats the line which appears at the bottom of the footer. */
 
-@media screen and (min-width: 970px) and (max-width: 1034px) {
-  .nav-empty {
-    width: 4.5%;
+
+@media screen and (min-width: 310px) and (max-width: 400px) {
+  nav, 
+  nav > ul {
+    height: 8.5em;
   }
 
-  #container-discussions {
-    left: 13.5em;
+  nav > ul > li:nth-child(2) {
+    width: 6.75em;
+  }
+
+  nav > ul > li:nth-child(4) {
+    width: 7em;
+    float: right;
+  }
+  
+  .nav-logo {
+    padding-top: 0;
+  }
+
+  .nav-logo img {
+    width: 8em;
+    height: 8em;
+  }
+
+  .container {
+    top: 9.5em;
+  }
+
+  .carousel-inner {
+    height: 16em;
+  }
+
+  .img-fluid {
+    width: 21em;
+    height: 13em;
+  }
+
+  #carousel-discussions {
+    width: 8em;
+    top: 6em;
+    left: 17.25em; 
+  }
+
+  .carousel-item-content {
+    font-size: 0.75em;
+  }
+
+  #carousel-easy_treatment {
+    width: 10.7em;
+    top: 5.25em;
+    left: 2em;
+  }
+
+  .carousel-item-content > span {
+    display: none;
+  }
+
+  .carousel-listen_now, 
+  .carousel-listen_archive {
+    width: 7.85em;
+    height: 8.5em;
+  }
+
+  .carousel-listen_archive {
+    width: 10.7em;
+  }
+
+  .carousel-listen_now a, 
+  .carousel-listen_archive a {
+    width: 5em;
+    margin-left: 0.5em;
+  }
+
+  .carousel-listen_archive a {
+    margin: 0.5em 1em 0.5em 2em;
+  }
+
+  .carousel-listen_now img, 
+  .carousel-listen_archive img {
+    width: 5em;
+    height: 5em;
+  }
+
+  #email_newsletter {
+    left: 23%;
+  }
+
+  #description {
+    height: inherit;
+  }
+
+  #description-border {
+    width: 85%;
+  }
+
+  #description p {
+    width: 80%;
+  }
+
+  #show_listings {
+    padding: 1em 0 0 0;
+    display: block;
+  }
+
+  .show_listing {
+    padding-bottom: 3em;
+    display: block;
+  }
+
+  .show_listing-description {
+    transform: translate(6%, -10%);
+  }
+
+  .show_listing-description + img {
+    width: 16.5em;
+  }
+
+  .footer-border_mid {
+    height: 23em;
+    padding-top: 7em;
+    background-repeat: repeat;
+  }
+
+  .footer-archive, 
+  .footer-actions {
+    display: inline-block;
+    float: none;
+  }
+
+  .footer-actions {
+    text-align: left;
+  }
+}
+
+
+@media screen and (min-width: 310px) and (max-width: 340px) {
+  nav, 
+  nav > ul {
+    height: 6.5em;
+  }
+
+  nav > ul > li {
+    padding-top: 0.7em;
+  }
+
+  nav > ul > li:nth-child(2) {
+    width: 6.25em;
+  }
+
+  nav > ul > li:nth-child(4) {
+    width: 5.5em;
+  }
+
+  nav > ul > li > a {
+    font-size: 0.7em;
+  }
+
+  .nav-logo img {
+    width: 9em;
+    height: 8em;
+  }
+
+  .container {
+    top: 7.5em;
+  }
+
+  .carousel-inner {
+    height: 12.5em;
+  }
+
+  .img-fluid {
+    height: 10em;
+  }
+
+  .carousel-item-content {
+    font-size: 0.7em;
+  }
+
+  #carousel-discussions {
+    top: 4.5em;
+    left: 15.25em;
+  }
+
+  #carousel-easy_treatment {
+    top: 4em;
+  }
+
+  .carousel-listen_now, 
+  .carousel-listen_archive {
+    width: 8em;
+    height: 7.3em;
+  }
+
+  .carousel-listen_archive {
+    width: 10.8em;
+  }
+
+  .carousel-listen_now img, 
+  .carousel-listen_archive img {
+    width: 3em;
+    height: 3em;
+  }
+
+  .carousel-listen_now a, 
+  .carousel-listen_archive a {
+    width: 3.5em;
+    margin-left: 1.5em;
+  }
+
+  .carousel-listen_archive a {
+    margin-left: 2.6em;
+  }
+
+  #email_newsletter {
+    width: 7.7em;
+    height: 2.6em;
+    top: 88.25%;
+    left: 28.75%;
+  }
+
+  #email_newsletter a {
+    font-size: 0.7em;
+  }
+
+  #description, 
+  #show_listings {
+    padding: 1em;
+  }
+  
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  #description p {
+    font-size: 0.8em;
+  }
+
+  .show_listing {
+    width: 16.5em;
+    padding-bottom: 3em;
+  }
+
+  .show_listing-description {
+    transform: translate(0%, -10%);
+  }
+
+  .footer-border_mid {
+    padding-top: 10em;
+    font-size: 0.7em;
+  }
+
+  .footer-archive {
+    height: 7em;
+  }
+
+  .footer-border_bot_med {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 412px) and (max-width: 620px) { 
+  nav, 
+  nav > ul {
+    height: 8.5em;
+  }
+
+  nav > ul > li:nth-child(2)  {
+    width: 7.75em;
+  }
+
+  nav > ul > li:nth-child(4) {
+    width: 7em;
+    float: right;
+  }
+  
+  .nav-logo {
+    padding-top: 0;
+  }
+
+  .nav-logo img {
+    width: 9em;
+    height: 8em;
+  }
+
+  .container {
+    top: 9.5em;
+  }
+
+  .carousel-inner {
+    height: 19em;
+  }
+
+  .img-fluid {
+    width: 24em;
+    height: 16em;
+  }
+
+  .carousel-item-content {
+    font-size: 0.75em;
+  }
+
+  #carousel-discussions {
+    width: 8em;
+    top: 8.5em;
+    left: 20em; 
+  }
+
+  #carousel-easy_treatment {
+    width: 10.7em;
+    top: 6.25em;
+    left: 2em;
+  }
+
+  .carousel-item-content > span {
+    display: none;
+  }
+
+  .carousel-listen_now, 
+  .carousel-listen_archive {
+    width: 7.85em;
+    height: 9em;
+  }
+
+  .carousel-listen_archive {
+    width: 10.7em;
+  }
+
+  .carousel-listen_now a, 
+  .carousel-listen_archive a {
+    width: 5em;
+    margin-left: 0.5em;
+  }
+
+  .carousel-listen_archive a {
+    margin: 0.5em 1em 0.5em 1.75em;
+  }
+
+  .carousel-listen_now img, 
+  .carousel-listen_archive img {
+    width: 5em;
+    height: 5em;
+  }
+
+  #description {
+    height: inherit;
+    padding: 1em;
+  }
+
+  #email_newsletter {
+    left: 27%;
+  }
+
+  #show-listings {
+    display: block;
+  }
+
+  .show_listing {
+    display: block;
+    padding-bottom: 3em;
+  }
+
+  .show_listing-description {
+    transform: translate(0%, -10%);
+  }
+
+  .show_listing-description + img {
+    width: 18.6em;
+  }
+
+  .footer-border_mid {
+    height: 19.25em;
+    padding-top: 6.5em;
+    background-repeat: repeat;
+  }
+
+  .footer-archive,
+  .footer-actions {
+    float: none;
+  }
+
+  .footer-archive {
+    height: 7em;
+  }
+
+  .footer-actions {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1034px) {
+  nav, 
+  nav > ul {
+    height: 6em;
+  }
+
+  nav > ul > li:nth-child(2)  {
+    width: 16.75em;
+  }
+
+  nav > ul > li:nth-child(4) {
+    width: 17em;
+    float: right;
+  }
+  
+  .nav-empty {
+    width: 2em;
+  }
+
+  .nav-logo {
+    padding-top: 0;
+  }
+
+  .nav-logo img {
+    width: 9em;
+    height: 8em;
+  }
+
+  .container {
+    top: 6.5em;
+  }
+
+  .carousel-inner {
+    height: 27.75em;
+  }
+
+  .img-fluid {
+    height: 25em;
+  }
+
+  .carousel-item-content {
+    font-size: 0.75em;
+  }
+
+  #carousel-discussions {
+    width: 22em;
+    top: 15em;
+    left: 34.5em;
+  }
+
+  .carousel-listen_now, 
+  .carousel-listen_archive {
+    width: 8em;
+    height: 7.9em;
+  }
+
+  .carousel-listen_archive {
+    width: 10.8em;
+  }
+
+  .carousel-listen_now a, 
+  .carousel-listen_archive a {
+    width: 4em;
+    margin-left: 1.05em;
+  }
+
+  .carousel-listen_archive a {
+    margin-left: 2.3em;
+  }
+
+  .carousel-listen_now img, 
+  .carousel-listen_archive img {
+    width: 4em;
+    height: 4.1em;
+  }
+
+  #email_newsletter {
+    left: 37.5%;
   }
 
   #description {
@@ -375,8 +878,14 @@ h3,
     padding: 2em 2em 0 2em;
   }
 
+  h3 {
+    font-size: 1.25rem;
+  }
+
   #description p {
     width: 29em;
+    font-size: 0.95em;
+    line-height: 1.75em;
   }
 
   #description-border {
@@ -387,6 +896,10 @@ h3,
   .description-bottom_border {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .show_listing {
+    padding-bottom: 3em;
   }
 
   .show_listing-description {
@@ -403,7 +916,7 @@ h3,
     width: 17.25%;
   }
 
-  #container-discussions {
+  #carousel-discussions {
     left: 40em;
   }
 }
