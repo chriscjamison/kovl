@@ -9,12 +9,18 @@ h3,
 .show_listing-listen_now span, 
 .show_listing-listen_archive span,  
 .footer-archive, 
-.footer-actions {
+.footer-actions, 
+#show-description p, 
+#archive h5, 
+#archive h6 {
   font-family: 'abril-text', serif;
 }
 
 .carousel-item-content, 
-.show_listing-description {
+.show_listing-description, 
+#archive-most_recent_ep-description span, 
+.archive-previous_eps-description span, 
+.archive-listen_now span {
   font-family: 'los-feliz', sans-serif;
 }
 
@@ -157,12 +163,16 @@ nav > ul > li > a {
 }
 
 h3, 
-#description p {
+#description p, 
+#show-description p, 
+#archive h5, 
+#archive h6 {
   font-weight: 700;
   text-align: center;
 }
 
-#description p {
+#description p, 
+#show-description p {
   width: 80%;
   margin: 0 auto;
   font-size: 1.05em;
@@ -170,14 +180,31 @@ h3,
 }
 
 #description-border, 
-#show_listing-border {
+#show_listing-border, 
+#social_media-border, 
+.archive-previous_eps-border {
   width: 85%;
   height: 0.31em;
   margin: 1em auto;
 }
 
+#description-border {
+  width: 48%;
+}
+
+#social_media-border {
+  width: 25%;
+}
+
+.archive-previous_eps-border {
+  width: 25%;
+  margin: 1em auto 0.5em auto;
+}
+
 .description-top_border, 
-.show_listing-top_border {
+.show_listing-top_border, 
+.social_media-top_border, 
+.archive-previous_eps-top_border {
   height: 0.12em;
   background-color: #a5bcbb;
 }
@@ -187,7 +214,9 @@ h3,
  */
 
 .description-bottom_border, 
-.show_listing-bottom_border {
+.show_listing-bottom_border, 
+.social_media-bottom_border, 
+.archive-previous_eps-bottom_border {
   height: 0.06em;
   margin-top: 0.06em;
   background-color: #9f9c99;
@@ -230,7 +259,9 @@ h3,
 }
 /* A <div> which holds a text description of the show. */
 
-.show_listing-description span {
+.show_listing-description span, 
+#archive-most_recent_ep-description > span, 
+.archive-previous_eps-description span {
   padding: 0.25em 0;
   background-color: #2f3e55;
   line-height: 2em;
@@ -241,7 +272,7 @@ h3,
  * <img> contained within the <div> for .show_listing.
  */
 
-.show_listing-description + img {
+.show_listing-description + a > img {
   border: 10px solid #2f3e55;
 }
 /* A <img> which contains a splash image within each show listing */
@@ -257,10 +288,15 @@ h3,
 }
 
 .show_listing-listen_now span, 
-.show_listing-listen_archive span {
+.show_listing-listen_archive span, 
+.archive-listen_now span {
   background-color: #a5bcbb;
   color: #2f3e55;
   font-weight: 700;
+}
+
+.archive-listen_now span {
+  font-weight: 400;
 }
 
 .show_listing-actions a {
@@ -277,7 +313,8 @@ h3,
 }
 
 .show_listing-social_media {
-  margin-top: 1.5em;
+  margin: 1.5em auto 2.5em auto;
+  display: table;
 }
 /* 
  * Adds a slight space between the top of the social media icons 
@@ -292,6 +329,64 @@ h3,
  * Adds a slight space between the left and right of each social media icons 
  * and sets the icons to appear in a row in each show listing.
  */
+
+#archive-most_recent_ep {
+  margin: 1.25em auto;
+  display: table;
+}
+
+#archive-most_recent_ep-description {
+  width: 15em;
+  padding: 0.73em;
+  float: left;
+  border: 10px solid #2f3e55;
+}
+
+.archive-listen_now {
+  width: 9.5em;
+  margin: 0.5em auto;
+  display: table;
+}
+
+.archive-listen_now a {
+  width: 4.25em;
+  height: 4.25em;
+  display: table-cell;
+}
+
+#archive-previous_eps {
+  width: 85%;
+  margin: 0.5em auto;
+}
+
+#archive-previous_eps h6 {
+  margin-top: 1.5em;
+}
+
+.archive-row {
+  width: 80%;
+  margin: 1em auto;
+  display: table;
+}
+
+.archive-episode,
+.archive-previous_eps-spacer {
+  display: table-cell;
+}
+
+.archive-episode {
+  width: 19em;
+  vertical-align: middle;
+}
+
+.archive-previous_eps-spacer {
+  vertical-align: middle;
+}
+
+.archive-previous_eps-spacer img {
+  margin: 0 auto;
+  display: block;
+}
 
 .footer-logo {
   width: 100%;
@@ -462,7 +557,8 @@ h3,
   }
 
   .carousel-listen_now, 
-  .carousel-listen_archive {
+  .carousel-listen_archive, 
+  .archive-listen_now {
     width: 7.85em;
     height: 8.5em;
   }
@@ -496,7 +592,7 @@ h3,
   }
 
   #description-border {
-    width: 85%;
+    width: 48%;
   }
 
   #description p {
