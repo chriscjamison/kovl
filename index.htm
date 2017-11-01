@@ -13,6 +13,9 @@
     <!-- Typekit reference links -->
     <script src="https://use.typekit.net/zvs5kis.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Routing Vistor to Live Streaming Show -->
+    <script src="assets/js/route_to_show.js"></script>
     
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -33,10 +36,10 @@
         <li>
           <a href="#the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
         </li>
-        <!-- <li class="nav-spacer">&tilde;</li>
+        <li class="nav-spacer">&tilde;</li>
         <li>
-          <a href="transitions-in-the-key-of-raej" title="Transitions in the Key of RaeJ">Transitions in the Key of RaeJ</a>
-        </li> -->
+          <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+        </li>
       </ul>
     </nav>
     <div class="container">
@@ -52,7 +55,7 @@
               </span> -->
               <div class="carousel-listen_now" style="margin-left: 5em;">
                 <span>Listen Now</span>
-                <a href="#" title="Listen Now" onclick="javascript: window.open('media-player/media_player.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+                <a href="#" title="Listen Now" onclick="javascript: window.open('media-player/discussions.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
             <!-- <div id="email_newsletter">
@@ -66,9 +69,9 @@
                 Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
                 sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
               </span> -->
-              <div class="carousel-listen_archive" style="margin-left: 5.5em;">
-                <span>Listen to Archive</span>
-                <a href="#" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+              <div class="carousel-listen_now" style="margin-left: 7em;">
+                <span>Listen Now</span>
+                <a href="#" title="Listen Now" onclick="javascript: window.open('media-player/easy_treatment.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
             <!-- <div id="email_newsletter">
@@ -162,8 +165,8 @@
             <a href="the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
           </div>
           <div class="footer-actions">
-            <a href="#" title="Listen Now">Listen Now</a>
-            <a href="#" title="Email Newsletter">Email Newsletter</a>
+            <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+            <!-- <a href="#" title="Email Newsletter">Email Newsletter</a> -->
           </div>
         </div>
         <div class="footer-border_bot_med">
