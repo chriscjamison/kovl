@@ -1,4 +1,4 @@
-/* style.css - Contains custom CSS for wutm.com/index.htm */
+/* style.css - Contains custom CSS for wutm.com/index.htm and sub-sections. */
 
 nav, 
 .carousel-listen_now > span, 
@@ -497,6 +497,7 @@ h3,
   background-color: #2b2c30;
 }
 /* Formats the line which appears at the bottom of the footer. */
+
 
 
 @media screen and (min-width: 310px) and (max-width: 400px) {

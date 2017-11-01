@@ -1,0 +1,55 @@
+/* media_player.css - Contains custom CSS for the 'Media Player' (/media-player/media_player.htm) */
+
+body {
+  width: 40em;
+  height: 30em;
+  margin: 0;
+  background-color: #fff;
+}
+
+nav {
+  position: relative;
+}
+
+body, 
+nav, { 
+  width: 40em;
+}
+
+.nav-empty {
+  width: 38%;
+}
+
+ul > li + li + li + li {
+  width: 33.5%;
+  text-align: right;
+}
+
+#container-player {
+  margin: 1em;
+}
+
+#container-player, 
+#container-player > div + img {
+  width: 37em;
+  height: 22.65em;
+}
+
+#description-player {
+  position: absolute;
+  right: 5.25em;
+}
+
+.carousel-listen_now, 
+.carousel-listen_archive {
+  width: 10.4em;
+  height: 2.9em;
+  margin-top: 13em;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.carousel-listen_now a {
+  margin-left: 0.75em;
+}
