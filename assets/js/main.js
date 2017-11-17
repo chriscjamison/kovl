@@ -40,7 +40,11 @@ $(document).ready(
                   "  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
                   "</div>\n";
 
-    footer_html = "<span>Archive</span>\n";
+    footer_html = "<span>Shows</span>\n";
+    
+    var window_width = new Number();
+
+    window_width = $(window).width();
     
     show_info_Array.forEach( 
       function (value, index) {
@@ -50,14 +54,19 @@ $(document).ready(
 
         show_html = "<div class=\"header-show\" id=\"show-" + current_show[2] + "\">\n";
 
-        if (index % 2 === 0)  {
-          show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n" + 
-                                  "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n";            
-        } else {
+        if (window_width > 1034) {
           show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n" + 
                                   "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
+        } else {
+          if (index % 2 === 0)  {
+            show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n" + 
+                                    "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n";            
+          } else {
+            show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n" + 
+                                    "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
+          }
         }
-
+        
         show_html = show_html + "</div>\n";
 
         header_html = header_html + show_html;
@@ -70,24 +79,32 @@ $(document).ready(
 
     $(header_element).html(header_html);
 
-    show_selector = ".header-show:even";
-    show_element = $(show_selector);
+    if (window_width <= 1034) {
+      show_selector = ".header-show:even";
+      show_element = $(show_selector);
+  
+      $(show_element).addClass("show-right");
+  
+      show_selector = ".header-show:odd";
+      show_element = $(show_selector);
+  
+      $(show_element).addClass("show-left");
+  
+      show_selector = ".header-show:nth-child(1)";
+      show_element = $(show_selector);  
+    } else {
+      show_selector = ".header-show";
+      show_element = $(show_selector);
 
-    $(show_element).addClass("show-right");
-
-    show_selector = ".header-show:odd";
-    show_element = $(show_selector);
-
-    $(show_element).addClass("show-left");
-
-    show_selector = ".header-show:nth-child(1)";
-    show_element = $(show_selector);
-
-    if ($(show_element).hasClass("close_menu")) {
-      $(show_element).removeClass();
-      $(show_element).addClass("header-show close_menu");
+      $(show_element).addClass("display-large");
     }
 
+    show_selector = ".close_menu";
+    show_element = $(show_selector);
+
+    $(show_element).removeClass();
+    $(show_element).addClass("header-show close_menu");
+    
     footer_selector = ".footer-archive";
     footer_element = $(footer_selector);
 
@@ -97,7 +114,7 @@ $(document).ready(
 
     window_width = $(window).width();
 
-    if (window_width <= 414)  {
+    if (window_width <= 1034)  {
       var nav_logo_selector = new String();
       var nav_logo_element = new Object();
 
@@ -189,7 +206,7 @@ function determinePathofWebpage()  {
 
   url_string = window.location.pathname;
   
-  if (url_string === "/" || url_string === "/index.htm")  {
+  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
     path_string = "";
   } else {
     path_string = "../";
