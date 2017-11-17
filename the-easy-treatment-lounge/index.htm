@@ -1,61 +1,71 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <link rel="icon" href="../assets/img/favicon/favicon.png">
-
-    <title>WUTM &ndash; The Easy Treatment Lounge</title>
-
-    <!-- Typekit reference links -->
-    <script src="https://use.typekit.net/zvs5kis.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-    <!-- Routing Vistor to Live Streaming Show -->
-    <script src="../assets/js/route_to_show.js"></script>
-    
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../assets/css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li class="nav-empty">&nbsp;</li>
-        <li>
-          <a href="../discussions-with-dallas-live-with-raej" title="Discussions with Dallas &ndash; Live with RaeJ">Discussions with Dallas &ndash; Live with RaeJ</a>
-        </li>
-        <li class="nav-logo">
-          <a href="../index.htm" title="WUTM &ndash; thewuinthelou.com &ndash; &ndash; St. Louis, MO"><img src="../assets/img/logo/logo-top.png" width="220" height="190" alt="WUTM &ndash; thewuinthelou.com &ndash; &ndash; St. Louis, MO" /></a>
-        </li>
-        <li>
-          <a href="../the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
-        </li>
-        <li class="nav-spacer">&tilde;</li>
-        <li>
-          <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
-        </li>
-      </ul>
-    </nav>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+  
+      <link rel="icon" href="../assets/img/favicon/favicon.png">
+  
+      <title>KOVL &ndash; The Easy Treatment Lounge</title>
+  
+      <!-- Typekit reference links -->
+      <script src="https://use.typekit.net/zvs5kis.js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+      <!-- Contains the JS and jQuery to link to streams and animate the 'Shows' menu -->
+      <script src="../assets/js/main.js"></script>
+      
+      <!-- Bootstrap core CSS -->
+      <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  
+      <!-- Custom CSS -->
+      <link href="../assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+      <div id="header-shows">
+        <div class="header-show show-left" id="show-live_with_raej">
+          <a href="../live-with-raej/" title="Live with RaeJ">Live with RaeJ</a>
+          <a href="../live-with-raej/" title="Live with RaeJ"><img src="../assets/img/splash/live_with_raej.jpg" width="140" height="75" alt="Live with RaeJ" /></a>
+        </div>
+        <div class="header-show show-right" id="show-easy_treatment">
+          <a href="../the-easy_treatment-lounge/" title="The Easy Treatment Lounge"><img src="../assets/img/splash/easy_treatment.jpg" width="140" height="75" alt="The Easy Treatment Lounge" /></a>
+          <a href="../the-easy-treatment-lounge/" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li class="nav-empty">&nbsp;</li>
+          <li>
+            <a href="#shows" title="Shows">Shows</a>
+          </li>
+          <li class="nav-spacer">&nbsp;</li>
+          <li class="nav-logo">
+            <a href="../index.htm" title="KOVL &ndash; kovlradio.com &ndash; &ndash; Rulers Over the Land"><img src="../assets/img/logo/logo-top.png" width="220" height="223" alt="KOVL &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
+          </li>
+          <li class="nav-spacer">&nbsp;</li>
+          <li>
+            <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+          </li>
+        </ul>
+      </nav>
     <div class="container">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
       <!-- <div id="carouselExampleControls" class="carousel slide">  -->
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
+            <div id="link-listen_now">
+              <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+            </div>
             <img class="d-block img-fluid" src="../assets/img/splash/easy_treatment.jpg" alt="The Easy Treatment Lounge with Eric Weathersby">
             <div class="carousel-item-content" id="carousel-easy_treatment">
               <!-- <span>
                 Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
                 sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
               </span> -->
-              <div class="carousel-listen_now" style="margin-left: 7em;">
+              <div class="carousel-listen_now">
                 <span>Listen Now</span>
-                <a href="#" title="Listen Now" onclick="javascript: window.open('media-player/media_player.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+                <a href="#" title="Listen Now" onclick="routeToShow();"><img src="../assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
           </div>
@@ -87,7 +97,7 @@
           9pm &mdash; 12am
         </p>
       </div>
-      <div id="show_listing-border">
+      <!-- <div id="show_listing-border">
         <div class="show_listing-top_border">&nbsp;</div>
         <div class="show_listing-bottom_border">&nbsp;</div>
       </div>
@@ -96,7 +106,7 @@
         <a href="#" title="YouTube"><img src="../assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
         <a href="#" title="Instagram"><img src="../assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
       </div>
-      <a name="archive"></a>
+      <a name="archive"></a> -->
       <!-- <div id="archive">
         <h5>Show Archive</h5>
         <div id="show_listing-border">
@@ -153,15 +163,17 @@
           </div>
         </div>
       </div> -->
-      <div class="footer-logo"><a href="#top" title="Back to top"><img src="../assets/img/logo/logo-footer.png" width="220" height="220" alt="WUTM.com - thewuinthelou.com" /></a></div>
+      <div class="footer-logo">
+        <a href="#top" title="Back to Top"><img src="../assets/img/logo/logo-footer.png" width="220" height="213" alt="KOVL &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
+      </div>
       <div id="footer">
         <div class="footer-border_top_sm">&nbsp;</div>
         <div class="footer-border_top_med">&nbsp;</div>
         <div class="footer-border_mid">
           <div class="footer-archive">
             <span>Archive</span>
-            <a href="#discussions-with-dallas-live-with-raej" title="Discussions with Dallas - Live with RaeJ">Discussions with Dallas - Live with RaeJ</a>
-            <a href="#the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
+            <a href="../live-with-raej" title="Live with RaeJ">Live with RaeJ</a>
+            <a href="../the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
           </div>
           <div class="footer-actions">
             <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>

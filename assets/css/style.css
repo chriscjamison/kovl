@@ -1,11 +1,14 @@
 /* style.css - Contains custom CSS for wutm.com/index.htm and sub-sections. */
 
+#header-shows, 
 nav, 
 .carousel-listen_now > span, 
 .carousel-listen_archive > span, 
+#link-listen_now a, 
 #email_newsletter a, 
 h3, 
-#description p,
+#description p, 
+#show-description p,
 .show_listing-listen_now span, 
 .show_listing-listen_archive span,  
 .footer-archive, 
@@ -29,8 +32,50 @@ h3,
   font-weight: 300;
 }
 
+#header-shows, 
+nav, 
 .footer-border_bot_med strong {
   font-weight: 700;
+}
+
+#header-shows {
+  width: 100%;
+  height: 6.75em;
+  padding: 1em;
+  display: none;
+  background-color: #f4f5f0;
+}
+
+.header-show {
+  display: inline-block;
+}
+
+.show-left {
+  text-align: right;
+  width: 40.5%;
+}
+
+.show-left > a:first-of-type {
+  margin-right: 1.5em;
+}
+
+.show-right {
+  margin-left: 22em;
+}
+
+.show-right > a:nth-child(2) {
+  margin-left: 1.5em;
+}
+
+.header-show img {
+  border: 4px solid #2f3e55;
+}
+
+.close_menu {
+  width: 19%;
+  text-align: right;
+  vertical-align: top;
+  font-weight: 400;
 }
 
 nav {
@@ -38,7 +83,6 @@ nav {
   height: 4.35em;
   position: absolute;
   font-size: 1em;
-  font-weight: 700;
   z-index: 2;
 }
 
@@ -63,12 +107,10 @@ nav > ul > li {
 }
 
 .nav-spacer {
-  padding: 1em 0.25em;
-  font-size: 2em;
-  line-height: 0.5em;
-  color: #9f9c99
+  width: 4em;
 }
 
+.header-show a, 
 nav > ul > li > a {
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -88,6 +130,10 @@ nav > ul > li > a {
   color: #2f3e55;
 }
 
+#link-listen_now {
+  display: none;
+}
+
 .carousel-listen_now, 
 .carousel-listen_archive {
   width: 7.4em;
@@ -101,6 +147,14 @@ nav > ul > li > a {
 
 .carousel-listen_archive {
   width: 10.1em;
+}
+
+#carousel-live_with_raej > .carousel-listen_now {
+  margin-left: 6em;
+}
+
+#carousel-easy_treatment > .carousel-listen_now {
+  margin-left: 7em;
 }
 
 .carousel-listen_now > span, 
@@ -124,10 +178,10 @@ nav > ul > li > a {
   margin: 0.5em 1em 0.5em 2.5em;
 }
 
-#carousel-discussions {
+#carousel-live_with_raej {
   width: 19em;
   top: 16em;
-  left: 44em;
+  left: 41.75em;
 }
 
 #carousel-easy_treatment {
@@ -136,6 +190,7 @@ nav > ul > li > a {
   left: 5.75em;
 }
 
+#link-listen_now, 
 #email_newsletter {
   width: 10.75em;
   height: 3.5em;
@@ -145,6 +200,11 @@ nav > ul > li > a {
   border: 1px solid #2f3e55;
 }
 
+#link-listen_now {
+  width: 8em;
+}
+
+#link-listen_now a, 
 #email_newsletter a {
   padding: 0.75em 1em;
   display: block;
@@ -174,7 +234,7 @@ h3,
 #description p, 
 #show-description p {
   width: 80%;
-  margin: 0 auto;
+  margin: 2.5em auto;
   font-size: 1.05em;
   line-height: 2em;
 }
@@ -506,6 +566,10 @@ h3,
     height: 8.5em;
   }
 
+  .nav-empty {
+    width: 2.25%;
+  }
+
   nav > ul > li:nth-child(2) {
     width: 6.75em;
   }
@@ -514,7 +578,16 @@ h3,
     width: 7em;
     float: right;
   }
-  
+
+  nav > ul > li:nth-child(5), 
+  nav > ul > li:nth-child(6) {
+    display: none;
+  }
+
+  nav > ul > li > a {
+    font-size: 0.9em;
+  }
+
   .nav-logo {
     padding-top: 0;
   }
@@ -532,12 +605,16 @@ h3,
     height: 16em;
   }
 
+  #link-listen_now {
+    display: block;
+  }
+
   .img-fluid {
     width: 21em;
     height: 13em;
   }
 
-  #carousel-discussions {
+  #carousel-live_with_raej {
     width: 8em;
     top: 6em;
     left: 17.25em; 
@@ -550,11 +627,16 @@ h3,
   #carousel-easy_treatment {
     width: 10.7em;
     top: 5.25em;
-    left: 2em;
+    left: 2.75em;
   }
 
   .carousel-item-content > span {
     display: none;
+  }
+
+  #carousel-live_with_raej > .carousel-listen_now, 
+  #carousel-easy_treatment > .carousel-listen_now {
+    margin-left: 0;
   }
 
   .carousel-listen_now, 
@@ -584,12 +666,14 @@ h3,
     height: 5em;
   }
 
+  #link-listen_now, 
   #email_newsletter {
-    left: 23%;
+    left: 31%;
   }
 
-  #description {
+  #show-description {
     height: inherit;
+    margin-top: 1em;
   }
 
   #description-border {
@@ -634,7 +718,7 @@ h3,
     text-align: left;
   }
 }
-
+/* 
 
 @media screen and (min-width: 310px) and (max-width: 340px) {
   nav, 
@@ -679,13 +763,18 @@ h3,
     font-size: 0.7em;
   }
 
-  #carousel-discussions {
+  #carousel-live_with_raej {
     top: 4.5em;
     left: 15.25em;
   }
 
   #carousel-easy_treatment {
     top: 4em;
+  }
+
+  #carousel-live_with_raej > .carousel-listen_now, 
+  #carousel-easy_treatment > .carousel-listen_now {
+    margin-left: 0;
   }
 
   .carousel-listen_now, 
@@ -714,6 +803,7 @@ h3,
     margin-left: 2.6em;
   }
 
+  #link-listen_now, 
   #email_newsletter {
     width: 7.7em;
     height: 2.6em;
@@ -721,6 +811,7 @@ h3,
     left: 28.75%;
   }
 
+  #link-listen_now a, 
   #email_newsletter a {
     font-size: 0.7em;
   }
@@ -759,7 +850,7 @@ h3,
   .footer-border_bot_med {
     font-size: 0.8em;
   }
-}
+} */
 
 @media screen and (min-width: 412px) and (max-width: 620px) { 
   nav, 
@@ -802,7 +893,7 @@ h3,
     font-size: 0.75em;
   }
 
-  #carousel-discussions {
+  #carousel-live_with_raej {
     width: 8em;
     top: 8.5em;
     left: 20em; 
@@ -844,11 +935,13 @@ h3,
     height: 5em;
   }
 
-  #description {
+  #description, 
+  #show-description {
     height: inherit;
     padding: 1em;
   }
 
+  #link-listen_now, 
   #email_newsletter {
     left: 27%;
   }
@@ -909,6 +1002,11 @@ h3,
     width: 2em;
   }
 
+  nav > ul > li:nth-child(5), 
+  nav > ul > li:nth-child(6) {
+    display: none;
+  }
+
   .nav-logo {
     padding-top: 0;
   }
@@ -926,6 +1024,10 @@ h3,
     height: 27.75em;
   }
 
+  #link-listen_now {
+    display: block;
+  }
+
   .img-fluid {
     height: 25em;
   }
@@ -934,7 +1036,7 @@ h3,
     font-size: 0.75em;
   }
 
-  #carousel-discussions {
+  #carousel-live_with_raej {
     width: 22em;
     top: 15em;
     left: 34.5em;
@@ -944,6 +1046,14 @@ h3,
   .carousel-listen_archive {
     width: 8em;
     height: 7.9em;
+  }
+
+  #carousel-live_with_raej > .carousel-listen_now {
+    margin-left: 6em;
+  }
+
+  #carousel-easy_treatment > .carousel-listen_now {
+    margin-left: 4.25em;
   }
 
   .carousel-listen_archive {
@@ -966,11 +1076,12 @@ h3,
     height: 4.1em;
   }
 
+  #link-listen_now, 
   #email_newsletter {
-    left: 37.5%;
+    left: 40.5%;
   }
 
-  #description {
+  #show-description {
     height: inherit;
     padding: 2em 2em 0 2em;
   }
@@ -979,7 +1090,7 @@ h3,
     font-size: 1.25rem;
   }
 
-  #description p {
+  #show-description p {
     width: 29em;
     font-size: 0.95em;
     line-height: 1.75em;
@@ -1032,6 +1143,6 @@ h3,
 
 @media screen and (min-width: 1910px) {
   .nav-empty {
-    width: 26.88%;
+    width: 37.75%;
   }
 }
