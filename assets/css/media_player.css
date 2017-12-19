@@ -137,3 +137,40 @@ nav, {
     margin-top: 7em;
   }
 }
+
+@media screen and (min-width: 412px) and (max-width: 620px) { 
+  body {
+    width: 26em;
+  }
+
+  nav {
+    height: 10.5em;
+  }
+
+  .nav-empty {
+    width: 30.75%;
+  }
+
+  .nav-logo {
+    width: 9em !important;
+  }
+
+  nav > ul > li:nth-child(3)  {
+    width: 8em;
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  #container-player, #container-player > div + img {
+    width: 24em;
+    height: 12.81em;
+  }
+
+  #description-player {
+    right: 1.4em;
+  }
+
+  .carousel-listen_now {
+    margin-top: 7em;
+  }
+}
