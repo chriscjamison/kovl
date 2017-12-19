@@ -21,6 +21,23 @@
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div id="header-shows">
+      <div class="header-show show-left" id="show-live_with_raej">
+        <a href="live-with-raej/" title="Live with RaeJ">Live with RaeJ</a>
+        <a href="live-with-raej/" title="Live with RaeJ"><img src="assets/img/splash/live_with_raej.jpg" width="140" height="75" alt="Live with RaeJ" /></a>
+      </div>
+      <div class="header-show show-right" id="show-easy_treatment">
+        <a href="the-easy_treatment-lounge/" title="The Easy Treatment Lounge"><img src="assets/img/splash/easy_treatment.jpg" width="140" height="75" alt="The Easy Treatment Lounge" /></a>
+        <a href="the-easy-treatment-lounge/" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
+      </div>
+      <div class="header-show show-left" id="show-private_times">
+        <a href="private-times/" title="Private Times"><img src="assets/img/splash/private_times.jpg" width="140" height="75" alt="Private Times" /></a>
+        <a href="private-times/" title="Private Times">Private Times</a>
+      </div>
+      <div class="header-show close_menu">
+        <a href="#" title="Close Menu">Close Menu</a>
+      </div>
+    </div>
     <nav>
       <ul>
         <li class="nav-empty">&nbsp;</li>
@@ -65,6 +82,25 @@
             </div>
             <img class="d-block img-fluid" src="assets/img/splash/easy_treatment.jpg" alt="The Easy Treatment Lounge with Eric Weathersby">
             <div class="carousel-item-content" id="carousel-easy_treatment">
+              <!-- <span>
+                Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
+                sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
+              </span> -->
+              <div class="carousel-listen_now">
+                <span>Listen Now</span>
+                <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+              </div>
+            </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
+          </div>
+          <div class="carousel-item">
+            <div id="link-listen_now">
+              <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+            </div>
+            <img class="d-block img-fluid" src="assets/img/splash/private_times.jpg" alt="Private Times with Brian Bouch&#233;">
+            <div class="carousel-item-content" id="carousel-private_times">
               <!-- <span>
                 Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
                 sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
@@ -153,6 +189,32 @@
             <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
           </div> -->
         </div>
+        <div class="show_listing">
+          <a name="private-times"></a>
+          <div class="show_listing-description" id="show_listing-private_times">
+            <span>The Easy Treatment Lounge</span>
+          </div>
+          <a href="private-times"><img src="assets/img/listings/private_times.jpg" width="300" height="190" alt="Private Times" /></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
+        </div>
       </div>
       <div class="footer-logo">
         <a href="#top" title="Back to Top"><img src="assets/img/logo/logo-footer.png" width="220" height="213" alt="KOVL &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
@@ -165,6 +227,7 @@
             <span>Archive</span>
             <a href="live-with-raej" title="Live with RaeJ">Live with RaeJ</a>
             <a href="the-easy-treatment-lounge" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
+            <a href="private-times" title="Private Times">Private Times</a>
           </div>
           <div class="footer-actions">
             <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
