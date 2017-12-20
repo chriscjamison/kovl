@@ -22,6 +22,9 @@
   </head>
   <body>
     <div id="header-shows">
+      <div class="header-show close_menu">
+        <a href="#" title="Close Menu">Close Menu</a>
+      </div>
       <div class="header-show show-left" id="show-live_with_raej">
         <a href="../live-with-raej/" title="Live with RaeJ">Live with RaeJ</a>
         <a href="../live-with-raej/" title="Live with RaeJ"><img src="../assets/img/splash/live_with_raej.jpg" width="140" height="75" alt="Live with RaeJ" /></a>
@@ -31,33 +34,24 @@
         <a href="../the-easy-treatment-lounge/" title="The Easy Treatment Lounge">The Easy Treatment Lounge</a>
       </div>
       <div class="header-show show-left" id="show-private_times">
-        <a href="../private-times/" title="Private Times"><img src="../assets/img/splash/private_times.jpg" width="140" height="75" alt="Private Times" /></a>
         <a href="../private-times/" title="Private Times">Private Times</a>
-      </div>
-      <div class="header-show close_menu">
-        <a href="#" title="Close Menu">Close Menu</a>
+        <a href="../private-times/" title="Private Times"><img src="../assets/img/splash/private_times.jpg" width="140" height="75" alt="Private Times" /></a>
       </div>
     </div>
     <nav>
-      <ul>
-        <li class="nav-empty">&nbsp;</li>
-        <li>
-          <a href="#shows" title="Shows">Shows</a>
-        </li>
-        <li class="nav-spacer">&nbsp;</li>
-        <li class="nav-logo">
-          <a href="../index.htm" title="KOVL &ndash; kovlradio.com &ndash; &ndash; Rulers Over the Land"><img src="../assets/img/logo/logo-top.png" width="220" height="223" alt="KOVL &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
-        </li>
-        <li class="nav-spacer">&nbsp;</li>
-        <li>
-          <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
-        </li>
-      </ul>
+      <div class="nav-spacer spacer-left">&nbsp;</div>
+      <div class="nav-link_to"><a href="#shows" title="Shows" id="nav-link-shows">Shows</a></div>
+      <div class="nav-spacer spacer-center">&nbsp;</div>
+      <div class="nav-link_to"><a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a></div>
+      <div class="nav-spacer spacer-right">&nbsp;</div>
     </nav>
-    <div class="container">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
+    <div class="nav-logo">
+      <a href="../index.htm" title="KOVL &ndash; kovlradio.com &ndash; &ndash; Rulers Over the Land"><img src="../assets/img/logo/logo-top.png" width="220" height="223" alt="KOVL &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
+    </div>
+    <div class="container container-about_kovl">
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">  -->
       <!-- <div id="carouselExampleControls" class="carousel slide">  -->
-        <div class="carousel-inner" role="listbox">
+        <!-- <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div id="link-listen_now">
               <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
@@ -73,7 +67,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -81,8 +75,8 @@
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a> -->
-      </div>
+        </a> 
+      </div>-->
       <div id="show-description">
         <h3>About KOVL</h3>
         <div id="description-border">
@@ -110,7 +104,7 @@
           KOVLRADIO.COM offers news, sports, talk and a variety of music genres…every format one would obtain from terrestrial radio stations or radio network.
         </p>
       </div>
-      <div id="show_listing-border">
+      <!-- <div id="show_listing-border">
         <div class="show_listing-top_border">&nbsp;</div>
         <div class="show_listing-bottom_border">&nbsp;</div>
       </div>
@@ -118,7 +112,7 @@
         <a href="https://www.facebook.com/profile.php?id=100008873620130" title="Facebook" target="_blank"><img src="../assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
         <a href="https://twitter.com/1raejohnson" title="Twitter" target="_blank"><img src="../assets/img/social/twitter.png" width="58" height="47" alt="Twitter" /></a>
         <a href="https://instagram.com/johnsonraej" title="Instagram" target="_blank"><img src="../assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
-      </div>  
+      </div>   -->
       <a name="archive"></a>
       <!-- <div id="archive">
         <h5>Show Archive</h5>
@@ -191,7 +185,7 @@
           </div>
           <div class="footer-actions">
             <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
-            <!-- <a href="#" title="Email Newsletter">Email Newsletter</a> -->
+            <a href="../company/about-kovl.htm" title="About KOVL">About KOVL</a>
           </div>
         </div>
         <div class="footer-border_bot_med">

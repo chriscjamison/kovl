@@ -1,6 +1,6 @@
 $(document).ready( 
   function () {
-    $("nav > ul > li:nth-child(2) a").on("click", 
+    $("#nav-link-shows").on("click", 
       function () {
 
         var shows_menu_selector = new String();
@@ -41,15 +41,22 @@ function routeToShow()  {
   if ((current_hour >= 0) && 
       (current_hour < 3))  {
     if (user_agent.indexOf("Mac OS X") > -1) {
-      window.location.href="http://kovlradio.com/media-player/easy_treatment.htm";
+      window.location.href = "http://kovlradio.com/media-player/easy_treatment.htm";
     } else {
       window.open('media-player/easy_treatment.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
     }
+  } else if ((current_hour >= 21) && 
+             ((current_hour < 24))) {
+    if (user_agent.indexOf("Mac OS X") > -1) {
+      window.location.href = "http://kovlradio.com/media-player/private_times.htm";
+    } else {
+      window.open('media-player/private_times.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
+    }
   } else {
     if (user_agent.indexOf("Mac OS X") > -1) {
-      window.location.href="http://kovlradio.com/media-player/live_with_raej.htm";
+      window.location.href = "http://kovlradio.com/media-player/live_with_raej.htm";
     } else {
-      window.open('media-player/discussions.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
+      window.open('media-player/live_with_raej.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
     }
   }
 }
