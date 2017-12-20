@@ -592,7 +592,6 @@ h3,
 }
 
 
-
 @media screen and (min-width: 310px) and (max-width: 400px) {
   #header-shows a, 
   nav > div > a {
@@ -697,7 +696,7 @@ h3,
     display: none;
   }
 
-  #carousel-live_with_raej > .carousel-listen_now, 
+  #carousel-discussions > .carousel-listen_now, 
   #carousel-easy_treatment > .carousel-listen_now {
     margin-left: 0;
   }
