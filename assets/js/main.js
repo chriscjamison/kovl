@@ -1,36 +1,5 @@
 $(document).ready( 
   function () {
-    $("#nav-link-shows").on("click", 
-      function () {
-
-        var shows_menu_selector = new String();
-        var shows_menu_element = new Object();
-    
-        shows_menu_selector = "#header-shows";
-        shows_menu_element = $(shows_menu_selector)
-    
-    
-        $(shows_menu_element).css("display", "block");
-      }
-    );
-
-    $(".close_menu a").on("click", 
-      function () {
-        var shows_menu_selector = new String();
-        var shows_menu_element = new Object();
-    
-        shows_menu_selector = "#header-shows";
-        shows_menu_element = $(shows_menu_selector)
-    
-    console.log("1");
-        $(shows_menu_element).css("display", "none");
-      }
-    );
-  }
-);
-
-$(window).on("load", 
-  function () {
     var header_selector = new String();
     var show_selector = new String();
     var footer_selector = new String();
@@ -73,7 +42,7 @@ $(window).on("load",
       function (value, index) {
         var current_show = value;
 
-        if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
+        if (url_string === "/" || url_string === "/index.htm")  {
           path_string = "";
         } else {
           path_string = "../";
@@ -94,7 +63,7 @@ $(window).on("load",
         header_html = header_html + show_html;
 
         archive_html = "<a href=\"" + path_string + current_show[1] + "\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
-       
+      
         footer_html = footer_html + archive_html;
       }
     );
@@ -114,14 +83,45 @@ $(window).on("load",
     show_selector = ".header-show:nth-child(1)";
     show_element = $(show_selector);
 
-    $(show_element).removeClass("show-right");
+    if ($(show_element).hasClass("close_menu")) {
+      $(show_element).removeClass();
+      $(show_element).addClass("header-show close_menu");
+    }
 
     footer_selector = ".footer-archive";
     footer_element = $(footer_selector);
 
     $(footer_element).html(footer_html);
+
+    $("#nav-link-shows").click(
+      function () {
+
+        var shows_menu_selector = new String();
+        var shows_menu_element = new Object();
+    
+        shows_menu_selector = "#header-shows";
+        shows_menu_element = $(shows_menu_selector);
+    
+    
+        $(shows_menu_element).css("display", "block");
+      }
+    );
+
+    $(".close_menu a").click(
+      function () {
+        var shows_menu_selector = new String();
+        var shows_menu_element = new Object();
+    
+        shows_menu_selector = "#header-shows";
+        shows_menu_element = $(shows_menu_selector);
+    
+        $(shows_menu_element).css("display", "none");
+      }
+    );
   }
 );
+
+
 
 function routeToShow()  {
   var current_time = new Date;

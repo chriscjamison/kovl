@@ -218,6 +218,16 @@ nav > div > a {
   left: 5.75em;
 }
 
+#carousel-the_twinz {
+  top: 25em;
+  left: 29.5em;
+}
+
+#carousel-truth_muzic {
+  top: 20em;
+  left: 9em;
+}
+
 #link-listen_now, 
 #email_newsletter {
   width: 10.75em;
@@ -322,7 +332,8 @@ h3,
 #show_listings {
   width: 100%;
   padding: 2em;
-  display: table;
+  display: block;
+  text-align: center;
 }
 /* A <div> which holds the HTML content including a photo for each individual show and 
  * links for listening to audio and social media outlets.
@@ -331,8 +342,8 @@ h3,
 .show_listing {
   width: 18.75em;
   height: inherit;
-  margin: 0 auto;
-  display: table-cell;
+  margin: 0 3em;
+  display: inline-block;
   text-align: center;
 }
 /* A <div> which holds the HTML content for an individual show. */
@@ -599,7 +610,7 @@ h3,
   }
 
   #header-shows {
-    height: 21.5em;
+    height: 32em;
   }
 
   #header-shows a {
@@ -747,11 +758,12 @@ h3,
   }
 
   #show_listings {
-    padding: 1em 0 0 0;
+    padding: 1em 0 0 0.5em;
     display: block;
   }
 
   .show_listing {
+    margin: 0;
     padding-bottom: 3em;
     display: block;
   }
@@ -769,7 +781,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 23em;
+    height: 26em;
     padding-top: 7em;
     background-repeat: repeat;
   }
@@ -1110,7 +1122,7 @@ h3,
   }
 
   #header-shows {
-    height: 16em;
+    height: 22em;
   }
   
   .show-left > a:first-of-type, 
@@ -1167,6 +1179,7 @@ h3,
   .carousel-listen_archive {
     width: 8em;
     height: 7.9em;
+    display: none;
   }
 
   #carousel-live_with_raej > .carousel-listen_now {
@@ -1216,7 +1229,8 @@ h3,
   }
 
   .show_listing {
-    width: 4.75em;
+    width: 9.5em;
+    margin: 0 1em;
   }
 
   .show_listing-description + a > img {
@@ -1226,7 +1240,8 @@ h3,
   }
 
   .show_listing-social_media {
-    width: 5em;
+    width: 8.5em;
+    margin: 1.5em auto 2.75em auto;
   }
 
   #show-description p {
@@ -1245,12 +1260,12 @@ h3,
     margin-right: auto;
   }
 
-  .show_listing {
+ /*  .show_listing {
     padding-bottom: 3em;
-  }
+  } */
 
   .show_listing-description {
-    transform: translate(6%, -75%);
+    transform: translate(-7%, -75%);
   }
 
   .show_listing-description span {
@@ -1263,6 +1278,10 @@ h3,
 
   .show_listing-social_media a {
     margin-bottom: 1em;
+  }
+
+  .footer-border_mid {
+    height: 14.5em;
   }
 
   .footer-archive {
@@ -1313,8 +1332,12 @@ h3,
     right: 9.5em;
   }
 
+  .show_listing:last-of-type {
+    margin-top: 3.5em;
+  }
+
   .show_listing-description {
-    transform: translate(19%, -20%);
+    transform: translate(-1%, -20%);
   }
 
   .container-about_kovl {
@@ -1347,7 +1370,7 @@ h3,
   }
   
   #header-shows {
-    height: 15em;
+    height: 22em;
   }
 
   .container {
@@ -1369,7 +1392,7 @@ h3,
   }
 
   .show_listing-description {
-    transform: translate(23%, -20%);
+    transform: translate(-2%, -20%);
   }
 
   .container-about_kovl {
@@ -1393,7 +1416,7 @@ h3,
   }
 
   #header-shows {
-    height: 15.5em;
+    height: 22em;
   }
 
   #carousel-private_times {
@@ -1403,7 +1426,7 @@ h3,
   }
 
   .show_listing-description {
-    transform: translate(27%, -10%);
+    transform: translate(0, -10%);
   }
 
   .container-about_kovl {
@@ -1430,7 +1453,7 @@ h3,
   }
   
   #header-shows {
-    height: 15.75em;
+    height: 21.75em;
   }
   
   #carousel-private_times {
@@ -1440,7 +1463,7 @@ h3,
   }
 
   .show_listing-description {
-    transform: translate(27%, -10%);
+    transform: translate(0, -10%);
   }
 
   .container-about_kovl {
