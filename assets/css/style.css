@@ -520,7 +520,7 @@ h3,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 10em;
+  height: 13em;
   background-image: url('../img/backgrounds/footer-mid.png');
   background-repeat: repeat-x;
 }
@@ -1272,7 +1272,7 @@ h3,
 
 @media screen and (min-width: 1044px) and (max-width: 1280px) {
   #header-shows {
-    height: 15.5em;
+    height: 22em;
   }
 
   .nav-spacer {
@@ -1284,7 +1284,7 @@ h3,
   }
 
   .nav-link_to {
-    width: 6em;
+    width: 6.25em;
   }
   
   .nav-logo {
