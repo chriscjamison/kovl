@@ -219,13 +219,18 @@ nav > div > a {
 }
 
 #carousel-the_twinz {
-  top: 25em;
-  left: 29.5em;
+  bottom: 2.25em;
+  left: 30.5em;
 }
 
 #carousel-truth_muzic {
   top: 20em;
-  left: 9em;
+  left: 13em;
+}
+
+#carousel-hustle {
+  top: 10em;
+  right: 12.5em;
 }
 
 #link-listen_now, 
@@ -531,9 +536,9 @@ h3,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 13em;
+  height: 15em;
   background-image: url('../img/backgrounds/footer-mid.png');
-  background-repeat: repeat-x;
+  background-repeat: repeat;
 }
 /* Formats the light blue block which appears within the footer. */ 
 
@@ -610,7 +615,7 @@ h3,
   }
 
   #header-shows {
-    height: 32em;
+    height: 38em;
   }
 
   #header-shows a {
@@ -797,90 +802,71 @@ h3,
   }
 }
 /* 
-
 @media screen and (min-width: 310px) and (max-width: 340px) {
   nav, 
   nav > ul {
     height: 6.5em;
   }
-
   nav > ul > li {
     padding-top: 0.7em;
   }
-
   nav > ul > li:nth-child(2) {
     width: 6.25em;
   }
-
   nav > ul > li:nth-child(4) {
     width: 5.5em;
   }
-
   nav > ul > li > a {
     font-size: 0.7em;
   }
-
   .nav-logo img {
     width: 9em;
     height: 8em;
   }
-
   .container {
     top: 7.5em;
   }
-
   .carousel-inner {
     height: 12.5em;
   }
-
   .img-fluid {
     height: 10em;
   }
-
   .carousel-item-content {
     font-size: 0.7em;
   }
-
   #carousel-live_with_raej {
     top: 4.5em;
     left: 15.25em;
   }
-
   #carousel-easy_treatment {
     top: 4em;
   }
-
   #carousel-live_with_raej > .carousel-listen_now, 
   #carousel-easy_treatment > .carousel-listen_now {
     margin-left: 0;
   }
-
   .carousel-listen_now, 
   .carousel-listen_archive {
     width: 8em;
     height: 7.3em;
   }
-
   .carousel-listen_archive {
     width: 10.8em;
   }
-
   .carousel-listen_now img, 
   .carousel-listen_archive img {
     width: 3em;
     height: 3em;
   }
-
   .carousel-listen_now a, 
   .carousel-listen_archive a {
     width: 3.5em;
     margin-left: 1.5em;
   }
-
   .carousel-listen_archive a {
     margin-left: 2.6em;
   }
-
   #link-listen_now, 
   #email_newsletter {
     width: 7.7em;
@@ -888,12 +874,10 @@ h3,
     top: 88.25%;
     left: 28.75%;
   }
-
   #link-listen_now a, 
   #email_newsletter a {
     font-size: 0.7em;
   }
-
   #description, 
   #show_listings {
     padding: 1em;
@@ -902,29 +886,23 @@ h3,
   h3 {
     font-size: 1.05rem;
   }
-
   #description p {
     font-size: 0.8em;
   }
-
   .show_listing {
     width: 16.5em;
     padding-bottom: 3em;
   }
-
   .show_listing-description {
     transform: translate(0%, -10%);
   }
-
   .footer-border_mid {
     padding-top: 10em;
     font-size: 0.7em;
   }
-
   .footer-archive {
     height: 7em;
   }
-
   .footer-border_bot_med {
     font-size: 0.8em;
   }
@@ -1281,7 +1259,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 14.5em;
+    height: 16.5em;
   }
 
   .footer-archive {

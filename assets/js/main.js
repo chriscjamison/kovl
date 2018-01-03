@@ -26,8 +26,9 @@ $(document).ready(
       ['Live with RaeJ', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
-      ['The Twinz &rsquo;r Inn', 'the-twinz-r-inn', 'the_twinz'], 
-      ['Truth Muzic', 'truth-muzic', 'truth_muzic']
+      ['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'], 
+      ['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
+      ['Hustle &amp; Love', 'hustle-and-love', 'hustle']
     ];
 
     url_string = window.location.pathname;
@@ -42,7 +43,7 @@ $(document).ready(
       function (value, index) {
         var current_show = value;
 
-        if (url_string === "/" || url_string === "/index.htm")  {
+        if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
           path_string = "";
         } else {
           path_string = "../";
