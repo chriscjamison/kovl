@@ -224,13 +224,33 @@ nav > div > a {
 }
 
 #carousel-truth_muzic {
-  top: 20em;
+  bottom: 4em;
   left: 13em;
 }
 
 #carousel-hustle {
   top: 10em;
   right: 12.5em;
+}
+
+#carousel-agree {
+  bottom: 3em;
+  left: 30em;
+}
+
+#carousel-queen_g {
+  top: 11em;
+  right: 12.5em;
+}
+
+#carousel-travel_time {
+  top: 16.5em;
+  right: 12.5em; 
+}
+
+#carousel-fabulously {
+  top: 15em;
+  left: 12.5em; 
 }
 
 #link-listen_now, 
@@ -279,6 +299,11 @@ h3,
   font-size: 1.05em;
   text-align: center;
   line-height: 2em;
+}
+
+#description p:first-of-type, 
+#show-description p:first-of-type {
+  margin-top: 0;
 }
 
 #description-border, 
@@ -347,11 +372,18 @@ h3,
 .show_listing {
   width: 18.75em;
   height: inherit;
-  margin: 0 3em;
+  margin: 3em;
   display: inline-block;
   text-align: center;
 }
 /* A <div> which holds the HTML content for an individual show. */
+
+.show_listing:nth-child(1), 
+.show_listing:nth-child(1), 
+.show_listing:nth-child(1) {
+  margin-top: 0;
+} 
+
 
 .show_listing-description {
   width: 15em;
@@ -536,7 +568,7 @@ h3,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 15em;
+  height: 23.25em;
   background-image: url('../img/backgrounds/footer-mid.png');
   background-repeat: repeat;
 }
@@ -615,7 +647,7 @@ h3,
   }
 
   #header-shows {
-    height: 38em;
+    height: 60.5em;
   }
 
   #header-shows a {
@@ -636,7 +668,8 @@ h3,
     width: 9.75em;
   }
 
-  #show-easy_treatment a:nth-child(2) {
+  #show-easy_treatment a:nth-child(2), 
+  #show-queen_g a:nth-child(2) {
     width: 46%;
     vertical-align: middle;
   }
@@ -658,7 +691,7 @@ h3,
   }
 
   .spacer-center {
-    width: 65%;
+    width: 66%;
   }
 
   .nav-link_to {
@@ -763,7 +796,7 @@ h3,
   }
 
   #show_listings {
-    padding: 1em 0 0 0.5em;
+    padding: 1em 0 0 1.4em;
     display: block;
   }
 
@@ -786,7 +819,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 26em;
+    height: 36em;
     padding-top: 7em;
     background-repeat: repeat;
   }
@@ -795,6 +828,10 @@ h3,
   .footer-actions {
     display: inline-block;
     float: none;
+  }
+
+  .footer-archive {
+    height: 23.5em;
   }
 
   .footer-actions {
@@ -1100,7 +1137,7 @@ h3,
   }
 
   #header-shows {
-    height: 22em;
+    height: 34.75em;
   }
   
   .show-left > a:first-of-type, 
@@ -1208,7 +1245,7 @@ h3,
 
   .show_listing {
     width: 9.5em;
-    margin: 0 1em;
+    margin: 1em;
   }
 
   .show_listing-description + a > img {
@@ -1259,7 +1296,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 16.5em;
+    height: 27.75em;
   }
 
   .footer-archive {
@@ -1267,9 +1304,9 @@ h3,
   }
 }
 
-@media screen and (min-width: 1044px) and (max-width: 1280px) {
+@media screen and (min-width: 1044px) and (max-width: 1290px) {
   #header-shows {
-    height: 22em;
+    height: 33.5em;
   }
 
   .nav-spacer {
@@ -1325,7 +1362,7 @@ h3,
   }
 }
 
-@media screen and (min-width: 1290px) and (max-width: 1580px) {
+@media screen and (min-width: 1300px) and (max-width: 1580px) {
   .nav-link_to {
     width: 7em;
   }
@@ -1348,7 +1385,7 @@ h3,
   }
   
   #header-shows {
-    height: 22em;
+    height: 33.5em;
   }
 
   .container {
@@ -1394,7 +1431,7 @@ h3,
   }
 
   #header-shows {
-    height: 22em;
+    height: 33.5em;
   }
 
   #carousel-private_times {
@@ -1431,7 +1468,7 @@ h3,
   }
   
   #header-shows {
-    height: 21.75em;
+    height: 33.5em;
   }
   
   #carousel-private_times {
