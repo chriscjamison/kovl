@@ -129,33 +129,37 @@ $(document).ready(
 
 
 function routeToShow()  {
-  var current_time = new Date;
-  var current_hour = new Number;
-  // var current_minute = new Number;
-  var user_agent = window.navigator.userAgent;
 
-  current_hour = current_time.getUTCHours();
-  // current_minute = current_time.getMinutes();
+  var listen_now_selector = new String();
+  var listen_now_element = new Object();
 
-  if ((current_hour >= 0) && 
-      (current_hour < 3))  {
-    if (user_agent.indexOf("Mac OS X") > -1) {
-      window.location.href = "http://kovlradio.com/media-player/easy_treatment.htm";
-    } else {
-      window.open('media-player/easy_treatment.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
-    }
-  } else if ((current_hour >= 21) && 
-             ((current_hour < 24))) {
-    if (user_agent.indexOf("Mac OS X") > -1) {
-      window.location.href = "http://kovlradio.com/media-player/private_times.htm";
-    } else {
-      window.open('media-player/private_times.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
-    }
-  } else {
-    if (user_agent.indexOf("Mac OS X") > -1) {
-      window.location.href = "http://kovlradio.com/media-player/live_with_raej.htm";
-    } else {
-      window.open('media-player/live_with_raej.htm', 'media_player', 'width=640,height=480,location=no,menubar=no,resizeable=no,status=no,toolbar=no');
-    }
-  }
+  var nav_link_to_selector = new String();
+  var nav_link_to_element = new Object();
+
+  var nav_link_to_a_selector = new String();
+  var nav_link_to_a_element = new Object();
+
+  var nav_div_selector = new String();
+  var nav_div_element = new Object();
+
+  listen_now_selector = ".nav-link_to.media_player";
+  listen_now_element = $(listen_now_selector);
+  
+  nav_link_to_selector = ".nav-link_to";
+  nav_link_to_element = $(nav_link_to_selector);
+
+  nav_link_to_a_selector = ".nav-link_to a";
+  nav_link_to_a_element = $(nav_link_to_a_selector);
+
+  nav_div_selector = "nav > div";
+  nav_div_element = $(nav_div_selector);
+
+  $(nav_link_to_element).css("width", "8.9em");
+  $(nav_link_to_a_element).css("paddingTop", "0.4em");
+  $(nav_div_element).css("height", "3.65em");
+
+  $(listen_now_element).html(
+    "<iframe src=\"media-player/media_player.htm\" name=\"media_player\"></iframe>");
+
+ 
 }

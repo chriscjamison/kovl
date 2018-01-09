@@ -146,6 +146,14 @@ nav > div > a {
   color: #384883;
 }
 
+iframe {
+  width: 150px;
+  height: 30px;
+  position: relative;
+  top: 1.1em;
+  border: none;
+}
+
 .carousel-item-content {
   position: absolute;
   font-size: 1.25em;
@@ -235,7 +243,7 @@ nav > div > a {
 
 #carousel-agree {
   bottom: 3em;
-  left: 30em;
+  right: 7em;
 }
 
 #carousel-queen_g {
