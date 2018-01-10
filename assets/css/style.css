@@ -154,6 +154,12 @@ iframe {
   border: none;
 }
 
+iframe#iframe-media_player {
+  display: block;
+  top: 0; 
+  margin: 1.5em auto 1em auto;
+}
+
 .carousel-item-content {
   position: absolute;
   font-size: 1.25em;
@@ -185,12 +191,8 @@ iframe {
   width: 10.1em;
 }
 
-#carousel-live_with_raej > .carousel-listen_now {
-  margin-left: 6em;
-}
-
-#carousel-easy_treatment > .carousel-listen_now {
-  margin-left: 7em;
+.carousel-listen_now {
+  position: relative;
 }
 
 .carousel-listen_now > span, 
@@ -220,25 +222,55 @@ iframe {
   right: 5em;
 }
 
+#carousel-live_with_raej .carousel-listen_now {
+  left: 6em;
+}
+
 #carousel-easy_treatment {
   width: 20.25em;
   top: 12.25em;
   left: 5.75em;
 }
 
+#carousel-easy_treatment .carousel-listen_now {
+  left: 7em;
+}
+
+#carousel-private_times {
+  width: 18.75em;
+  top: 20.5em;
+  right: 6.52em;
+}
+
+#carousel-private_times .carousel-listen_now {
+  left: 5.5em;
+}
+
 #carousel-the_twinz {
+  width: 24em;
   bottom: 2.25em;
-  left: 30.5em;
+  left: 4.5em;
+}
+
+#carousel-the_twinz .carousel-listen_now {
+  left: 7.25em;
 }
 
 #carousel-truth_muzic {
-  bottom: 4em;
-  left: 13em;
+  width: 22em;
+  bottom: 2.75em;
+  left: 6.1em;
+}
+
+#carousel-truth_muzic .carousel-listen_now, 
+#carousel-hustle .carousel-listen_now {
+  left: 7em;
 }
 
 #carousel-hustle {
-  top: 10em;
-  right: 12.5em;
+  width: 21.5em;
+  top: 8em;
+  right: 5.5em;
 }
 
 #carousel-agree {
@@ -247,18 +279,30 @@ iframe {
 }
 
 #carousel-queen_g {
+  width: 21em;
   top: 11em;
-  right: 12.5em;
+  right: 6.4em;
+}
+
+#carousel-queen_g .carousel-listen_now, 
+#carousel-fabulously .carousel-listen_now {
+  left: 6.75em;
 }
 
 #carousel-travel_time {
-  top: 16.5em;
-  right: 12.5em; 
+  width: 21em;
+  top: 15.25em;
+  right: 5.5em; 
+}
+
+#carousel-travel_time .carousel-listen_now {
+  left: 6em;
 }
 
 #carousel-fabulously {
+  width: 21em;
   top: 15em;
-  left: 12.5em; 
+  left: 6.5em; 
 }
 
 #link-listen_now, 
@@ -742,11 +786,6 @@ h3,
     width: 10.7em;
     top: 5.25em;
     left: 2.75em;
-  }
-
-  #carousel-private_times {
-    top: 6.5em;
-    right: 2sem;
   }
 
   .carousel-item-content > span {
@@ -1479,11 +1518,6 @@ h3,
     height: 33.5em;
   }
   
-  #carousel-private_times {
-    width: 16em;
-    top: 22em;
-    right: 2em;
-  }
 
   .show_listing-description {
     transform: translate(0, -10%);

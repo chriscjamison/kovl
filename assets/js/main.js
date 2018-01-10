@@ -129,37 +129,59 @@ $(document).ready(
 
 
 function routeToShow()  {
+  
+  var player_html = new String();
 
   var listen_now_selector = new String();
   var listen_now_element = new Object();
 
-  var nav_link_to_selector = new String();
-  var nav_link_to_element = new Object();
+  var window_width = new Number();
 
-  var nav_link_to_a_selector = new String();
-  var nav_link_to_a_element = new Object();
+  window_width = $(window).width();
 
-  var nav_div_selector = new String();
-  var nav_div_element = new Object();
-
-  listen_now_selector = ".nav-link_to.media_player";
+  listen_now_selector = "#carouselExampleControls";
   listen_now_element = $(listen_now_selector);
+
+  player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
+
+  $(listen_now_element).append(player_html);
+
+
+/*   if (window_width <= 375)  {
+    listen_now_selector = "#carouselExampleControls";
+    listen_now_element = $(listen_now_selector);
+
+    player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" class=\"iframe-mobile\" id=\"iframe-media_player\"></iframe>";
+
+    $(listen_now_element).append(player_html);
+  } else {
+    var nav_link_to_selector = new String();
+    var nav_link_to_element = new Object();
   
-  nav_link_to_selector = ".nav-link_to";
-  nav_link_to_element = $(nav_link_to_selector);
+    var nav_link_to_a_selector = new String();
+    var nav_link_to_a_element = new Object();
+  
+    var nav_div_selector = new String();
+    var nav_div_element = new Object();
 
-  nav_link_to_a_selector = ".nav-link_to a";
-  nav_link_to_a_element = $(nav_link_to_a_selector);
+    listen_now_selector = ".nav-link_to.media_player";
+    listen_now_element = $(listen_now_selector);
 
-  nav_div_selector = "nav > div";
-  nav_div_element = $(nav_div_selector);
+    nav_link_to_selector = ".nav-link_to";
+    nav_link_to_element = $(nav_link_to_selector);
 
-  $(nav_link_to_element).css("width", "8.9em");
-  $(nav_link_to_a_element).css("paddingTop", "0.4em");
-  $(nav_div_element).css("height", "3.65em");
+    nav_link_to_a_selector = ".nav-link_to a";
+    nav_link_to_a_element = $(nav_link_to_a_selector);
 
-  $(listen_now_element).html(
-    "<iframe src=\"media-player/media_player.htm\" name=\"media_player\"></iframe>");
+    nav_div_selector = "nav > div";
+    nav_div_element = $(nav_div_selector);
 
- 
-}
+    $(nav_link_to_element).css("width", "8.9em");
+    $(nav_link_to_a_element).css("paddingTop", "0.4em");
+    $(nav_div_element).css("height", "3.65em");
+    
+    player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
+    
+    $(listen_now_element).html(player_html);
+  }
+ */}
