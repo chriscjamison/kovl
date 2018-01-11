@@ -28,7 +28,7 @@ $(document).ready(
       ['Private Times', 'private-times', 'private_times'], 
       ['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'], 
       ['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
-      ['Hustle &amp; Love', 'hustle-and-love', 'hustle'], 
+      ['Hustle in Love', 'hustle-in-love', 'hustle'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
       ['Travel Time with Travis', 'travel-time-with-travis', 'travel_time'], 
@@ -183,7 +183,7 @@ function determinePathofWebpage()  {
 
   url_string = window.location.pathname;
   
-  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
+  if (url_string === "/" || url_string === "/index.htm")  {
     path_string = "";
   } else {
     path_string = "../";

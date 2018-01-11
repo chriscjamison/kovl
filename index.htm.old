@@ -42,12 +42,25 @@
     </div>
     <div class="container">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
+      <!-- <div id="carouselExampleControls" class="carousel slide">  -->
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div id="link-listen_now">
               <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
             </div>
             <img class="d-block img-fluid" src="assets/img/splash/schedule.jpg" alt="KOVL &ndash; kovlradio.com &ndash; &ndash; Rulers Over the Land">
+<!--             <div class="carousel-item-content" id="carousel-live_with_raej">
+              <span>
+                &ldquo;Live with RaeJ&rdquo; is a drive time show to bring you stories of the day and interviews of some interesting people she's giving a voice to. 
+              </span>
+              <div class="carousel-listen_now">
+                <span>Listen Now</span>
+                <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+              </div>
+            </div>
+ -->            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -63,6 +76,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -70,11 +86,18 @@
             </div>
             <img class="d-block img-fluid" src="assets/img/splash/easy_treatment.jpg" alt="The Easy Treatment Lounge with Eric Weathersby">
             <div class="carousel-item-content" id="carousel-easy_treatment">
+              <!-- <span>
+                Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
+                sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
+              </span> -->
               <div class="carousel-listen_now">
                 <span>Listen Now</span>
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -83,13 +106,16 @@
             <img class="d-block img-fluid" src="assets/img/splash/private_times.jpg" alt="Private Times with Brian Bouch&#233;">
             <div class="carousel-item-content" id="carousel-private_times">
               <span>
-                Private Times is about soulful eclectic music, old and new, to keep the listening audience wanting more!
+                Private Times is about soulful eclectic music, old and new, to keep the listing audience wanting more!
               </span>
               <div class="carousel-listen_now">
                 <span>Listen Now</span>
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -98,7 +124,7 @@
             <img class="d-block img-fluid" src="assets/img/splash/the_twinz.jpg" alt="The Twinz &rsquo;r Inn with Stacy Artice &amp; Tracy Richardson">
             <div class="carousel-item-content" id="carousel-the_twinz">
               <span>
-                Our show will be about other businesses coming in and talking about their business and 
+                Our show will be about other businesses coming in talking about their business and 
                 how are they a benefit to the community.
               </span>
               <div class="carousel-listen_now">
@@ -106,6 +132,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -121,6 +150,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -129,13 +161,17 @@
             <img class="d-block img-fluid" src="assets/img/splash/hustle.jpg" alt="Hustle &amp; Love with Cortez and Arletha Thorton">
             <div class="carousel-item-content" id="carousel-hustle">
               <span>
-                Hustle In Love! The family that hustles together stays together.
+                Hustle In Love! The family that hustles together stays together. This budding power couple let's you into the 
+                hearts and minds of entrepreneurs in love.
               </span>
               <div class="carousel-listen_now">
                 <span>Listen Now</span>
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -143,11 +179,18 @@
             </div>
             <img class="d-block img-fluid" src="assets/img/splash/agree.jpg" alt="Agree to Disagree with Jamel Johnson, Tyree Thomas &amp; Cee Ren&#233;e">
             <div class="carousel-item-content" id="carousel-agree">
+              <!-- <span>
+                Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
+                sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
+              </span> -->
               <div class="carousel-listen_now">
                 <span>Listen Now</span>
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>    
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -164,6 +207,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>    
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -179,6 +225,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>
           <div class="carousel-item">
             <div id="link-listen_now">
@@ -194,6 +243,9 @@
                 <a href="#" title="Listen Now" onclick="routeToShow();"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
               </div>
             </div>
+            <!-- <div id="email_newsletter">
+              <a href="#" title="Email Newsletter">Email Newsletter</a>
+            </div> -->
           </div>     
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -205,13 +257,18 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <div id="description">
-        <h3>KOVL Radio Personalities</h3>
+      <!-- <div id="description">
+        <h3>Cras condimentum pellentesque tellus, nec pretium purus dignissim</h3>
         <div id="description-border">
           <div class="description-top_border">&nbsp;</div>
           <div class="description-bottom_border">&nbsp;</div>
         </div>
-      </div>
+        <p>
+          Sed sagittis justo et felis sollicitudin faucibus. Integer a lacus mollis, pulvinar ipsum vitae, 
+          rutrum purus. Quisque lobortis ipsum sit amet justo convallis, a molestie magna feugiat. Aenean purus 
+          lorem, congue nec rhoncus in, congue eget nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+        </p>
+      </div> -->
       <div id="show_listings">
         <div class="show_listing">
           <a name="live_with_raej"></a>
@@ -219,6 +276,25 @@
             <span>Live with RaeJ</span>
           </div>
           <a href="live-with-raej" title="Live with RaeJ"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="discussions-with-dallas-live-with-raej" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div> 
+          <div class="show_listing-social_media">
+            <a href="https://www.facebook.com/profile.php?id=100008873620130" title="Facebook" target="_blank"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="https://twitter.com/1raejohnson" title="Twitter" target="_blank"><img src="assets/img/social/twitter.png" width="58" height="47" alt="Twitter" /></a>
+            <a href="https://instagram.com/johnsonraej" title="Instagram" target="_blank"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="the-easy-treatment-lounge"></a>
@@ -226,6 +302,25 @@
             <span>The Easy Treatment Lounge</span>
           </div>
           <a href="the-easy-treatment-lounge" title="The Easy Treatment Lounge"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="private-times"></a>
@@ -233,6 +328,25 @@
             <span>Private Times</span>
           </div>
           <a href="private-times" title="Private Times"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="the-twinz-r-inn"></a>
@@ -240,6 +354,25 @@
             <span>The Twinz &rsquo;R Inn</span>
           </div>
           <a href="the-twinz-r-inn" title="The Twinz &rsquo;R Inn"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="truth-muzic"></a>
@@ -247,6 +380,25 @@
             <span>Truth Muzic</span>
           </div>
           <a href="truth-muzic" title="Truth Muzic"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="hustle-in-love"></a>
@@ -254,6 +406,25 @@
             <span>Hustle &amp; Love</span>
           </div>
           <a href="hustle-in-love" title="Hustle in Love"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="agree-to-disagree"></a>
@@ -261,6 +432,25 @@
             <span>Agree to Disagree</span>
           </div>
           <a href="agree-to-disagree" title="Agree to Disagree"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="the-queen-g-live-experience"></a>
@@ -268,6 +458,25 @@
             <span>The Queen G Live Experience</span>
           </div>
           <a href="the-queen-g-live-experience" title="The Queen G Live Experience"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="travel-time-with-travis"></a>
@@ -275,6 +484,25 @@
             <span>Travel Time with Travis</span>
           </div>
           <a href="travel-time-with-travis" title="Travel Time with Travis"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
         <div class="show_listing">
           <a name="fabulously-vegan"></a>
@@ -282,6 +510,25 @@
             <span>Fabulously Vegan</span>
           </div>
           <a href="fabulously-vegan" title="Fabulously Vegan"></a>
+          <!-- <div class="show_listing-actions">
+            <div class="show_listing-listen_now">
+              <span>Listen Now</span>
+              <a href="#" title="Listen Now"><img src="assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+            </div>
+            <div class="show_listing-listen_archive">
+              <span>Listen to Archive</span>
+              <a href="the-easy-treatment-lounge" title="Listen To Archive"><img src="assets/img/actions/listen_archive.png" width="70" height="72" alt="Listen to Archive" /></a>
+            </div>
+          </div>
+          <div id="show_listing-border">
+            <div class="show_listing-top_border">&nbsp;</div>
+            <div class="show_listing-bottom_border">&nbsp;</div>
+          </div>
+          <div class="show_listing-social_media">
+            <a href="#" title="Facebook"><img src="assets/img/social/facebook.png" width="47" height="47" alt="Facebook" /></a>
+            <a href="#" title="YouTube"><img src="assets/img/social/youtube.png" width="112" height="47" alt="YouTube" /></a>
+            <a href="#" title="Instagram"><img src="assets/img/social/instagram.png" width="47" height="47" alt="Instagram" /></a>
+          </div> -->
         </div>
       </div>
       <div class="footer-logo">
