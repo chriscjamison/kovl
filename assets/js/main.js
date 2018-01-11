@@ -35,8 +35,6 @@ $(document).ready(
       ['Fabulously Vegan', 'fabulously-vegan', 'fabulously']
     ];
 
-    url_string = window.location.pathname;
-    
     header_html = "<div class=\"header-show close_menu\">\n" + 
                   "  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
                   "</div>\n";
@@ -47,12 +45,8 @@ $(document).ready(
       function (value, index) {
         var current_show = value;
 
-        if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
-          path_string = "";
-        } else {
-          path_string = "../";
-        }
-        
+        path_string = determinePathofWebpage();
+
         show_html = "<div class=\"header-show\" id=\"show-" + current_show[2] + "\">\n";
 
         if (index % 2 === 0)  {
@@ -98,6 +92,38 @@ $(document).ready(
 
     $(footer_element).html(footer_html);
 
+    var window_width = new Number();
+
+    window_width = $(window).width();
+
+    if (window_width <= 414)  {
+      var nav_logo_selector = new String();
+      var nav_logo_element = new Object();
+
+      var lower_nav_logo_selector = new String();
+      var lower_nav_logo_element = new Object();
+
+      var nav_div_selector = new String();
+      var nav_div_element = new Object();
+
+      nav_logo_selector = "nav > div.spacer-center > a > img";
+      nav_logo_element = $(nav_logo_selector);
+
+      lower_nav_logo_selector = ".nav-logo";
+      lower_nav_logo_element = $(lower_nav_logo_selector);
+
+      var path_string = new String();
+      var src_string = new String();
+
+      path_string = determinePathofWebpage();
+
+      src_string = path_string + "assets/img/logo/logo-top.png";
+
+      $(nav_logo_element).attr("src", src_string);
+
+      $(lower_nav_logo_element).remove();
+    }
+
     $("#nav-link-shows").click(
       function () {
 
@@ -135,53 +161,33 @@ function routeToShow()  {
   var listen_now_selector = new String();
   var listen_now_element = new Object();
 
-  var window_width = new Number();
+  var url_string = new String();
+  var path_string = new String();
 
   window_width = $(window).width();
 
   listen_now_selector = "#carouselExampleControls";
   listen_now_element = $(listen_now_selector);
 
-  player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
+  path_string = determinePathofWebpage();
+
+  player_html = "<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
 
   $(listen_now_element).append(player_html);
 
+}
 
-/*   if (window_width <= 375)  {
-    listen_now_selector = "#carouselExampleControls";
-    listen_now_element = $(listen_now_selector);
+function determinePathofWebpage()  {
+  var url_string = new String();
+  var path_string = new String();
 
-    player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" class=\"iframe-mobile\" id=\"iframe-media_player\"></iframe>";
-
-    $(listen_now_element).append(player_html);
+  url_string = window.location.pathname;
+  
+  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
+    path_string = "";
   } else {
-    var nav_link_to_selector = new String();
-    var nav_link_to_element = new Object();
-  
-    var nav_link_to_a_selector = new String();
-    var nav_link_to_a_element = new Object();
-  
-    var nav_div_selector = new String();
-    var nav_div_element = new Object();
-
-    listen_now_selector = ".nav-link_to.media_player";
-    listen_now_element = $(listen_now_selector);
-
-    nav_link_to_selector = ".nav-link_to";
-    nav_link_to_element = $(nav_link_to_selector);
-
-    nav_link_to_a_selector = ".nav-link_to a";
-    nav_link_to_a_element = $(nav_link_to_a_selector);
-
-    nav_div_selector = "nav > div";
-    nav_div_element = $(nav_div_selector);
-
-    $(nav_link_to_element).css("width", "8.9em");
-    $(nav_link_to_a_element).css("paddingTop", "0.4em");
-    $(nav_div_element).css("height", "3.65em");
-    
-    player_html = "<iframe src=\"media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
-    
-    $(listen_now_element).html(player_html);
+    path_string = "../";
   }
- */}
+
+  return path_string;
+}
