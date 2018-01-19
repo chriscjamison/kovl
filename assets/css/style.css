@@ -157,6 +157,10 @@ nav > div {
   text-align: right;
 }
 
+#nav-link-shows {
+  left: 2.75em;
+}
+
 .header-show a, 
 nav > div > a {
   text-decoration: underline;
@@ -246,7 +250,7 @@ iframe#iframe-media_player {
 }
 
 #carousel-easy_treatment {
-  width: 20.25em;
+  width: 21.25em;
   top: 12.25em;
   left: 6.25em;
 }
@@ -282,7 +286,8 @@ iframe#iframe-media_player {
 }
 
 #carousel-truth_muzic .carousel-listen_now, 
-#carousel-hustle .carousel-listen_now {
+#carousel-hustle .carousel-listen_now, 
+#carousel-monday .carousel-listen_now {
   left: 7em;
 }
 
@@ -322,6 +327,12 @@ iframe#iframe-media_player {
   width: 21em;
   top: 15em;
   left: 6.5em; 
+}
+
+#carousel-monday {
+  width: 22em;
+  bottom: 1.5em;
+  left: 7em;
 }
 
 #link-listen_now, 
@@ -381,12 +392,17 @@ h3,
 }
 
 #description-border, 
+#media_player-border, 
 #show_listing-border, 
 #social_media-border, 
 .archive-previous_eps-border {
   width: 85%;
   height: 0.31em;
   margin: 1em auto;
+}
+
+#media_player-border {
+  width: 39%;
 }
 
 #description-border {
@@ -403,6 +419,7 @@ h3,
 }
 
 .description-top_border, 
+.media_player-top_border, 
 .show_listing-top_border, 
 .social_media-top_border, 
 .archive-previous_eps-top_border {
@@ -415,6 +432,7 @@ h3,
  */
 
 .description-bottom_border, 
+.media_player-bottom_border, 
 .show_listing-bottom_border, 
 .social_media-bottom_border, 
 .archive-previous_eps-bottom_border {
@@ -531,8 +549,13 @@ h3,
   background-position-x: -600px;
 }
 
-#show_listing-fabulously + a {
+#show_listing-fabulously + a, 
+#show_listing-monday + a {
   background-image: url('../img/listings/row_4.jpg');
+}
+
+#show_listing-monday + a {
+  background-position-x: -300px;
 }
 
 .show_listing-social_media {
@@ -656,7 +679,7 @@ h3,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 23.25em;
+  height: 25em;
   background-image: url('../img/backgrounds/footer-mid.png');
   background-repeat: repeat;
 }
@@ -733,7 +756,7 @@ h3,
   }
 
   #header-shows {
-    height: 60.5em;
+    height: 66em;
   }
 
   #header-shows a {
@@ -777,10 +800,16 @@ h3,
     width: 1em;
   }
 
+  #nav-link-shows {
+    left: 0;
+  }
+
   #header-shows a, 
   nav > div > a, 
   #link-listen_now a, 
   #email_newsletter a, 
+  #description p, 
+  #show-description p, 
   .footer-archive a, 
   .footer-actions a, 
   .footer-border_bot_med {
@@ -833,8 +862,13 @@ h3,
     margin-top: 1.5em;
   }
 
+  #description p, 
+  #show-description p {
+    width: 100%;
+  }
+
   .footer-border_mid {
-    height: 25.75em;
+    height: 27.5em;
     background-repeat: repeat;
   }
 
@@ -846,7 +880,7 @@ h3,
 
   .footer-archive {
     width: 100%;
-    height: 21em;
+    height: 22.75em;
   }
 
   .footer-actions {
@@ -956,12 +990,17 @@ h3,
     margin-top: 1em;
   }
 
+  #media_player-border {
+    width: 39%;
+  }
+  
   #description-border {
     width: 48%;
   }
 
-  #description p {
-    width: 60%;
+  #description p, 
+  #show-description p {
+    width: 100%;
   }
 
   .show_listing-description {
@@ -1019,6 +1058,7 @@ h3,
   #nav-link-shows {
     height: 3.1em;
     top: 1.4em;
+    left: 0;
   }
 
   .spacer-center {
@@ -1242,7 +1282,8 @@ h3,
     line-height: 1.75em;
   }
 
-  #description-border {
+  #description-border, 
+  #media_player-border {
     width: 32.25em;
   }
 
@@ -1281,17 +1322,17 @@ h3,
   }
 }
 
-@media screen and (min-width: 1044px) and (max-width: 1290px) {
+@media screen and (min-width: 1044px) and (max-width: 1280px) {
   #header-shows {
     height: 33.5em;
   }
 
   .nav-spacer {
-    width: 18.8em;
+    width: 23.7%;
   }
 
   .spacer-center {
-    width: 36.75%;
+    width: 36.6%;
   }
 
   .nav-link_to {
@@ -1394,6 +1435,16 @@ h3,
   }
 }
 
+@media screen and (min-width: 1281px) and (max-width: 1365px) {
+  .nav-spacer {
+    width: 24.5%;
+  }
+  
+/*   .spacer-center {
+    width: 33.4%;
+  }
+ */}
+
 @media screen and (min-width: 1590px) and (max-width: 1910px) {
   .nav-spacer {
     width: 29.25%;
@@ -1445,9 +1496,8 @@ h3,
   }
   
   #header-shows {
-    height: 33.5em;
+    height: 37.25em;
   }
-  
 
   .show_listing-description {
     transform: translate(0, -10%);

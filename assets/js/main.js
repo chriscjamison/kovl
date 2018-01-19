@@ -32,7 +32,8 @@ $(document).ready(
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
       ['Travel Time with Travis', 'travel-time-with-travis', 'travel_time'], 
-      ['Fabulously Vegan', 'fabulously-vegan', 'fabulously']
+      ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
+      ['Monday Motivation!', 'monday-motivation', 'monday']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
@@ -171,7 +172,12 @@ function routeToShow()  {
 
   path_string = determinePathofWebpage();
 
-  player_html = "<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
+  player_html = "<h3>Live Radio</h3>\n" + 
+                "<div id=\"media_player-border\">\n" + 
+                "  <div class=\"media_player-top_border\">&nbsp;</div>\n" + 
+                "  <div class=\"media_player-bottom_border\">&nbsp;</div>\n" + 
+                "</div>\n" + 
+                "<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
 
   $(listen_now_element).append(player_html);
 
