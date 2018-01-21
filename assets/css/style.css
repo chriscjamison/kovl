@@ -10,7 +10,8 @@ h3,
 #description p, 
 #show-description p,
 .show_listing-listen_now span, 
-.show_listing-listen_archive span,  
+.show_listing-listen_archive span, 
+.show_listing-showtime, 
 .footer-archive, 
 .footer-actions, 
 #show-description p, 
@@ -467,6 +468,7 @@ h3,
   margin: 3em;
   display: inline-block;
   text-align: center;
+  vertical-align: top;
 }
 /* A <div> which holds the HTML content for an individual show. */
 
@@ -556,6 +558,12 @@ h3,
 
 #show_listing-monday + a {
   background-position-x: -300px;
+}
+
+.show_listing-showtime {
+  position: relative;
+  top: 0.75em;
+  font-family: 
 }
 
 .show_listing-social_media {
