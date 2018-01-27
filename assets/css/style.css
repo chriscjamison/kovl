@@ -9,8 +9,7 @@ nav,
 h3, 
 #description p, 
 #show-description p,
-.show_listing-listen_now span, 
-.show_listing-listen_archive span,  
+.show_listing-showtime,  
 .footer-archive, 
 .footer-actions, 
 #show-description p, 
@@ -449,15 +448,9 @@ h3,
   margin: 3em;
   display: inline-block;
   text-align: center;
+	vertical-align: top;
 }
 /* A <div> which holds the HTML content for an individual show. */
-
-.show_listing:nth-child(1), 
-.show_listing:nth-child(2), 
-.show_listing:nth-child(3) {
-  margin-top: 0;
-} 
-
 
 .show_listing-description {
   width: 15em;
@@ -488,6 +481,10 @@ h3,
   border: 10px solid #2f3e55;
 }
 /* A <img> which contains a splash image within each show listing */
+
+.show_listing-showtime {
+	margin-top: 0.75em;
+}
 
 #show_listing-live_with_raej + a, 
 #show_listing-easy_treatment + a, 
@@ -531,8 +528,13 @@ h3,
   background-position-x: -600px;
 }
 
-#show_listing-fabulously + a {
+#show_listing-fabulously + a, 
+#show_listing-monday + a {
   background-image: url('../img/listings/row_4.jpg');
+}
+
+#show_listing-monday + a {
+ background-position-x: -300px;
 }
 
 .show_listing-social_media {
@@ -656,7 +658,7 @@ h3,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 23.25em;
+  height: 25em;
   background-image: url('../img/backgrounds/footer-mid.png');
   background-repeat: repeat;
 }
@@ -897,54 +899,6 @@ h3,
     height: 13em;
   }
 
-/*   #carousel-live_with_raej {
-    width: 8em;
-    top: 6em;
-    left: 17.25em; 
-  }
-
-  .carousel-item-content {
-    display: none;
-  }
-
-  #carousel-easy_treatment {
-    width: 10.7em;
-    top: 5.25em;
-    left: 2.75em;
-  }
-
-  #carousel-discussions > .carousel-listen_now, 
-  #carousel-easy_treatment > .carousel-listen_now {
-    margin-left: 0;
-  }
-
-  .carousel-listen_now, 
-  .carousel-listen_archive, 
-  .archive-listen_now {
-    width: 7.85em;
-    height: 8.5em;
-  }
-
-  .carousel-listen_archive {
-    width: 10.7em;
-  }
-
-  .carousel-listen_now a, 
-  .carousel-listen_archive a {
-    width: 5em;
-    margin-left: 0.5em;
-  }
-
-  .carousel-listen_archive a {
-    margin: 0.5em 1em 0.5em 2em;
-  }
-
-  .carousel-listen_now img, 
-  .carousel-listen_archive img {
-    width: 5em;
-    height: 5em;
-  }
- */
   #link-listen_now, 
   #email_newsletter {
     top: 88%;
@@ -978,27 +932,6 @@ h3,
 }
 
 @media screen and (min-width: 412px) and (max-width: 620px) { 
-  /* #header-shows a {
-    display: inline-block;
-  }
-
-  .show-left {
-    width: 87%;
-  }
-
-  .show-right {
-    margin: 2em 0 0 1.75em;
-  }
-
-  #show-easy_treatment {
-    width: 89%;
-  }
-
-  #show-easy_treatment > a:nth-child(2) {
-    width: 45%;
-    vertical-align: middle;
-  } */
-
   nav {
     height: 4.5em;
   }
@@ -1074,34 +1007,17 @@ h3,
   .show_listing-description + img {
     width: 18.6em;
   }
+}
 
-/*   .footer-border_mid {
-    height: 28.25em;
-    background-repeat: repeat;
-  }
-
-  .footer-archive,
-  .footer-actions {
-    float: none;
-  }
-
-  .footer-archive {
-    height: 23em;
-  }
-
-  .footer-actions {
-    text-align: left;
-  }
- */}
-
+@media screen and (min-width: 760px) and (max-width: 1366px) {
+	.show_listing {
+		margin: 0 0 3em 0;
+	}
+}
+	
 @media screen and (min-width: 760px) and (max-width: 1034px) {
   nav {
     height: 6em;
-  }
-
-  nav > ul > li:nth-child(5), 
-  nav > ul > li:nth-child(6) {
-    display: none;
   }
 
   .spacer-center {
@@ -1252,10 +1168,6 @@ h3,
     margin-right: auto;
   }
 
- /*  .show_listing {
-    padding-bottom: 3em;
-  } */
-
   .show_listing-description {
     transform: translate(-7%, -75%);
   }
@@ -1283,20 +1195,24 @@ h3,
 
 @media screen and (min-width: 1044px) and (max-width: 1290px) {
   #header-shows {
-    height: 33.5em;
+    height: 37em;
   }
 
   .nav-spacer {
-    width: 18.8em;
+    width: 1em;
   }
 
   .spacer-center {
-    width: 36.75%;
+    width: 36.6%;
   }
 
   .nav-link_to {
-    width: 6.25em;
+    width: 30.3%;
   }
+	
+	#nav-link-shows {
+		left: 83%;
+	}
   
   .nav-logo {
     height: 1em;
@@ -1324,9 +1240,9 @@ h3,
     right: 9.5em;
   }
 
-  .show_listing:last-of-type {
+  /*.show_listing:last-of-type {
     margin-top: 3.5em;
-  }
+  }*/
 
   .show_listing-description {
     transform: translate(-1%, -20%);
@@ -1349,7 +1265,7 @@ h3,
   }
 
   .nav-spacer {
-    width: 21em;
+    width: 5em;
   }
 
   .spacer-center {
@@ -1378,11 +1294,6 @@ h3,
     right: 10.5em;
   }
 
-/*   #carousel-live_with_raej > .carousel-listen_now, 
-  #carousel-easy_treatment > .carousel-listen_now {
-    margin-left: 6em;
-  }
- */
   .show_listing-description {
     transform: translate(-2%, -20%);
   }

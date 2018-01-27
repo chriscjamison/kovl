@@ -32,7 +32,8 @@ $(document).ready(
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
       ['Travel Time with Travis', 'travel-time-with-travis', 'travel_time'], 
-      ['Fabulously Vegan', 'fabulously-vegan', 'fabulously']
+      ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
+			['Monday Motivation!', 'monday-motivation', 'monday']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
@@ -124,6 +125,21 @@ $(document).ready(
       $(lower_nav_logo_element).remove();
     }
 
+		/*if (window_width > 768 && window_width <= 1366)  {
+			var show_listing_selector;
+			var show_listing_element = {};
+
+			show_listing_selector = ".show_listing:odd";
+			show_listing_element = $(show_listing_selector);
+			
+			var show_listing_col_class;
+			
+			show_listing_col_class = ".show_listing-left_col";
+			
+			$(show_listing_element).addClass(show_listing_col_class);
+		}
+		*/
+		
     $("#nav-link-shows").click(
       function () {
 
@@ -183,7 +199,7 @@ function determinePathofWebpage()  {
 
   url_string = window.location.pathname;
   
-  if (url_string === "/" || url_string === "/index.htm")  {
+  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
     path_string = "";
   } else {
     path_string = "../";
