@@ -4,7 +4,7 @@
 nav, 
 .carousel-listen_now > span, 
 .carousel-listen_archive > span, 
-#link-listen_now a, 
+.link-listen_now a, 
 #email_newsletter a, 
 h3, 
 #description p, 
@@ -190,7 +190,7 @@ iframe#iframe-media_player {
   color: #2f3e55;
 }
 
-#link-listen_now {
+.link-listen_now {
   display: none;
 }
 
@@ -323,7 +323,7 @@ iframe#iframe-media_player {
   left: 6.5em; 
 }
 
-#link-listen_now, 
+.link-listen_now, 
 #email_newsletter {
   width: 10.75em;
   height: 3.5em;
@@ -333,11 +333,11 @@ iframe#iframe-media_player {
   border: 1px solid #2f3e55;
 }
 
-#link-listen_now {
+.link-listen_now {
   width: 8em;
 }
 
-#link-listen_now a, 
+.link-listen_now a, 
 #email_newsletter a {
   padding: 0.75em 1em;
   display: block;
@@ -781,7 +781,7 @@ h3,
 
   #header-shows a, 
   nav > div > a, 
-  #link-listen_now a, 
+  .link-listen_now a, 
   #email_newsletter a, 
   .footer-archive a, 
   .footer-actions a, 
@@ -808,7 +808,7 @@ h3,
     display: none;
   }
 
-  #link-listen_now {
+  .link-listen_now {
     width: 7.1em;
     height: 3.2em;
     display: block;
@@ -899,7 +899,7 @@ h3,
     height: 13em;
   }
 
-  #link-listen_now, 
+  .link-listen_now, 
   #email_newsletter {
     top: 88%;
     left: 32.75%;
@@ -983,7 +983,7 @@ h3,
     height: 16em;
   }
 
-  #link-listen_now, 
+  .link-listen_now, 
   #email_newsletter {
     top: 90%;
     left: 35.1%;
@@ -1059,7 +1059,7 @@ h3,
     height: 27.75em;
   }
 
-  #link-listen_now {
+  .link-listen_now {
     display: block;
   }
 
@@ -1118,7 +1118,7 @@ h3,
     height: 4.1em;
   }
 
-  #link-listen_now, 
+  .link-listen_now, 
   #email_newsletter {
     left: 40.5%;
   }
