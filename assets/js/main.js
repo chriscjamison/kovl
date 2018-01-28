@@ -40,7 +40,11 @@ $(document).ready(
                   "  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
                   "</div>\n";
 
-    footer_html = "<span>Archive</span>\n";
+    footer_html = "<span>Shows</span>\n";
+		
+		var window_width = new Number();
+
+    window_width = $(window).width();
     
     show_info_Array.forEach( 
       function (value, index) {
@@ -49,14 +53,20 @@ $(document).ready(
         path_string = determinePathofWebpage();
 
         show_html = "<div class=\"header-show\" id=\"show-" + current_show[2] + "\">\n";
-
-        if (index % 2 === 0)  {
-          show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n" + 
-                                  "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n";            
-        } else {
-          show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n" + 
-                                  "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
-        }
+				
+				if (window_width <= 1024)	{
+					if (index % 2 === 0)  {
+						show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n" + 
+																		"  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n";            
+					} else {
+						show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n" + 
+																		"  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
+					}	
+				}	else {
+					show_html = show_html + "  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\"><img src=\"" + path_string + "assets/img/splash/" + current_show[2] + ".jpg\" width=\"140\" height=\"75\" alt=\"" + current_show[0] + "\" /></a>\n" + 
+																		"  <a href=\"" + path_string + current_show[1] + "/\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
+				}
+        
 
         show_html = show_html + "</div>\n";
 
@@ -69,16 +79,23 @@ $(document).ready(
     );
 
     $(header_element).html(header_html);
+		
+		if (window_width <= 1024)	{
+			show_selector = ".header-show:even";
+			show_element = $(show_selector);
 
-    show_selector = ".header-show:even";
-    show_element = $(show_selector);
+			$(show_element).addClass("show-right");
 
-    $(show_element).addClass("show-right");
+			show_selector = ".header-show:odd";
+			show_element = $(show_selector);
 
-    show_selector = ".header-show:odd";
-    show_element = $(show_selector);
-
-    $(show_element).addClass("show-left");
+			$(show_element).addClass("show-left");
+		} else {
+			show_selector = ".header-show";
+			show_element = $(show_selector);
+			
+			$(show_element).addClass("display-wide");
+		}
 
     show_selector = ".header-show:nth-child(1)";
     show_element = $(show_selector);
@@ -93,11 +110,7 @@ $(document).ready(
 
     $(footer_element).html(footer_html);
 
-    var window_width = new Number();
-
-    window_width = $(window).width();
-
-    if (window_width <= 414)  {
+    if (window_width <= 1024)  {
       var nav_logo_selector = new String();
       var nav_logo_element = new Object();
 
@@ -125,20 +138,7 @@ $(document).ready(
       $(lower_nav_logo_element).remove();
     }
 
-		/*if (window_width > 768 && window_width <= 1366)  {
-			var show_listing_selector;
-			var show_listing_element = {};
-
-			show_listing_selector = ".show_listing:odd";
-			show_listing_element = $(show_listing_selector);
-			
-			var show_listing_col_class;
-			
-			show_listing_col_class = ".show_listing-left_col";
-			
-			$(show_listing_element).addClass(show_listing_col_class);
-		}
-		*/
+		
 		
     $("#nav-link-shows").click(
       function () {
@@ -199,7 +199,7 @@ function determinePathofWebpage()  {
 
   url_string = window.location.pathname;
   
-  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
+  if (url_string === "/" || url_string === "/index.htm")  {
     path_string = "";
   } else {
     path_string = "../";
