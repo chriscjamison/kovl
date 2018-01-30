@@ -31,7 +31,7 @@ $(document).ready(
       ['Hustle in Love', 'hustle-in-love', 'hustle'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
-      ['Travel Time with Travis', 'travel-time-with-travis', 'travel_time'], 
+      ['The King &amp; I All Sports Show', 'the-king-and-i-all-sports-show', 'the_king'], 
       ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
 			['Monday Motivation!', 'monday-motivation', 'monday']
     ];
@@ -187,7 +187,8 @@ function routeToShow()  {
 
   path_string = determinePathofWebpage();
 
-  player_html = "<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
+  player_html = "<h3>KOVL LiveStream</h3>\n" + 
+								"<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
 
   $(listen_now_element).append(player_html);
 
