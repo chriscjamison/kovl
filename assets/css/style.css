@@ -13,8 +13,11 @@ h3,
 .footer-archive, 
 .footer-actions, 
 #content-form-contact a, 
-#form-contact input, 
+#input-contact-full_name, 
+#input-contact-email_address, 
 #form-contact textarea, 
+#input-contact-reset, 
+#input-contact-submit, 
 #show-description p, 
 #archive h5, 
 #archive h6 {
@@ -326,7 +329,9 @@ iframe#iframe-media_player {
 
 .link-listen_now a, 
 #email_newsletter a, 
-#content-form-contact a {
+#content-form-contact a, 
+#input-contact-reset, 
+#input-contact-submit {
   padding: 0.75em 1em;
   display: block;
   background-color: #a5bcbb;
@@ -745,20 +750,48 @@ h3,
 
 #contact-bkgrnd {
 	background-color: #2b2c30;
-	opacity: 0.7;
+	opacity: 0.8;
 	z-index: 1;
 }
 
 #form-contact {
-	width: 25em;
-	height: 25em;
+	width: 20.25em;
+	height: 29.75em;
 	margin: auto;
 	position: relative;
 	top: 1em;
 }
 
+#input-contact-full_name, 
+#input-contact-email_address, 
+#form-contact textarea {
+	width: 20.25em;
+}
+
+#input-contact-reset, 
+#input-contact-submit {
+	margin-top: 0.5em;
+	display: inline-block;
+}
+
+#input-contact-reset:hover, 
+#input-contact-submit:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
 #form-contact label {
-	color: #a2a2a1
+	margin: 1em 0 0.25em 0;
+	display: block;
+	color: #a5bcbb;
+}
+
+#input-contact-full_name, 
+#input-contact-email_address,  
+#form-contact textarea {
+	padding: 0.5em;
+	color: #a2a2a1;
 }
 
 
