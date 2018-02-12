@@ -1,23 +1,21 @@
 $(document).ready( 
   function () {
-    var header_selector = new String();
-    var show_selector = new String();
-    var footer_selector = new String();
+    var header_selector;
+    var show_selector;
+    var footer_selector;
 
-    var header_element = new Object();
-    var show_element = new Object();
-    var footer_element = new Object();
+    var header_element = {};
+    var show_element = {};
+    var footer_element = {};
 
-    var show_info_Array = new Array;
+    var show_info_Array;
 
-    var path_string = new String();
+    var path_string;
 
-    var url_string = new String();
-
-    var show_html = new String();
-    var header_html = new String;
-    var footer_html = new String();
-    var archive_html = new String();
+		var show_html;
+    var header_html;
+    var footer_html;
+    var archive_html;
 
     header_selector = "#header-shows";
     header_element = $(header_selector);
@@ -42,7 +40,7 @@ $(document).ready(
 
     footer_html = "<span>Shows</span>\n";
 		
-		var window_width = new Number();
+		var window_width;
 
     window_width = $(window).width();
     
@@ -111,14 +109,11 @@ $(document).ready(
     $(footer_element).html(footer_html);
 
     if (window_width <= 1024)  {
-      var nav_logo_selector = new String();
-      var nav_logo_element = new Object();
+      var nav_logo_selector;
+      var nav_logo_element = {};
 
-      var lower_nav_logo_selector = new String();
-      var lower_nav_logo_element = new Object();
-
-      var nav_div_selector = new String();
-      var nav_div_element = new Object();
+      var lower_nav_logo_selector;
+      var lower_nav_logo_element = {};
 
       nav_logo_selector = "nav > div.spacer-center > a > img";
       nav_logo_element = $(nav_logo_selector);
@@ -126,8 +121,7 @@ $(document).ready(
       lower_nav_logo_selector = ".nav-logo";
       lower_nav_logo_element = $(lower_nav_logo_selector);
 
-      var path_string = new String();
-      var src_string = new String();
+      var src_string;
 
       path_string = determinePathofWebpage();
 
@@ -143,8 +137,8 @@ $(document).ready(
     $("#nav-link-shows").click(
       function () {
 
-        var shows_menu_selector = new String();
-        var shows_menu_element = new Object();
+        var shows_menu_selector;
+        var shows_menu_element = {};
     
         shows_menu_selector = "#header-shows";
         shows_menu_element = $(shows_menu_selector);
@@ -156,8 +150,8 @@ $(document).ready(
 
     $(".close_menu a").click(
       function () {
-        var shows_menu_selector = new String();
-        var shows_menu_element = new Object();
+        var shows_menu_selector;
+        var shows_menu_element = {};
     
         shows_menu_selector = "#header-shows";
         shows_menu_element = $(shows_menu_selector);
@@ -165,6 +159,49 @@ $(document).ready(
         $(shows_menu_element).css("display", "none");
       }
     );
+		
+		$("#input-contact-full_name, #input-contact-email_address, #input-contact-message").focusin(
+			function () {
+				var input_element = {};
+				var color_css = {};
+				
+				input_element = this;
+				
+				color_css = {
+					color: "#000"
+				};
+				
+				verifyFields(input_element, "focus");
+				
+			}
+		);
+		
+		$("#input-contact-full_name, #input-contact-email_address, #input-contact-message").blur(
+			function () {
+				var input_element = {};
+				var color_css = {};
+				
+				input_element = this;
+				
+				verifyFields(input_element, "blur");
+								
+				$(input_element).css(color_css);
+			}
+		);
+		
+		$("#input-contact-reset").click(
+			function ()	{
+				var full_name_selector;
+				var full_name_element = {};
+				
+				var email_selector;
+				var email_element = {};
+				
+				var message_selector;
+				var message_element = {};
+				
+				verifyFields(input_element, "focus");
+			})
   }
 );
 
@@ -172,13 +209,12 @@ $(document).ready(
 
 function routeToShow()  {
   
-  var player_html = new String();
+  var player_html;
 
-  var listen_now_selector = new String();
-  var listen_now_element = new Object();
+  var listen_now_selector;
+  var listen_now_element = {};
 
-  var url_string = new String();
-  var path_string = new String();
+  var path_string;
 
   window_width = $(window).width();
 
@@ -195,8 +231,8 @@ function routeToShow()  {
 }
 
 function determinePathofWebpage()  {
-  var url_string = new String();
-  var path_string = new String();
+  var url_string;
+  var path_string;
 
   url_string = window.location.pathname;
   
@@ -212,7 +248,7 @@ function determinePathofWebpage()  {
 function loadContactForm()	{
 	
 	var div_selector;
-	var div_element = new Object();
+	var div_element = {};
 	
 	div_selector = "#content-form-contact, #contact-bkgrnd";
 	div_element = $(div_selector);
@@ -222,10 +258,122 @@ function loadContactForm()	{
 
 function closeContactForm()	{
 	var div_selector;
-	var div_element = new Object();
+	var div_element = {};
 	
 	div_selector = "#content-form-contact, #contact-bkgrnd";
 	div_element = $(div_selector);
 	
 	$(div_element).css("display", "none");
+}
+
+function verifyFields(input_element, field_status) {
+	var color_base_css = {};
+	var color_valid_css = {};
+	var color_error_css = {};
+	
+	color_base_css = {
+		color: "#a2a2a1"
+	};
+	
+	color_valid_css = {
+		color: "#000"
+	};
+	
+	color_error_css = {
+		color: "#AA3939"
+	};
+//console.log("$(input_element).attr(\"id\") = " + $(input_element).attr("id"));
+//console.log("$(input_element).val().length = " + $(input_element).val().length);
+//	console.log("$(input_element).val() = " + $(input_element).val());
+	
+	switch ($(input_element).attr("id")) {
+		case "input-contact-full_name":
+			if ($(input_element).val() === "Please enter your First and Last Name") {
+				clearAndResetData(input_element, color_valid_css);
+			}
+			
+			if ($(input_element).val() === "First and Last Name") {
+				if (field_status === "focus")	{
+					clearAndResetData(input_element, color_valid_css);
+				}	else {
+					$(input_element).css(color_base_css);
+				}
+			}
+			
+			if ($(input_element).val().length === 0) {
+				if (field_status === "blur")	{
+					$(input_element).css(color_base_css);
+					$(input_element).val("First and Last Name");	
+				}
+			} 
+			
+			if ($(input_element).val() !== "First and Last Name" && 
+					field_status === "blur")	{
+					validateData(input_element, color_valid_css, color_error_css);
+			}
+		break; 
+
+		case "input-contact-email_address":
+			if ($(input_element).val().length < 5 ||  
+					$(input_element).val() !== "____@_______.___") {
+				$(input_element).css(color_base_css);
+				$(input_element).val("____@_______.___");
+			} else {
+				if ($(input_element).val() === "____@_______.___" && 
+					  field_status === "focus") {
+					$(input_element).val("");
+				}
+				
+				$(input_element).css(color_valid_css);
+			}
+		break;
+
+		case "input-contact-message":
+			if ($(input_element).val() === "Type your message here") {
+				if (field_status === "focus")	{
+					$(input_element).val("");
+					$(input_element).css(color_valid_css);
+				}	else {
+					$(input_element).css(color_base_css);
+				}
+			}
+			
+			if ($(input_element).val().length === 0) {
+				if (field_status === "blur")	{
+					$(input_element).css(color_base_css);
+					$(input_element).val("Type your message here");	
+				}
+			} 
+			
+			if ($(input_element).val() !== "Type your message here") {
+				$(input_element).css(color_valid_css);
+			}
+		break;
+	}
+}
+
+function validateData(input_element, color_valid_css, color_error_css)	{
+	var search_string;
+	var search_index_num;
+/*console.log("validateData");
+console.log("$(input_element).attr(\"id\") = " + $(input_element).attr("id"));
+*/	switch ($(input_element).attr("id"))	{
+		case "input-contact-full_name": 
+			
+			search_string = " ";
+			search_index_num = $(input_element).val().indexOf(search_string);
+
+			if (search_index_num > 1)	{
+				$(input_element).css(color_valid_css);
+			}	else {
+				$(input_element).css(color_error_css);
+				$(input_element).val("Please enter your First and Last Name");
+			}
+		break;
+	}
+}
+
+function clearAndResetData(input_element, color_valid_css)	{
+	$(input_element).val("");
+	$(input_element).css(color_valid_css);
 }
