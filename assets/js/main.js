@@ -208,3 +208,24 @@ function determinePathofWebpage()  {
 
   return path_string;
 }
+
+function loadContactForm()	{
+	
+	var div_selector;
+	var div_element = new Object();
+	
+	div_selector = "#content-form-contact, #contact-bkgrnd";
+	div_element = $(div_selector);
+	
+	$(div_element).css("display", "block");
+}
+
+function closeContactForm()	{
+	var div_selector;
+	var div_element = new Object();
+	
+	div_selector = "#content-form-contact, #contact-bkgrnd";
+	div_element = $(div_selector);
+	
+	$(div_element).css("display", "none");
+}
