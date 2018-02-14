@@ -12,12 +12,19 @@ h3,
 .show_listing-showtime,  
 .footer-archive, 
 .footer-actions, 
+#content-form-contact a, 
+#input-contact-full_name, 
+#input-contact-email_address, 
+#form-contact textarea, 
+#input-contact-reset, 
+#input-contact-submit, 
 #show-description p, 
 #archive h5, 
 #archive h6 {
   font-family: 'abril-text', serif;
 }
 
+#content-form-contact label, 
 .carousel-item-content, 
 .show_listing-description, 
 #archive-most_recent_ep-description span, 
@@ -108,13 +115,6 @@ nav > div {
   border-left: none;
   border-right: none;
 }
-
-/* nav > div > a {
-  padding-top: 1.13em;
-  display: inline-block;
-  list-style-type: none;
-  vertical-align: top;
-} */
 
 .nav-link_to a {
   height: 2.75em;
@@ -297,8 +297,8 @@ iframe#iframe-media_player {
 
 #carousel-the_king {
   width: 21em;
-  top: 15.25em;
-  right: 5.5em; 
+  top: 21.75em;
+  right: 6.25em; 
 }
 
 #carousel-fabulously {
@@ -328,7 +328,10 @@ iframe#iframe-media_player {
 }
 
 .link-listen_now a, 
-#email_newsletter a {
+#email_newsletter a, 
+#content-form-contact a, 
+#input-contact-reset, 
+#input-contact-submit {
   padding: 0.75em 1em;
   display: block;
   background-color: #a5bcbb;
@@ -361,8 +364,7 @@ h3,
 }
 
 #show-description p.description-time {
-  margin-bottom: 0;
-	text-align: center;
+  text-align: center;
 }
 
 #description p:first-of-type, 
@@ -719,6 +721,79 @@ h3,
   font-weight: 400 !important;
   text-align: justify !important;
 }
+/* Formats paragraphs displayed on the About KOVL page. */
+
+#content-form-contact, 
+#contact-confirmation_message, 
+#contact-bkgrnd {
+	display: none;
+}
+
+#content-form-contact, 
+#contact-bkgrnd {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#content-form-contact {
+	padding: 3em;
+}
+
+#content-form-contact a {
+	display: block;
+	float: right;
+}
+
+#contact-bkgrnd {
+	background-color: #2b2c30;
+	opacity: 0.8;
+	z-index: 1;
+}
+
+#form-contact {
+	width: 20.25em;
+	height: 29.75em;
+	margin: auto;
+	position: relative;
+}
+
+#input-contact-full_name, 
+#input-contact-email_address, 
+#form-contact textarea {
+	width: 20.25em;
+}
+
+#input-contact-reset, 
+#input-contact-submit {
+	margin-top: 0.5em;
+	display: inline-block;
+}
+
+#input-contact-reset:hover, 
+#input-contact-submit:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+#form-contact label {
+	margin: 1em 0 0.25em 0;
+	display: block;
+	color: #a5bcbb;
+}
+
+#input-contact-full_name, 
+#input-contact-email_address,  
+#form-contact textarea {
+	padding: 0.5em;
+	border: 3px solid #a5bcbb;
+	color: #a2a2a1;
+}
+
 
 @media screen and (min-width: 310px) and (max-width: 414px) {
   h3 {
@@ -726,7 +801,7 @@ h3,
   }
 
   #header-shows {
-    height: 66.25em;
+    height: 68.25em;
   }
 
   #header-shows a {
@@ -740,7 +815,9 @@ h3,
   }
 
   .show-right {
+		width: 100%;
     margin: 0 0 0 0.4em;
+		text-align: left;
   }
 
   .show-left > a:nth-child(2), 
@@ -842,7 +919,7 @@ h3,
 
   .footer-archive {
     width: 100%;
-    height: 21em;
+    height: 22em;
   }
 
   .footer-actions {
@@ -852,6 +929,10 @@ h3,
 	#description p, 
 	#show-description p {
 		width: 85%;
+	}
+	
+	#show-desciption p.description-time {
+		margin-bottom: 0;
 	}
 
 }
@@ -954,7 +1035,7 @@ h3,
   }
 
   .spacer-center {
-    width: 59.8%;
+    width: 58%;
   }
 
   .nav-logo img {
@@ -963,12 +1044,12 @@ h3,
   }
 
   .container {
-    width: 25.9em;
+    width: 100%;
     top: 5.5em;
   }
 
   #carouselExampleControls {
-    width: 24em;
+    width: 23em;
     position: relative;
     margin: 0 auto;
   }
@@ -985,7 +1066,7 @@ h3,
   .link-listen_now, 
   #email_newsletter {
     top: 90%;
-    left: 35.1%;
+    left: 34.5%;
   }
 
   #description, 
@@ -1006,6 +1087,10 @@ h3,
   .show_listing-description + img {
     width: 18.6em;
   }
+	
+	#show-desciption p.description-time {
+		margin-bottom: 0;
+	}
 }
 
 @media screen and (min-width: 760px) and (max-width: 1366px) {
@@ -1096,7 +1181,7 @@ h3,
 
   .link-listen_now {
     display: block;
-		left: 40.5%;
+		left: 39%;
   }
 
   .img-fluid {
@@ -1154,11 +1239,6 @@ h3,
 		bottom: 8em;
 	}
   
-  /*.link-listen_now, 
-  #email_newsletter {
-    left: 40.5%;
-  }*/
-
   #show-description {
     height: inherit;
     padding: 2em 2em 0 2em;
@@ -1218,6 +1298,10 @@ h3,
   .footer-archive {
     width: 22em;
   }
+	
+	#show-desciption p.description-time {
+		margin-bottom: 0;
+	}
 }
 
 @media screen and (min-width: 1044px) and (max-width: 1290px) {
