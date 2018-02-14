@@ -163,13 +163,8 @@ $(document).ready(
 		$("#input-contact-full_name, #input-contact-email_address, #input-contact-message").focusin(
 			function () {
 				var input_element = {};
-				var color_css = {};
 				
 				input_element = this;
-				
-				color_css = {
-					color: "#000"
-				};
 				
 				verifyFields(input_element, "focus");
 				
@@ -179,17 +174,14 @@ $(document).ready(
 		$("#input-contact-full_name, #input-contact-email_address, #input-contact-message").blur(
 			function () {
 				var input_element = {};
-				var color_css = {};
 				
 				input_element = this;
 				
 				verifyFields(input_element, "blur");
-								
-				$(input_element).css(color_css);
 			}
 		);
 		
-		$("#input-contact-reset").click(
+/*		$("#input-contact-reset").click(
 			function ()	{
 				var full_name_selector;
 				var full_name_element = {};
@@ -200,8 +192,19 @@ $(document).ready(
 				var message_selector;
 				var message_element = {};
 				
-				verifyFields(input_element, "focus");
-			})
+				full_name_selector = "#input-contact-full_name";
+				full_name_element = $(full_name_selector);
+				
+				email_selector = "#input-contact-email_address";
+				email_element = $(email_selector);
+				
+				message_selector = "#input-contact-message";
+				message_element = $(message_selector);
+				
+				verifyFields(full_name_element, "focus");
+				verifyFields(email_element, "focus");
+				verifyFields(message_element, "focus");
+			}) */
   }
 );
 
@@ -272,108 +275,201 @@ function verifyFields(input_element, field_status) {
 	var color_error_css = {};
 	
 	color_base_css = {
+		borderColor: "#a5bcbb", 
+		backgroundColor: "#fff", 
 		color: "#a2a2a1"
 	};
 	
 	color_valid_css = {
+		borderColor: "#a5bcbb", 
+		backgroundColor: "#fff",
 		color: "#000"
 	};
 	
 	color_error_css = {
-		color: "#AA3939"
+		borderColor: "#d46a6a", 
+		backgroundColor: "#ffaaaa", 
+		color: "#aa3939"
 	};
-//console.log("$(input_element).attr(\"id\") = " + $(input_element).attr("id"));
-//console.log("$(input_element).val().length = " + $(input_element).val().length);
-//	console.log("$(input_element).val() = " + $(input_element).val());
 	
-	switch ($(input_element).attr("id")) {
+	var field_selector;
+	var field_value;
+	
+	field_selector = $(input_element).attr("id");
+	field_value = $(input_element).val();
+	
+	var default_value_string;
+	var error_value_string;
+
+	switch (field_selector) {
 		case "input-contact-full_name":
-			if ($(input_element).val() === "Please enter your First and Last Name") {
-				clearAndResetData(input_element, color_valid_css);
-			}
+			default_value_string = "First and Last Name";
+			error_value_string = "Please enter your First and Last Name";
 			
-			if ($(input_element).val() === "First and Last Name") {
+			if (field_value === error_value_string) { 
 				if (field_status === "focus")	{
-					clearAndResetData(input_element, color_valid_css);
+					clearData(input_element, color_valid_css);
 				}	else {
-					$(input_element).css(color_base_css);
+					resetData(input_element, default_value_string, color_base_css);
 				}
 			}
 			
-			if ($(input_element).val().length === 0) {
-				if (field_status === "blur")	{
-					$(input_element).css(color_base_css);
-					$(input_element).val("First and Last Name");	
-				}
-			} 
+			if (field_value === default_value_string) {
+				if (field_status === "focus")	{
+					clearData(input_element, color_valid_css);
+				}	
+			}
 			
-			if ($(input_element).val() !== "First and Last Name" && 
+			if (field_value.length === 0) {
+				if (field_status === "blur")	{
+					resetData(input_element, default_value_string, color_base_css);
+				}
+			} else {
+				if (field_value !== default_value_string && 
 					field_status === "blur")	{
-					validateData(input_element, color_valid_css, color_error_css);
+					validateData(input_element, error_value_string, color_valid_css, color_error_css);
+				}	
 			}
 		break; 
 
 		case "input-contact-email_address":
-			if ($(input_element).val().length < 5 ||  
-					$(input_element).val() !== "____@_______.___") {
-				$(input_element).css(color_base_css);
-				$(input_element).val("____@_______.___");
-			} else {
-				if ($(input_element).val() === "____@_______.___" && 
-					  field_status === "focus") {
-					$(input_element).val("");
+			default_value_string = "____@_______.___";
+			error_value_string = "Please retype your email address";
+			
+			if ((field_value === default_value_string || 
+					 field_value === error_value_string) && 
+				 	(field_status === "focus")) {
+				clearData(input_element, color_valid_css);
+			} else if (field_status === "blur") { 
+				if (field_value.length > 7)	{
+					validateData(input_element, error_value_string, color_valid_css, color_error_css);
+				} else {
+					resetData(input_element, default_value_string, color_base_css);
 				}
-				
-				$(input_element).css(color_valid_css);
-			}
+			} 
 		break;
 
 		case "input-contact-message":
-			if ($(input_element).val() === "Type your message here") {
+			default_value_string = "Type your message here";
+			
+			if (field_value === default_value_string) {
 				if (field_status === "focus")	{
-					$(input_element).val("");
-					$(input_element).css(color_valid_css);
+					clearData(input_element, color_valid_css);
 				}	else {
-					$(input_element).css(color_base_css);
+					resetData(input_element, default_value_string, color_base_css);
 				}
 			}
 			
-			if ($(input_element).val().length === 0) {
+			if (field_value.length === 0) {
 				if (field_status === "blur")	{
-					$(input_element).css(color_base_css);
-					$(input_element).val("Type your message here");	
+					resetData(input_element, default_value_string, color_base_css);
 				}
-			} 
-			
-			if ($(input_element).val() !== "Type your message here") {
+			} else if (field_value !== default_value_string) {
 				$(input_element).css(color_valid_css);
 			}
 		break;
 	}
 }
 
-function validateData(input_element, color_valid_css, color_error_css)	{
+function validateData(input_element, error_value_string, color_valid_css, color_error_css)	{
+	var field_selector;
+	var field_value;
+	
+	field_selector = $(input_element).attr("id");
+	field_value = $(input_element).val();
+	
 	var search_string;
 	var search_index_num;
-/*console.log("validateData");
-console.log("$(input_element).attr(\"id\") = " + $(input_element).attr("id"));
-*/	switch ($(input_element).attr("id"))	{
+	
+	switch ($(input_element).attr("id"))	{
 		case "input-contact-full_name": 
-			
+
 			search_string = " ";
-			search_index_num = $(input_element).val().indexOf(search_string);
+			search_index_num = field_value.indexOf(search_string);
 
 			if (search_index_num > 1)	{
 				$(input_element).css(color_valid_css);
 			}	else {
 				$(input_element).css(color_error_css);
-				$(input_element).val("Please enter your First and Last Name");
+				$(input_element).val(error_value_string);
 			}
 		break;
+
+		case "input-contact-email_address": 
+			var search_string_Array;
+			var email_string;
+
+			search_string_Array = [
+				"@", 
+				".", 
+				"com", 
+				"net", 
+				"org", 
+				"mil", 
+				"edu"
+			];
+
+			email_string = field_value;
+
+			var is_valid_results_Array;
+			var inc;
+
+			is_valid_results_Array = [];
+			inc = 0;
+
+			search_string_Array.forEach(
+				function (item, index)	{
+					var search_string;
+					var search_result_num;
+
+					search_string = item;
+
+
+					search_result_num = email_string.indexOf(search_string);
+
+					if (search_result_num > -1)	{
+						is_valid_results_Array[index] = true;
+					} else {
+						is_valid_results_Array[index] = false;
+					}
+				}
+			);
+						
+			var is_valid;
+			
+			is_valid = false;
+			
+			if (is_valid_results_Array[0] === true &&  
+				 	is_valid_results_Array[1] === true)	{
+				var i;
+			
+				for (i = 2; i < is_valid_results_Array.length; i++)	{
+					if (is_valid_results_Array[i] === true)	{
+						is_valid = true;
+					}
+				}	
+			}	else {
+				is_valid = false;
+			}
+			
+			if (is_valid === true)	{
+				$(input_element).css(color_valid_css);
+			} else {
+				$(input_element).css(color_error_css);
+				$(input_element).val(error_value_string);
+			}
+			
+		break;
+		
 	}
 }
 
-function clearAndResetData(input_element, color_valid_css)	{
+function clearData(input_element, color_valid_css)	{
 	$(input_element).val("");
 	$(input_element).css(color_valid_css);
+}
+
+function resetData(input_element, default_value_string, color_base_css) {
+	$(input_element).css(color_base_css);
+	$(input_element).val(default_value_string);	
 }

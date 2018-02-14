@@ -790,6 +790,7 @@ h3,
 #input-contact-email_address,  
 #form-contact textarea {
 	padding: 0.5em;
+	border: 3px solid #a5bcbb;
 	color: #a2a2a1;
 }
 
