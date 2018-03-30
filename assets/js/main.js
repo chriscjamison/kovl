@@ -1,5 +1,15 @@
 $(document).ready( 
   function () {
+		var url_hash;
+		var url_hash_search_string;
+		
+		url_hash = window.location.hash;
+		url_hash_search_string = "message=complete";
+		
+		if (url_hash.indexOf(url_hash_search_string) > -1)	{
+			loadConfirmationMessage();
+		}
+		
     var header_selector;
     var show_selector;
     var footer_selector;
@@ -181,30 +191,17 @@ $(document).ready(
 			}
 		);
 		
-/*		$("#input-contact-reset").click(
+		$("#contact-bkgrnd").click(
 			function ()	{
-				var full_name_selector;
-				var full_name_element = {};
+				var div_element;
 				
-				var email_selector;
-				var email_element = {};
+				div_element = this;
 				
-				var message_selector;
-				var message_element = {};
-				
-				full_name_selector = "#input-contact-full_name";
-				full_name_element = $(full_name_selector);
-				
-				email_selector = "#input-contact-email_address";
-				email_element = $(email_selector);
-				
-				message_selector = "#input-contact-message";
-				message_element = $(message_selector);
-				
-				verifyFields(full_name_element, "focus");
-				verifyFields(email_element, "focus");
-				verifyFields(message_element, "focus");
-			}) */
+				if ($(div_element).css("display") === "block")	{
+					closeConfirmationMessage();
+				}
+			}
+		);
   }
 );
 
@@ -219,9 +216,7 @@ function routeToShow()  {
 
   var path_string;
 
-  window_width = $(window).width();
-
-  listen_now_selector = "#carouselExampleControls";
+	listen_now_selector = "#carouselExampleControls";
   listen_now_element = $(listen_now_selector);
 
   path_string = determinePathofWebpage();
@@ -248,6 +243,49 @@ function determinePathofWebpage()  {
   return path_string;
 }
 
+function loadConfirmationMessage()	{
+	var div_selector_1;
+	var div_selector_2;
+	
+	var div_elements_1;
+	var div_elements_2;
+	
+	div_selector_1 =  "#contact-confirmation_message";
+	div_element_1 = $(div_selector_1);
+	
+	div_selector_2 =  "#contact-bkgrnd";
+	div_element_2 = $(div_selector_2);
+	
+	var visible_css = {};
+		
+	block_visible_css = {
+		display: "block"
+	};
+	
+	fixed_visible_css = {
+		display: "fixed"
+	};
+
+	$(div_element_1).css(block_visible_css);
+	$(div_element_2).css(block_visible_css);
+	$(div_element_1).css(fixed_visible_css);
+}
+
+function closeConfirmationMessage()	{
+	var div_selector;
+	var div_elements;
+	
+	div_selector = "#contact-confirmation_message, #contact-bkgrnd";
+	div_elements = $(div_selector);
+	
+	var visible_css = {};
+	
+	visible_css = {
+		display: "none"
+	}
+	
+	$(div_elements).css(visible_css);
+}
 function loadContactForm()	{
 	
 	var div_selector;

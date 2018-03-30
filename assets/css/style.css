@@ -25,6 +25,7 @@ h3,
 }
 
 #content-form-contact label, 
+#contact-confirmation_message p, 
 .carousel-item-content, 
 .show_listing-description, 
 #archive-most_recent_ep-description span, 
@@ -736,7 +737,7 @@ h3,
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 4;
 }
 
 #content-form-contact {
@@ -750,8 +751,7 @@ h3,
 
 #contact-bkgrnd {
 	background-color: #2b2c30;
-	opacity: 0.8;
-	z-index: 1;
+	z-index: 3;
 }
 
 #form-contact {
@@ -759,6 +759,16 @@ h3,
 	height: 29.75em;
 	margin: auto;
 	position: relative;
+	top: 3em;
+}
+
+#contact-confirmation_message {
+	width: 23.25em;
+	height: 24.5em;
+	padding: 2em 2.5em;
+	position: absolute;
+	background-color: #a5bcbb;
+	z-index: 4;
 }
 
 #input-contact-full_name, 
@@ -792,6 +802,12 @@ h3,
 	padding: 0.5em;
 	border: 3px solid #a5bcbb;
 	color: #a2a2a1;
+}
+
+#contact-confirmation_message p {
+	padding: 0.25em 0;
+	font-size: 1.15em;
+	color: #2f3e55;
 }
 
 
@@ -856,9 +872,16 @@ h3,
   .footer-actions a, 
   .footer-border_bot_med, 
 	#description p, 
-	#show-description p {
+	#show-description p, 
+	#content-form-contact {
     font-size: 0.9em;
   }
+	
+	#content-form-contact > a:first-of-type, 
+	#input-contact-reset, 
+	#input-contact-submit {
+		font-size: 0.99em;
+	}
 
   .spacer-center > a > img, 
   .footer-logo > a > img {
@@ -907,7 +930,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 26.75em;
+    height: 31.5em;
     background-repeat: repeat;
   }
 
@@ -919,7 +942,7 @@ h3,
 
   .footer-archive {
     width: 100%;
-    height: 22em;
+    height: 23em;
   }
 
   .footer-actions {
@@ -934,13 +957,31 @@ h3,
 	#show-desciption p.description-time {
 		margin-bottom: 0;
 	}
-
+	
+	#content-form-contact {
+		padding: 3em 1em;
+	}
+	
+	#content-form-contact a:first-of-type {
+		position: relative;
+		right: 2em;
+	}
+		
+	#contact-confirmation_message {
+		width: 20.5em;
+		height: 17.5em;
+		margin: 10% 4.5%;
+		padding: 1em 1.5em;
+	}
+	
+	#contact-confirmation_message p {
+		font-size: 0.9em;
+	}
 }
 
 @media screen and (min-width: 310px) and (max-width: 400px) {
-
   .spacer-center {
-    width: 66%;
+    width: 64%;
   }
 
   .nav-link_to {
@@ -1009,6 +1050,17 @@ h3,
   #show_listing-live_with_raej + a + .show_listing-social_media {
     margin-bottom: 0;
   }
+	
+	#contact-confirmation_message {
+		width: 20.5em;
+		height: 17.5em;
+		margin: 10% 4.5%;
+		padding: 1em 1.5em;
+	}
+	
+	#contact-confirmation_message p {
+		font-size: 0.9em;
+	}
 }
 
 @media screen and (min-width: 412px) and (max-width: 620px) { 
@@ -1090,6 +1142,10 @@ h3,
 	
 	#show-desciption p.description-time {
 		margin-bottom: 0;
+	}
+	
+	#contact-confirmation_message {
+		margin: 10% 5%;
 	}
 }
 
@@ -1247,6 +1303,10 @@ h3,
   h3 {
     font-size: 1.25rem;
   }
+	
+	#show_listings {
+		padding: 0;
+	}
 
   .show_listing {
     margin: 0 1em 2em 1em;
@@ -1301,6 +1361,10 @@ h3,
 	
 	#show-desciption p.description-time {
 		margin-bottom: 0;
+	}
+	
+	#contact-confirmation_message {
+		margin: 10% 25.5%;
 	}
 }
 
@@ -1377,6 +1441,10 @@ h3,
     display: block;
     top: 13em;
   }
+	
+	#contact-confirmation_message {
+		margin: 10% 35.25%;
+	}
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1580px) {
@@ -1448,6 +1516,10 @@ h3,
     display: block;
     top: 13em;
   }
+	
+	#contact-confirmation_message {
+		margin: 10% 36.5%;
+	}
 }
 
 @media screen and (min-width: 1590px) and (max-width: 1910px) {
@@ -1497,6 +1569,10 @@ h3,
   .container-about_kovl {
     top: 16em;
   }
+	
+	#contact-confirmation_message {
+		margin: 11% 38.25%;
+	}
 }
 
 @media screen and (min-width: 1910px) {
@@ -1538,4 +1614,8 @@ h3,
   .container-about_kovl {
     top: 16em;
   }
+	
+	#contact-confirmation_message {
+		margin: 11% 40.25%;
+	}
 }
