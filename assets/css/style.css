@@ -319,9 +319,9 @@ iframe#iframe-media_player {
 }
 
 #carousel-weekend {
-  width: 21em;
-  top: 16.75em;
-  right: 4.25em; 
+  width: 20.5em;
+  top: 17.75em;
+  right: 7.25em; 
 }
 
 
@@ -1212,7 +1212,7 @@ h3,
 	}
 	
   .spacer-center {
-    width: 33.5%;
+    width: 35.5%;
   }
 
   .spacer-center img, 
@@ -1637,7 +1637,8 @@ h3,
 	#show-the_king.display-wide a:nth-child(2), 
 	#show-agree.display-wide a:nth-child(2), 
 	#show-fabulously.display-wide a:nth-child(2), 
-	#show-monday.display-wide a:nth-child(2) {
+	#show-monday.display-wide a:nth-child(2), 
+	#show-weekend.display-wide a:nth-child(2) {
 		width: 7em;
 	}
 
