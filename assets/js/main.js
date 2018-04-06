@@ -39,9 +39,10 @@ $(document).ready(
       ['Hustle in Love', 'hustle-in-love', 'hustle'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
-      ['The King &amp; I All Sports Show', 'the-king-and-i-all-sports-show', 'the_king'], 
+      ['The King is Here', 'the-king-is-here', 'the_king'], 
       ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
-			['Monday Motivation!', 'monday-motivation', 'monday']
+			['Monday Motivation!', 'monday-motivation', 'monday'], 
+			['The Weekend Ride', 'the-weekend-ride', 'weekend']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
