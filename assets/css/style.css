@@ -908,6 +908,10 @@ h3,
   .container {
     top: 5.5em;
   }
+	
+	.container-about_kovl {
+		top: 8em;
+	}
 
   .carousel-item-content > span {
     display: none;
@@ -972,6 +976,10 @@ h3,
 	#description p, 
 	#show-description p {
 		width: 85%;
+	}
+	
+	.container-about_kovl p {
+		width: 85% !important;
 	}
 	
 	#show-desciption p.description-time {
@@ -1134,6 +1142,10 @@ h3,
     width: 100%;
     top: 5.5em;
   }
+	
+	.container-about_kovl {
+		top: 11em;
+	}
 
   #carouselExampleControls {
     width: 23em;
@@ -1212,7 +1224,7 @@ h3,
 	}
 	
   .spacer-center {
-    width: 35.5%;
+    width: 33.5%;
   }
 
   .spacer-center img, 
@@ -1259,6 +1271,10 @@ h3,
     top: 5.5em;
   }
 
+	.container-about_kovl {
+		top: 11em;
+	}
+	
   .carousel-inner {
 		width: 43em;
     height: 27.75em;
@@ -1393,7 +1409,7 @@ h3,
   }
 
   .footer-border_mid {
-    height: 25em;
+    height: 27em;
   }
 
   .footer-archive {
@@ -1506,7 +1522,7 @@ h3,
   .container-about_kovl {
     height: inherit;
     display: block;
-    top: 13em;
+    top: 16em;
   }
 	
 	#contact-confirmation_message {
@@ -1603,7 +1619,7 @@ h3,
   .container-about_kovl {
     height: inherit;
     display: block;
-    top: 13em;
+    top: 12em;
   }
 	
 	#contact-confirmation_message {
@@ -1661,7 +1677,7 @@ h3,
   }
 
   .container-about_kovl {
-    top: 16em;
+    top: 17em;
   }
 	
 	#contact-confirmation_message {
@@ -1707,7 +1723,7 @@ h3,
   }
 
   .container-about_kovl {
-    top: 16em;
+    top: 17em;
   }
 	
 	#contact-confirmation_message {
