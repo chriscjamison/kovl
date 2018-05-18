@@ -35,14 +35,14 @@ $(document).ready(
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
       ['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'], 
-      ['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
-      ['Hustle in Love', 'hustle-in-love', 'hustle'], 
+      // ['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
+      // ['Hustle in Love', 'hustle-in-love', 'hustle'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
-      ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
+      // ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
       ['The King is Here', 'the-king-is-here', 'the_king'], 
-      ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
-			['Monday Motivation!', 'monday-motivation', 'monday'], 
-			['The Weekend Ride', 'the-weekend-ride', 'weekend']
+      // ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
+			['Monday Motivation!', 'monday-motivation', 'monday'] 
+			// ['The Weekend Ride', 'the-weekend-ride', 'weekend']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
@@ -209,7 +209,6 @@ $(document).ready(
 
 
 function routeToShow()  {
-  
   var player_html;
 
   var listen_now_selector;
