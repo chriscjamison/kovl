@@ -34,15 +34,21 @@ $(document).ready(
       ['Live with RaeJ', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
-      ['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'], 
+			['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'],			
       // ['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
       // ['Hustle in Love', 'hustle-in-love', 'hustle'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'], 
       // ['The Queen G Live Experience', 'the-queen-g-live-experience', 'queen_g'], 
       ['The King is Here', 'the-king-is-here', 'the_king'], 
       // ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
-			['Monday Motivation!', 'monday-motivation', 'monday'] 
+			['Monday Motivation!', 'monday-motivation', 'monday'],  
 			// ['The Weekend Ride', 'the-weekend-ride', 'weekend']
+			['Food for your Soul', 'food-for-your-soul', 'food'], 
+			['The Dressing Room', 'the-dressing-room', 'dressing'], 
+			['Imagine That', 'imagine-that', 'imagine'],
+			['More with Mary', 'more-with-mary', 'more'],
+			['SKRAAD UP', 'skraad-up', 'skraad_up'],
+			['Friday Forum on Relationships', 'friday-forum-on-relationships', 'friday'],
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
