@@ -36,64 +36,79 @@
       <a href="../index.htm" title="KOVL Radio | kovlradio.com &ndash; &ndash; Rulers Over the Land &ndash; &ndash; St. Louis, MO"><img src="../assets/img/logo/logo-top_2.png" width="220" height="173" alt="KOVL Radio | kovlradio.com &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
     </div>
     <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
-
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="link-listen_now">
-                <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
-              </div>
-              <img class="d-block img-fluid" src="../assets/img/splash/agree.jpg" alt="Agree to Disagree with Jamel Johnson &amp; Tyree Thomas">
-              <div class="carousel-item-content" id="carousel-agree">
-                <!-- <span>
-                  Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
-                  sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
-                </span> -->
-                <div class="carousel-listen_now">
-                  <span>Listen Now</span>
-                  <a href="#" title="Listen Now" onclick="routeToShow();"><img src="../assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="show-description">
-          <h3>Agree to Disagree</h3>
-          <div id="description-border">
-            <div class="description-top_border">&nbsp;</div>
-            <div class="description-bottom_border">&nbsp;</div>
-          </div>
-          <p>
-            Agree to Disagree is a show to awaken your third eye! You will learn to from various perspectives on picking a part 
-            what life can and will dish out to you. We have a lot of fun and a whole lot of laughs. The goal is to find common 
-            ground and see how grown folks get down. At the end of the day we just may agree to disagree! 
-          </p>
-          <p class="description-time">
-            Tuesday &amp; Thursday
-            <br />
-            5pm &ndash; 7pm (CST)
-          </p>
-        </div>
-        <div class="footer-logo">
-          <a href="#top" title="Back to Top"><img src="../assets/img/logo/logo-footer.png" width="220" height="213" alt="KOVL Radio | kovlradio.com &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
-        </div>
-        <div id="footer">
-          <div class="footer-border_top_sm">&nbsp;</div>
-          <div class="footer-border_top_med">&nbsp;</div>
-          <div class="footer-border_mid">
-            <div class="footer-archive">
-            </div>
-            <div class="footer-actions">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="link-listen_now">
               <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
-              <a href="../company/about-kovl.htm" title="About KOVL">About KOVL</a>
+            </div>
+            <img class="d-block img-fluid" src="../assets/img/splash/agree.jpg" alt="Agree to Disagree with Jamel Johnson &amp; Tyree Thomas">
+            <div class="carousel-item-content" id="carousel-agree">
+              <!-- <span>
+                Sed elementum rutrum neque eget condimentum. Aenean non tellus luctus, hendrerit nunc ac, 
+                sollicitudin nunc. Curabitur erat massa, consectetur eu aliquam ut, dignissim sed mauris. 
+              </span> -->
+              <div class="carousel-listen_now">
+                <span>Listen Now</span>
+                <a href="#" title="Listen Now" onclick="routeToShow();"><img src="../assets/img/actions/listen_now.png" width="70" height="72" alt="Listen Now" /></a>
+              </div>
             </div>
           </div>
-          <div class="footer-border_bot_med">
-            <span><strong>EntMedia3</strong> &copy; 2018</span>
-          </div>
-          <div class="footer-border_bot_sm"></div>
         </div>
       </div>
+      <div id="show-description">
+        <h3>Agree to Disagree</h3>
+        <div id="description-border">
+          <div class="description-top_border">&nbsp;</div>
+          <div class="description-bottom_border">&nbsp;</div>
+        </div>
+        <p>
+          Agree to Disagree is a show to awaken your third eye! You will learn to from various perspectives on picking a part 
+          what life can and will dish out to you. We have a lot of fun and a whole lot of laughs. The goal is to find common 
+          ground and see how grown folks get down. At the end of the day we just may agree to disagree! 
+        </p>
+        <p class="description-time">
+          Tuesday &amp; Thursday
+          <br />
+          5pm &ndash; 7pm (CST)
+        </p>
+      </div>
+      <div class="footer-logo">
+        <a href="#top" title="Back to Top"><img src="../assets/img/logo/logo-footer.png" width="220" height="213" alt="KOVL Radio | kovlradio.com &ndash; kovalradio.com &ndash; &ndash; Rulers Over the Land" /></a>
+      </div>
+      <div id="footer">
+        <div class="footer-border_top_sm">&nbsp;</div>
+        <div class="footer-border_top_med">&nbsp;</div>
+        <div class="footer-border_mid landing_page">
+          <div class="footer-archive">
+          </div>
+          <div class="footer-actions">
+            <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+            <br />
+            <a href="../company/about-kovl.htm" title="About KOVL">About KOVL</a>
+            <a href="javascript:loadContactForm();" title="Contact KOVL">Contact KOVL</a>
+          </div>
+        </div>
+        <div class="footer-border_bot_med">
+          <span><strong>EntMedia3</strong> &copy; 2018</span>
+        </div>
+        <div class="footer-border_bot_sm"></div>
+      </div>
+    </div>
+    <div id="content-form-contact">
+      <a href="javascript:closeContactForm();" title="Go Back to Page">Go Back to Page</a> 
+      <form method="post" action="/assets/php/contact.php" name="form-contact" id="form-contact">
+        <label for="full_name">Please enter your full name below:</label>
+        <input type="text" value="First and Last Name" size="25" max-size="80" name="full_name" id="input-contact-full_name" />
+        <label for="email_address">Please enter your email address below:</label>
+        <input type="text" value="____@_______.___" size="25" max-size="80" name="email_address" id="input-contact-email_address" />
+        <label for="message">Please compose your message below:</label>
+        <textarea cols="27" rows="8" name="message" id="input-contact-message">Type your message here</textarea>
+        <input type="reset" value="Clear Information" name="input-reset" id="input-contact-reset" />
+        <input type="submit" value="Send Message" name="input-submit" id="input-contact-submit" />
+      </form>
+    </div>
+    <div id="contact-bkgrnd"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

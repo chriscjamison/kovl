@@ -273,27 +273,9 @@ iframe#iframe-media_player {
   left: 4.5em;
 }
 
-#carousel-truth_muzic {
-  width: 22em;
-  bottom: 2.75em;
-  left: 6.1em;
-}
-
-#carousel-hustle {
-  width: 21.5em;
-  bottom: 2em;
-  right: 5.5em;
-}
-
 #carousel-agree {
   bottom: 3em;
   right: 44.25%;
-}
-
-#carousel-queen_g {
-  width: 21em;
-  top: 11em;
-  right: 6.4em;
 }
 
 #carousel-the_king {
@@ -306,24 +288,41 @@ iframe#iframe-media_player {
 	top: 1.25em;
 }
 
-#carousel-fabulously {
-  width: 21em;
-  top: 15em;
-  left: 6.5em; 
-}
-
 #carousel-monday {
 	width: 20.75em;
 	bottom: 1.5em;
 	left: 7em;
 }
 
-#carousel-weekend {
-  width: 20.5em;
-  top: 17.75em;
-  right: 7.25em; 
+#carousel-food {
+  top: 10.5em;
+  right: 13.5em;
 }
 
+#carousel-dressing {
+  bottom: 2em;
+  left: 12.25em;
+}
+
+#carousel-imagine {
+  top: 15.5em;
+  left: 13.25em;
+}
+
+#carousel-more_with_mary {
+  top: 15.25em;
+  left: 12em;
+}
+
+#carousel-skraad_up {
+  bottom: 2.5em;
+  right: 11.75em;
+}
+
+#carousel-friday {
+  bottom: 2.25em;
+  left: 12em;
+}
 
 .link-listen_now, 
 #email_newsletter {
@@ -506,45 +505,50 @@ h3,
 }
 
 #show_listing-the_twinz + a, 
-#show_listing-truth_muzic + a, 
-#show_listing-hustle + a {
+#show_listing-agree  + a, 
+#show_listing-the_king + a {
   background-image: url('../img/listings/row_2.jpg');
 }
 
-#show_listing-truth_muzic + a {
+#show_listing-agree + a {
   background-position-x: -300px;
 }
 
-#show_listing-hustle + a {
+#show_listing-the_king + a {
   background-position-x: -600px;
 }
 
-#show_listing-agree + a, 
-#show_listing-queen_g + a, 
-#show_listing-the_king + a {
+#show_listing-monday + a, 
+#show_listing-food + a, 
+#show_listing-dressing + a {
   background-image: url('../img/listings/row_3.jpg');
 }
 
-#show_listing-queen_g + a {
+#show_listing-food + a {
   background-position-x: -300px;
 }
 
-#show_listing-the_king + a {
+#show_listing-dressing + a {
   background-position-x: -600px;
 }
 
-#show_listing-fabulously + a, 
-#show_listing-monday + a, 
-#show_listing-weekend +a {
+#show_listing-imagine + a, 
+#show_listing-more_with_mary + a, 
+#show_listing-skraad + a {
   background-image: url('../img/listings/row_4.jpg');
 }
 
-#show_listing-monday + a {
+#show_listing-more_with_mary + a {
  background-position-x: -300px;
 }
 
-#show_listing-weekend + a {
+#show_listing-skraad + a {
  background-position-x: -600px;
+}
+
+#show_listing-friday + a {
+  background-image: url('../img/listings/row_3.jpg');
+  background-position-x: -300px;
 }
 
 .show_listing-social_media {
@@ -833,7 +837,8 @@ h3,
   }
 
   #header-shows {
-    height: 45em;
+    height: 81.75em;
+    padding-bottom: 4.25em;
   }
 
   #header-shows a {
@@ -858,8 +863,10 @@ h3,
   }
 
   #show-easy_treatment a:nth-child(2), 
-  #show-queen_g a:nth-child(2), 
-  #show-the_king a:nth-child(2) {
+  #show-the_king a:nth-child(2), 
+  #show-monday a:nth-child(1),
+  #show-dressing a:nth-child(1),
+  #show-friday a:nth-child(1) {
     width: 46%;
     vertical-align: middle;
   }
@@ -962,7 +969,7 @@ h3,
 
   .footer-archive {
     width: 100%;
-    height: 16em;
+    height: 26.5em;
   }
 
   .footer-actions {
@@ -970,7 +977,7 @@ h3,
   }
 	
 	.footer-border_mid.landing_page {
-		height: 24.5em;
+		height: 35em;
 	}
 	
 	#description p, 
@@ -1024,7 +1031,7 @@ h3,
 
 @media screen and (min-width: 310px) and (max-width: 400px) {
   .spacer-center {
-    width: 64%;
+    width: 66%;
   }
 
   .nav-link_to {
@@ -1104,6 +1111,13 @@ h3,
 	#contact-confirmation_message p {
 		font-size: 0.9em;
 	}
+}
+
+@media screen and (width: 320px)  {
+  #header-shows {
+    height: 81.75em;
+    padding-bottom: 4.5em;
+  }
 }
 
 @media screen and (min-width: 412px) and (max-width: 620px) { 
@@ -1234,7 +1248,8 @@ h3,
   }
 
   #header-shows {
-    height: 27.5em;
+    height: 47em;
+    padding-bottom: 4em;
   }
   
 	.show-left {
@@ -1360,7 +1375,11 @@ h3,
   h3 {
     font-size: 1.25rem;
   }
-	
+  
+  div.carousel-inner + h3:first-of-type {
+    margin-top: 1.5em;
+  }
+  
 	#show_listings {
 		padding: 0;
 	}
@@ -1409,11 +1428,11 @@ h3,
   }
 
   .footer-border_mid {
-    height: 17em;
+    height: 29em;
   }
 
   .footer-archive {
-    width: 22em;
+    width: 17.5em;
   }
 	
 	#show-desciption p.description-time {
@@ -1447,20 +1466,20 @@ h3,
   }
 	
 	#header-shows {
-    height: 25em;
+    height: 31.5em;
+    padding-bottom: 3em;
 	}
 	
 	.display-wide {
 		width: 24%;
 	}
 	
-	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-queen_g.display-wide a:nth-child(2), 
-	#show-the_king.display-wide a:nth-child(2), 
+	#show-easy_treatment.display-wide a:nth-child(2),
 	#show-agree.display-wide a:nth-child(2), 
-	#show-fabulously.display-wide a:nth-child(2), 
-	#show-monday.display-wide a:nth-child(2), 
-	#show-weekend.display-wide a:nth-child(2) {
+  #show-monday.display-wide a:nth-child(2), 
+  #show-food.display-wide a:nth-child(2), 
+  #show-dressing.display-wide a:nth-child(2), 
+	#show-friday.display-wide a:nth-child(2) {
 		width: 8em;
 	}
   
@@ -1557,7 +1576,7 @@ h3,
   }
   
   #header-shows {
-    height: 17em;
+    height: 33.5em;
   }
 	
 	.display-wide {
@@ -1565,11 +1584,9 @@ h3,
 	}
 	
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-queen_g.display-wide a:nth-child(2), 
-	#show-the_king.display-wide a:nth-child(2), 
-	#show-agree.display-wide a:nth-child(2), 
-	#show-fabulously.display-wide a:nth-child(2), 
-	#show-monday.display-wide a:nth-child(2) {
+	#show-agree.display-wide a:nth-child(2),
+	#show-monday.display-wide a:nth-child(2),
+	#show-friday.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -1645,16 +1662,16 @@ h3,
   }
 
   #header-shows {
-    height: 24.75em;
+    height: 25.5em;
+    padding-bottom: 3.75em;
   }
 	
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-queen_g.display-wide a:nth-child(2), 
-	#show-the_king.display-wide a:nth-child(2), 
 	#show-agree.display-wide a:nth-child(2), 
-	#show-fabulously.display-wide a:nth-child(2), 
-	#show-monday.display-wide a:nth-child(2), 
-	#show-weekend.display-wide a:nth-child(2) {
+  #show-monday.display-wide a:nth-child(2), 
+  #show-food.display-wide a:nth-child(2), 
+  #show-dressing.display-wide a:nth-child(2), 
+	#show-friday.display-wide a:nth-child(2) {
 		width: 7em;
 	}
 
@@ -1678,7 +1695,15 @@ h3,
 	
 	#contact-confirmation_message {
 		margin: 11% 38.25%;
-	}
+  }
+  
+  .footer-border_mid {
+    height: 29em;
+  }
+
+  .footer-archive {
+    height: 29.5em;
+  }
 }
 
 @media screen and (min-width: 1910px) {
@@ -1700,13 +1725,12 @@ h3,
   }
   
   #header-shows {
-    height: 24.75em;
+    height: 25.5em;
+    padding-bottom: 3.75em;
   }
   
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-queen_g.display-wide a:nth-child(2), 
-	#show-the_king.display-wide a:nth-child(2), 
-	#show-weekend.display-wide a:nth-child(2) {
+	#show-friday.display-wide a:nth-child(2) {
 		width: 10em;
 	}
 
@@ -1724,5 +1748,10 @@ h3,
 	
 	#contact-confirmation_message {
 		margin: 11% 40.25%;
-	}
+  }
+  
+  .footer-border_mid, 
+  .footer-archive {
+    height: 29.5em;
+  }
 }

@@ -46,7 +46,7 @@ $(document).ready(
 			['Food for your Soul', 'food-for-your-soul', 'food'], 
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Imagine That', 'imagine-that', 'imagine'],
-			['More with Mary', 'more-with-mary', 'more'],
+			['More with Mary', 'more-with-mary', 'more_with_mary'],
 			['SKRAAD UP', 'skraad-up', 'skraad_up'],
 			['Friday Forum on Relationships', 'friday-forum-on-relationships', 'friday'],
     ];

@@ -71,12 +71,14 @@
       <div id="footer">
         <div class="footer-border_top_sm">&nbsp;</div>
         <div class="footer-border_top_med">&nbsp;</div>
-        <div class="footer-border_mid">
+        <div class="footer-border_mid landing_page">
           <div class="footer-archive">
           </div>
           <div class="footer-actions">
             <a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a>
+            <br />
             <a href="../company/about-kovl.htm" title="About KOVL">About KOVL</a>
+            <a href="javascript:loadContactForm();" title="Contact KOVL">Contact KOVL</a>
           </div>
         </div>
         <div class="footer-border_bot_med">
@@ -85,6 +87,20 @@
         <div class="footer-border_bot_sm"></div>
       </div>
     </div>
+    <div id="content-form-contact">
+      <a href="javascript:closeContactForm();" title="Go Back to Page">Go Back to Page</a> 
+      <form method="post" action="/assets/php/contact.php" name="form-contact" id="form-contact">
+        <label for="full_name">Please enter your full name below:</label>
+        <input type="text" value="First and Last Name" size="25" max-size="80" name="full_name" id="input-contact-full_name" />
+        <label for="email_address">Please enter your email address below:</label>
+        <input type="text" value="____@_______.___" size="25" max-size="80" name="email_address" id="input-contact-email_address" />
+        <label for="message">Please compose your message below:</label>
+        <textarea cols="27" rows="8" name="message" id="input-contact-message">Type your message here</textarea>
+        <input type="reset" value="Clear Information" name="input-reset" id="input-contact-reset" />
+        <input type="submit" value="Send Message" name="input-submit" id="input-contact-submit" />
+      </form>
+    </div>
+    <div id="contact-bkgrnd"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
