@@ -31,7 +31,7 @@ $(document).ready(
     header_element = $(header_selector);
 
     show_info_Array = [
-      ['Live with RaeJ', 'live-with-raej', 'live_with_raej'], 
+      ['Live with RaeJ &amp; Brown Shuga Sunday Brunch', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
 			['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'],			
@@ -43,12 +43,12 @@ $(document).ready(
       // ['Fabulously Vegan', 'fabulously-vegan', 'fabulously'], 
 			['Monday Motivation!', 'monday-motivation', 'monday'],  
 			// ['The Weekend Ride', 'the-weekend-ride', 'weekend']
-			['Food for your Soul', 'food-for-your-soul', 'food'], 
+			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Imagine That', 'imagine-that', 'imagine'],
 			['More with Mary', 'more-with-mary', 'more_with_mary'],
 			['SKRAAD UP', 'skraad-up', 'skraad_up'],
-			['Friday Forum on Relationships', 'friday-forum-on-relationships', 'friday'],
+			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
