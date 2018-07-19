@@ -523,7 +523,7 @@ h5,
 #show_listing-monday + a, 
 #show_listing-food + a, 
 #show_listing-dressing + a {
-  background-image: url('../img/listings/row_3.jpg?v=1');
+  background-image: url('../img/listings/row_3.jpg?v=2');
 }
 
 #show_listing-food + a {
