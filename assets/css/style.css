@@ -325,6 +325,11 @@ iframe#iframe-media_player {
   right: 12.5em;
 }
 
+#carousel-meleka {
+  bottom: 5em;
+  right: 11em;
+}
+
 .link-listen_now, 
 #email_newsletter {
   width: 10.75em;
@@ -548,8 +553,13 @@ h5,
  background-position-x: -600px;
 }
 
-#show_listing-lets + a {
-  background-image: url('../img/listings/row_5.jpg?v=1');
+#show_listing-lets + a, 
+#show_listing-meleka + a {
+  background-image: url('../img/listings/row_5.jpg?v=4');
+}
+
+#show_listing-meleka + a { 
+  background-position-x: -300px;
 }
 
 .show_listing-social_media {
@@ -673,18 +683,21 @@ h5,
 /* Formats the line which appears second from the top in the footer. */
 
 .footer-border_mid {
-  height: 29em;
   background-image: url('../img/backgrounds/footer-mid.png');
   background-repeat: repeat;
 }
 /* Formats the light blue block which appears within the footer. */ 
 
 .footer-archive {
-  height: 10em;
   padding: 1em;
   float: left;
 }
 /* Formats a <div> which holds links to Archives for each show's content. */
+
+.footer-border_mid, 
+.footer-archive {
+  height: 31.5em;
+}
 
 .footer-archive > span {
   padding: 0.25em;
@@ -838,7 +851,7 @@ h5,
   }
 
   #header-shows {
-    height: 81.75em;
+    height: 87.5em;
     padding-bottom: 4.25em;
   }
 
@@ -868,7 +881,8 @@ h5,
   #show-the_king a:nth-child(2), 
   #show-monday a:nth-child(1),
   #show-food a:nth-child(2), 
-  #show-dressing a:nth-child(1) {
+  #show-dressing a:nth-child(1), 
+  #show-lets a:nth-child(1) {
     width: 46%;
     vertical-align: middle;
   }
@@ -971,15 +985,15 @@ h5,
 
   .footer-archive {
     width: 100%;
-    height: 26.5em;
+    height: 29.5em;
   }
 
   .footer-actions {
     text-align: left;
   }
 	
-	.footer-border_mid.landing_page {
-		height: 35em;
+	.footer-border_mid {
+		height: 38em;
 	}
 	
 	#description p, 
@@ -1117,7 +1131,7 @@ h5,
 
 @media screen and (width: 320px)  {
   #header-shows {
-    height: 81.75em;
+    height: 87.5em;
     padding-bottom: 4.5em;
   }
 }
@@ -1435,12 +1449,12 @@ h5,
   }
 
   .footer-border_mid {
-    height: 29em;
+    height: 34.25em;
   }
 
   .footer-archive {
-    width: 25em;
-    height: 29em;
+    width: 20em;
+    height: 33.5em;
     padding-bottom: 0;
   }
 	
@@ -1617,10 +1631,6 @@ h5,
     top: 0;
   }
 
-	#carousel-monday {
-		bottom: 9em;
-	}
-	
   #carousel-private_times {
     top: 22em;
     right: 6.5em;
@@ -1716,14 +1726,6 @@ h5,
 	#contact-confirmation_message {
 		margin: 11% 38.25%;
   }
-  
-  .footer-border_mid {
-    height: 29em;
-  }
-
-  .footer-archive {
-    height: 29.5em;
-  }
 }
 
 @media screen and (min-width: 1910px) {
@@ -1769,10 +1771,5 @@ h5,
 	
 	#contact-confirmation_message {
 		margin: 11% 40.25%;
-  }
-  
-  .footer-border_mid, 
-  .footer-archive {
-    height: 29.5em;
   }
 }
