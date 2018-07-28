@@ -330,6 +330,11 @@ iframe#iframe-media_player {
   right: 11em;
 }
 
+#carousel-my_nerves {
+  bottom: 1.5em;
+  left: 30.1em;
+}
+
 .link-listen_now, 
 #email_newsletter {
   width: 10.75em;
@@ -554,12 +559,17 @@ h5,
 }
 
 #show_listing-lets + a, 
-#show_listing-meleka + a {
-  background-image: url('../img/listings/row_5.jpg?v=4');
+#show_listing-meleka + a, 
+#show_listing-my_nerves + a {
+  background-image: url('../img/listings/row_5.jpg?v=5');
 }
 
 #show_listing-meleka + a { 
   background-position-x: -300px;
+}
+
+#show_listing-my_nerves + a { 
+  background-position-x: -600px;
 }
 
 .show_listing-social_media {
@@ -696,7 +706,7 @@ h5,
 
 .footer-border_mid, 
 .footer-archive {
-  height: 31.5em;
+  height: 33.5em;
 }
 
 .footer-archive > span {
@@ -851,7 +861,7 @@ h5,
   }
 
   #header-shows {
-    height: 87.5em;
+    height: 93em;
     padding-bottom: 4.25em;
   }
 
@@ -985,7 +995,7 @@ h5,
 
   .footer-archive {
     width: 100%;
-    height: 29.5em;
+    height: 31em;
   }
 
   .footer-actions {
@@ -993,7 +1003,7 @@ h5,
   }
 	
 	.footer-border_mid {
-		height: 38em;
+		height: 39.5em;
 	}
 	
 	#description p, 
@@ -1260,7 +1270,7 @@ h5,
   }
 
   #header-shows {
-    height: 47em;
+    height: 52.5em;
     padding-bottom: 4em;
   }
   
@@ -1449,12 +1459,12 @@ h5,
   }
 
   .footer-border_mid {
-    height: 34.25em;
+    height: 36.25em;
   }
 
   .footer-archive {
     width: 20em;
-    height: 33.5em;
+    height: 35.5em;
     padding-bottom: 0;
   }
 	
@@ -1513,7 +1523,8 @@ h5,
   #show-monday.display-wide a:nth-child(2), 
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
-	#show-lets.display-wide a:nth-child(2) {
+  #show-lets.display-wide a:nth-child(2), 
+  #show-my_nerves.display-wide a:nth-child(2) {
 		width: 8em;
 	}
   
@@ -1701,7 +1712,8 @@ h5,
   #show-monday.display-wide a:nth-child(2), 
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
-	#show-lets.display-wide a:nth-child(2) {
+  #show-lets.display-wide a:nth-child(2), 
+  #show-my_nerves.display-wide a:nth-child(2) {
 		width: 7em;
 	}
 
