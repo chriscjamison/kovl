@@ -281,7 +281,7 @@ iframe#iframe-media_player {
 
 #carousel-the_king {
   width: 14em;
-  bottom: 7.25em;
+  bottom: 11.25em;
   right: 39.25%; 
 }
 
@@ -1545,33 +1545,50 @@ h5,
   }
 
   #carousel-private_times {
+    width: 17.75em;
     top: 22em;
-    right: 4.5em;
+    right: 5.75em;
   }
-	
-	#carousel-truth_muzic {
-		bottom: 10.75em;
-		left: 5.75em;
-	}
-	
-	#carousel-hustle {
-		bottom: 10em;
-		right: 4.5em;
-	}
-	
-	#carousel-queen_g {
-		width: 20em;
-		right: 5.5em;
-	}
 	
 	#carousel-the_king {
 		bottom: 8.5em;
-		right: 6.75em;
+		right: 24.25em;
 	}
 	
 	#carousel-monday {
-		bottom: 9em;
 		left: 6.5em;
+  }
+
+  #carousel-food {
+		left: 11em;
+  }
+  
+  #carousel-dressing {
+		left: 10em;
+	}
+
+  #carousel-imagine {
+		left: 12.25em;
+	}
+
+  #carousel-more_with_mary {
+		left: 11em;
+	}
+  
+  #carousel-skraad_up {
+		right: 10.75em;
+  }
+  
+  #carousel-lets {
+		right: 11.25em;
+  }
+  
+  #carousel-meleka {
+		right: 9.75em;
+  }
+  
+  #carousel-my_nerves {
+		left: 27.5em;
 	}
 
   /*.show_listing:last-of-type {
