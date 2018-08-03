@@ -518,58 +518,53 @@ h5,
 
 #show_listing-the_twinz + a, 
 #show_listing-agree  + a, 
-#show_listing-the_king + a {
-  background-image: url('../img/listings/row_2.jpg?v=1');
+#show_listing-monday + a {
+  background-image: url('../img/listings/row_2.jpg?v=2');
 }
 
 #show_listing-agree + a {
   background-position-x: -300px;
 }
 
-#show_listing-the_king + a {
+#show_listing-monday + a {
   background-position-x: -600px;
 }
 
-#show_listing-monday + a, 
 #show_listing-food + a, 
-#show_listing-dressing + a {
-  background-image: url('../img/listings/row_3.jpg?v=2');
+#show_listing-dressing + a, 
+#show_listing-imagine + a {
+  background-image: url('../img/listings/row_3.jpg?v=3');
 }
 
-#show_listing-food + a {
+#show_listing-dressing + a {
   background-position-x: -300px;
 }
 
-#show_listing-dressing + a {
+#show_listing-imagine + a {
   background-position-x: -600px;
 }
 
-#show_listing-imagine + a, 
 #show_listing-more_with_mary + a, 
-#show_listing-skraad + a {
-  background-image: url('../img/listings/row_4.jpg?v=1');
+#show_listing-skraad + a, 
+#show_listing-lets + a {
+  background-image: url('../img/listings/row_4.jpg?v=2');
 }
 
-#show_listing-more_with_mary + a {
+#show_listing-skraad + a {
  background-position-x: -300px;
 }
 
-#show_listing-skraad + a {
+#show_listing-lets + a {
  background-position-x: -600px;
 }
 
-#show_listing-lets + a, 
 #show_listing-meleka + a, 
 #show_listing-my_nerves + a {
-  background-image: url('../img/listings/row_5.jpg?v=5');
-}
-
-#show_listing-meleka + a { 
-  background-position-x: -300px;
+  background-image: url('../img/listings/row_5.jpg?v=6');
 }
 
 #show_listing-my_nerves + a { 
-  background-position-x: -600px;
+  background-position-x: -300px;
 }
 
 .show_listing-social_media {
@@ -706,7 +701,7 @@ h5,
 
 .footer-border_mid, 
 .footer-archive {
-  height: 33.5em;
+  height: 31.5em;
 }
 
 .footer-archive > span {
@@ -861,7 +856,7 @@ h5,
   }
 
   #header-shows {
-    height: 93em;
+    height: 89em;
     padding-bottom: 4.25em;
   }
 
@@ -995,7 +990,7 @@ h5,
 
   .footer-archive {
     width: 100%;
-    height: 31em;
+    height: 29.5em;
   }
 
   .footer-actions {
@@ -1141,7 +1136,7 @@ h5,
 
 @media screen and (width: 320px)  {
   #header-shows {
-    height: 87.5em;
+    height: 94em;
     padding-bottom: 4.5em;
   }
 }
@@ -1270,7 +1265,7 @@ h5,
   }
 
   #header-shows {
-    height: 52.5em;
+    height: 47em;
     padding-bottom: 4em;
   }
   
