@@ -40,11 +40,8 @@ $(document).ready(
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Imagine That', 'imagine-that', 'imagine'],
-			['More with Mary', 'more-with-mary', 'more_with_mary'],
-			['SKRAAD UP', 'skraad-up', 'skraad_up'],
 			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'],
 			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka'], 
-			['My Nerves Are Bad', 'my-nerves-are-bad', 'my_nerves']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 

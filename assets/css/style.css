@@ -544,26 +544,12 @@ h5,
   background-position-x: -600px;
 }
 
-#show_listing-more_with_mary + a, 
-#show_listing-skraad + a, 
-#show_listing-lets + a {
-  background-image: url('../img/listings/row_4.jpg?v=2');
+#show_listing-lets + a, 
+#show_listing-meleka + a {
+  background-image: url('../img/listings/row_4.jpg?v=3');
 }
 
-#show_listing-skraad + a {
- background-position-x: -300px;
-}
-
-#show_listing-lets + a {
- background-position-x: -600px;
-}
-
-#show_listing-meleka + a, 
-#show_listing-my_nerves + a {
-  background-image: url('../img/listings/row_5.jpg?v=6');
-}
-
-#show_listing-my_nerves + a { 
+#show_listing-meleka + a { 
   background-position-x: -300px;
 }
 
@@ -701,7 +687,7 @@ h5,
 
 .footer-border_mid, 
 .footer-archive {
-  height: 31.5em;
+  height: 25.5em;
 }
 
 .footer-archive > span {
@@ -856,7 +842,7 @@ h5,
   }
 
   #header-shows {
-    height: 89em;
+    height: 70.25em;
     padding-bottom: 4.25em;
   }
 
@@ -885,7 +871,7 @@ h5,
   #show-easy_treatment a:nth-child(2), 
   #show-the_king a:nth-child(2), 
   #show-monday a:nth-child(1),
-  #show-food a:nth-child(2), 
+  #show-food a:nth-child(1), 
   #show-dressing a:nth-child(1), 
   #show-lets a:nth-child(1) {
     width: 46%;
@@ -990,7 +976,7 @@ h5,
 
   .footer-archive {
     width: 100%;
-    height: 29.5em;
+    height: 23em;
   }
 
   .footer-actions {
@@ -998,7 +984,7 @@ h5,
   }
 	
 	.footer-border_mid {
-		height: 39.5em;
+		height: 31.5em;
 	}
 	
 	#description p, 
@@ -1265,7 +1251,7 @@ h5,
   }
 
   #header-shows {
-    height: 47em;
+    height: 41em;
     padding-bottom: 4em;
   }
   
@@ -1454,12 +1440,12 @@ h5,
   }
 
   .footer-border_mid {
-    height: 36.25em;
+    height: 28.25em;
   }
 
   .footer-archive {
     width: 20em;
-    height: 35.5em;
+    height: 27.5em;
     padding-bottom: 0;
   }
 	
@@ -1632,7 +1618,7 @@ h5,
   }
   
   #header-shows {
-    height: 32em;
+    height: 25em;
     padding-bottom: 3.5em;
   }
 	
@@ -1693,7 +1679,12 @@ h5,
 	
 	#contact-confirmation_message {
 		margin: 10% 36.5%;
-	}
+  }
+  
+  .footer-border_mid, 
+  .footer-archive {
+    height: 25.5em;
+  }
 }
 
 @media screen and (min-width: 1590px) and (max-width: 1910px) {
