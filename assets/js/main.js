@@ -40,8 +40,9 @@ $(document).ready(
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Imagine That', 'imagine-that', 'imagine'],
-			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'],
-			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka'], 
+			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'], 
+			['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
+			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
