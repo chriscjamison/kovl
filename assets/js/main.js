@@ -37,12 +37,13 @@ $(document).ready(
 			['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'],			
       ['Agree to Disagree', 'agree-to-disagree', 'agree'],
       ['Monday Motivation!', 'monday-motivation', 'monday'],  
-			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
+			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['Imagine That', 'imagine-that', 'imagine'],
 			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'], 
 			['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
-			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka']
+			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka'], 
+			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
@@ -144,7 +145,6 @@ $(document).ready(
     }
 
 		
-		
     $("#nav-link-shows").click(
       function () {
 
@@ -152,8 +152,22 @@ $(document).ready(
         var shows_menu_element = {};
     
         shows_menu_selector = "#header-shows";
-        shows_menu_element = $(shows_menu_selector);
-    
+				shows_menu_element = $(shows_menu_selector);
+				
+				var nav_selector;
+				var nav_element = {};
+
+				nav_selector = "nav";
+				nav_element = $(nav_selector);
+
+				var nav_css = {};
+
+				nav_css = {
+					position: "relative", 
+					float: "left"
+				}
+
+				$(nav_element).css(nav_css);
     
         $(shows_menu_element).css("display", "block");
       }
@@ -165,7 +179,20 @@ $(document).ready(
         var shows_menu_element = {};
     
         shows_menu_selector = "#header-shows";
-        shows_menu_element = $(shows_menu_selector);
+				shows_menu_element = $(shows_menu_selector);
+
+				var nav_selector;
+				var nav_element = {};
+
+				nav_selector = "nav";
+				nav_element = $(nav_selector);
+				
+				nav_css = {
+					position: "absolute", 
+					float: "none"
+				}
+				
+				$(nav_element).css(nav_css);
     
         $(shows_menu_element).css("display", "none");
       }
