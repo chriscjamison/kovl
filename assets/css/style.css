@@ -316,13 +316,15 @@ iframe#iframe-media_player {
   right: 6.75em;
 }
 
-#carousel-what_we_doing {
-  top: 11em;
-  right: 13em;
+#carousel-truth_muzic .carousel-listen_now, 
+#carousel-what_we_doing .carousel-listen_now {
+  margin: 1em auto 0 auto;
 }
 
-#carousel-truth_muzic .carousel-listen_now {
-  margin: 1em auto 0 auto;
+#carousel-what_we_doing {
+  width: 18em;
+  top: 10em;
+  right: 6.75em;
 }
 
 .link-listen_now, 
@@ -862,7 +864,7 @@ h5,
   }
 
   .show-right {
-		width: 100%;
+		width: 98%;
     margin: 0 0 0 0.4em;
 		text-align: left;
   }
@@ -874,11 +876,11 @@ h5,
 
   #show-live_with_raej a:nth-child(1), 
   #show-easy_treatment a:nth-child(2), 
-  #show-the_king a:nth-child(2), 
   #show-monday a:nth-child(1),
-  #show-food a:nth-child(1), 
+  #show-food a:nth-child(2), 
   #show-dressing a:nth-child(1), 
-  #show-lets a:nth-child(2) {
+  #show-lets a:nth-child(2), 
+  #show-truth_muzic a:nth-child(1) {
     width: 46%;
     vertical-align: middle;
   }
@@ -1048,7 +1050,12 @@ h5,
 	
 	.link-listen_now {
 		left: 29.25% !important;
-	}
+  }
+  
+  .carousel-control-prev, 
+  .carousel-control-next {
+    height: 81%;
+  }
 }
 
 @media screen and (min-width: 310px) and (max-width: 400px) {
@@ -1405,12 +1412,12 @@ h5,
 
   .carousel-control-prev {
     height: 90%;
-    left: 6em;
+    left: 0;
   }
 
   .carousel-control-next {
     height: 90%;
-    right: 6em;
+    right: 0;
   }
   
   #show-description {
@@ -1534,7 +1541,7 @@ h5,
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
   #show-lets.display-wide a:nth-child(2), 
-  #show-my_nerves.display-wide a:nth-child(2) {
+  #show-truth_muzic.display-wide a:nth-child(2) {
 		width: 8em;
 	}
   
@@ -1649,7 +1656,7 @@ h5,
   }
 
   .header-show:last-child {
-    padding-bottom: 3.75em;
+    padding-bottom: 1em;
   }
 	
 	.display-wide {
@@ -1662,7 +1669,8 @@ h5,
 	#show-monday.display-wide a:nth-child(2),
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
-  #show-lets.display-wide a:nth-child(2) {
+  #show-lets.display-wide a:nth-child(2), 
+  #show-truth_muzic.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -1746,7 +1754,7 @@ h5,
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
   #show-lets.display-wide a:nth-child(2), 
-  #show-my_nerves.display-wide a:nth-child(2) {
+  #show-truth_muzic.display-wide a:nth-child(2) {
 		width: 7em;
 	}
 

@@ -41,7 +41,7 @@ $(document).ready(
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['Imagine That', 'imagine-that', 'imagine'],
 			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'], 
-			['Truth Muzic', 'truth-muzic', 'truth_muzic'], 
+			['Truth Muzic &amp; The Table of Truth', 'truth-muzic', 'truth_muzic'], 
 			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka'], 
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
