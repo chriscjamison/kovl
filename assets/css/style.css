@@ -105,6 +105,11 @@ nav {
   z-index: 2;
 }
 
+.nav-shows_visible {
+  position: relative;
+	float: left;
+}
+
 nav > div {
   height: 4.38em;
   margin-bottom: 5px;
@@ -143,6 +148,10 @@ nav > div {
   z-index: 3;
 }
 
+.nav-logo-shows_visible {
+  top: 0;
+}
+
 .nav-logo a {
   margin: 0 auto;
   display: table;
@@ -177,6 +186,10 @@ nav > div > a {
 
 .display-wide a:nth-child(1) {
 	margin-right: 0.5em;
+}
+  
+.container-shows_visible {
+  top: 0.5em !important;
 }
 
 iframe {
@@ -880,7 +893,7 @@ h5,
   #show-food a:nth-child(2), 
   #show-dressing a:nth-child(1), 
   #show-lets a:nth-child(2), 
-  #show-truth_muzic a:nth-child(1) {
+  #show-truth_muzic a:nth-child(2) {
     width: 46%;
     vertical-align: middle;
   }
@@ -929,7 +942,7 @@ h5,
   .container {
     top: 5.5em;
   }
-	
+  
 	.container-about_kovl {
 		top: 8em;
 	}
@@ -1540,7 +1553,7 @@ h5,
   #show-monday.display-wide a:nth-child(2), 
   #show-food.display-wide a:nth-child(2), 
   #show-dressing.display-wide a:nth-child(2), 
-  #show-lets.display-wide a:nth-child(2), 
+  #show-lets.display-wide a:nth-child(2),
   #show-truth_muzic.display-wide a:nth-child(2) {
 		width: 8em;
 	}
@@ -1805,7 +1818,8 @@ h5,
  */  
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-truth_muzic.display-wide a:nth-child(2) {
 		width: 10em;
 	}
 

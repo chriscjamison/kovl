@@ -156,18 +156,33 @@ $(document).ready(
 				
 				var nav_selector;
 				var nav_element = {};
+				var nav_css_class;
 
 				nav_selector = "nav";
 				nav_element = $(nav_selector);
+				nav_css_class = "nav-shows_visible";
 
-				var nav_css = {};
+				var nav_logo_selector;
+				var nav_logo_element = {};
+				var nav_logo_css_class;
 
-				nav_css = {
-					position: "relative", 
-					float: "left"
-				}
+				nav_logo_selector = ".nav-logo";
+				nav_logo_element = $(nav_logo_selector);
+				nav_logo_css_class = "nav-logo nav-logo-shows_visible";
 
-				$(nav_element).css(nav_css);
+				var container_selector;
+				var container_element = {};
+				var container_css_class;
+
+				container_selector = ".container";
+				container_element = $(container_selector);
+				container_css_class = "container container-shows_visible";
+
+				$(nav_element).removeClass();
+
+				$(nav_element).addClass(nav_css_class);
+				$(nav_logo_element).addClass(nav_logo_css_class);
+				$(container_element).addClass(container_css_class);
     
         $(shows_menu_element).css("display", "block");
       }
@@ -183,16 +198,31 @@ $(document).ready(
 
 				var nav_selector;
 				var nav_element = {};
+				var nav_css_class;
 
 				nav_selector = "nav";
 				nav_element = $(nav_selector);
+				nav_css_class = "nav-shows_visible";
 				
-				nav_css = {
-					position: "absolute", 
-					float: "none"
-				}
-				
-				$(nav_element).css(nav_css);
+				var nav_logo_selector;
+				var nav_logo_element = {};
+				var nav_logo_css_class;
+
+				nav_logo_selector = ".nav-logo";
+				nav_logo_element = $(nav_logo_selector);
+				nav_logo_css_class = "nav-logo-shows_visible";
+
+				var container_selector;
+				var container_element = {};
+				var container_css_class;
+
+				container_selector = ".container";
+				container_element = $(container_selector);
+				container_css_class = "container-shows_visible";
+
+				$(nav_element).removeClass(nav_css_class);
+				$(nav_logo_element).removeClass(nav_logo_css_class);
+				$(container_element).removeClass(container_css_class);
     
         $(shows_menu_element).css("display", "none");
       }
