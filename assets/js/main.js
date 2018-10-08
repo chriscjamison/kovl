@@ -36,13 +36,11 @@ $(document).ready(
       ['Private Times', 'private-times', 'private_times'], 
 			['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'],			
       ['Agree to Disagree', 'agree-to-disagree', 'agree'],
-      ['Monday Motivation!', 'monday-motivation', 'monday'],  
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['Imagine That', 'imagine-that', 'imagine'],
 			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'], 
 			['Truth Muzic &amp; The Table of Truth', 'truth-muzic', 'truth_muzic'], 
-			['Meleka Monday&rsquo;s', 'meleka-mondays', 'meleka'], 
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
 
