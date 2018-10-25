@@ -537,25 +537,21 @@ h5,
 
 #show_listing-food + a, 
 #show_listing-imagine + a, 
-#show_listing-lets + a  {
-  background-image: url('../img/listings/row_3.jpg?v=4');
+#show_listing-truth_muzic + a  {
+  background-image: url('../img/listings/row_3.jpg?v=5');
+}
+
+#show_listing-truth_muzic + a {
+  background-position-x: -300px;
 }
 
 #show_listing-imagine + a {
-  background-position-x: -300px;
-}
-
-#show_listing-lets + a {
   background-position-x: -600px;
 }
 
-#show_listing-truth_muzic + a, 
-#show_listing-what_we_doing + a{
-  background-image: url('../img/listings/row_4.jpg?v=6');
-}
-
-#show_listing-what_we_doing + a { 
-  background-position-x: -300px;
+ 
+#show_listing-what_we_doing + a {
+  background-image: url('../img/listings/row_4.jpg?v=7');
 }
 
 .show_listing-social_media {

@@ -38,9 +38,8 @@ $(document).ready(
       ['Agree to Disagree', 'agree-to-disagree', 'agree'],
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
-			['Imagine That', 'imagine-that', 'imagine'],
-			['Let&rsquo;s Talk Confidence', 'lets-talk-confidence', 'lets'], 
 			['Truth Muzic &amp; The Table of Truth', 'truth-muzic', 'truth_muzic'], 
+			['Imagine That', 'imagine-that', 'imagine'],
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
 
