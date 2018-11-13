@@ -12,19 +12,23 @@ $(document).ready(
 		
     var header_selector;
     var show_selector;
-    var footer_selector;
+		var footer_archive_selector;
+		var footer_actions_selector;
 
     var header_element = {};
     var show_element = {};
-    var footer_element = {};
+		var footer_archive_element = {};
+		var footer_actions_element = {};
 
-    var show_info_Array;
+		var show_info_Array;
+		var footer_actions_Array;
 
     var path_string;
 
 		var show_html;
     var header_html;
-    var footer_html;
+		var footer_archive_html;
+		var footer_actions_html;
     var archive_html;
 
     header_selector = "#header-shows";
@@ -43,11 +47,15 @@ $(document).ready(
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
 
+		path_string = determinePathofWebpage();
+
     header_html = "<div class=\"header-show close_menu\">\n" + 
-                  "  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
+									"  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
+									"  <a href=\"" + path_string + "/recorded-shows/recorded_shows.htm\" title=\"Recorded Shows\" id=\"header-link-recorded\">Recorded Shows</a>\n" + 
+
                   "</div>\n";
 
-    footer_html = "<span>Shows</span>\n";
+    footer_archive_html = "<span>Shows</span>\n";
 		
 		var window_width;
 
@@ -56,8 +64,6 @@ $(document).ready(
     show_info_Array.forEach( 
       function (value, index) {
         var current_show = value;
-
-        path_string = determinePathofWebpage();
 
         show_html = "<div class=\"header-show\" id=\"show-" + current_show[2] + "\">\n";
 				
@@ -81,7 +87,7 @@ $(document).ready(
 
         archive_html = "<a href=\"" + path_string + current_show[1] + "\" title=\"" + current_show[0] + "\">" + current_show[0] + "</a>\n";
       
-        footer_html = footer_html + archive_html;
+        footer_archive_html = footer_archive_html + archive_html;
       }
     );
 
@@ -112,10 +118,40 @@ $(document).ready(
       $(show_element).addClass("header-show close_menu");
     }
 
-    footer_selector = ".footer-archive";
-    footer_element = $(footer_selector);
+    footer_archive_selector = ".footer-archive";
+    footer_archive_element = $(footer_archive_selector);
 
-    $(footer_element).html(footer_html);
+		$(footer_archive_element).html(footer_archive_html);
+		
+		footer_actions_Array = [
+			["#", "Listen Now"], 
+			["recorded-shows/recorded_shows.htm", "Recorded Shows"], 
+			["company/about-kovl.htm", "About KOVL"], 
+			["javascript:loadContactForm();", "Contact KOVL"] 
+		];
+
+		footer_actions_html = "";
+
+		footer_actions_Array.forEach( 
+      function (value, index) {
+				var current_link = value;
+
+				if (index !== 3) {
+					footer_actions_html = footer_actions_html + "<a href=\"" + path_string + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";
+
+					if (index === 1)	{
+						footer_actions_html = footer_actions_html + "<br />\n";
+					}
+				}	else {
+					footer_actions_html = footer_actions_html + "<a href=\"" + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";
+				}
+			}
+		);
+
+		footer_actions_selector = ".footer-actions";
+		footer_actions_element = $(footer_actions_selector);
+
+		$(footer_actions_element).html(footer_actions_html);        
 
     if (window_width <= 1024)  {
       var nav_logo_selector;

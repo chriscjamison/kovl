@@ -7,6 +7,7 @@ nav,
 .link-listen_now a, 
 #email_newsletter a, 
 h3, 
+h4, 
 h5, 
 #description p, 
 #show-description p,
@@ -19,9 +20,10 @@ h5,
 #form-contact textarea, 
 #input-contact-reset, 
 #input-contact-submit, 
-#show-description p, 
 #archive h5, 
-#archive h6 {
+#archive h6, 
+.recorded-date, 
+.recorded-link-show {
   font-family: 'abril-text', serif;
 }
 
@@ -59,6 +61,10 @@ nav,
 #header-shows a {
   display: inline-block;
 	vertical-align: middle;
+}
+
+#header-link-recorded {
+  float: left;
 }
 
 .show-left {
@@ -382,6 +388,11 @@ h5,
   text-align: center;
 }
 
+h4 {
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
 #description p, 
 #show-description p {
   width: 60%;
@@ -398,6 +409,10 @@ h5,
 #description p:first-of-type, 
 #show-description p:first-of-type {
   margin-top: 0;
+}
+
+#show-description {
+  min-height: 250px;
 }
 
 #description-border, 
@@ -756,6 +771,15 @@ h5,
   text-align: justify !important;
 }
 /* Formats paragraphs displayed on the About KOVL page. */
+
+.recorded-link-show {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #384883;
+}
+/* Formats links which connect to recorded shows listed on the 
+ * Recorded Shows page.
+ */
 
 #content-form-contact, 
 #contact-confirmation_message, 
@@ -1428,7 +1452,9 @@ h5,
   
   #show-description {
     height: inherit;
+    min-height: 653px;
     padding: 2em 2em 0 2em;
+    clear: both;
   }
 
   h3 {
@@ -1538,7 +1564,11 @@ h5,
 	
 	.display-wide {
 		width: 24%;
-	}
+  }
+  
+  #header-link-recorded {
+    margin-left: 1.25em;
+  }
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
@@ -1629,6 +1659,14 @@ h5,
     display: block;
     top: 16em;
   }
+
+  h4 {
+    margin: 0 0 0.5em 1.3em;
+  }
+
+  .recorded-date {
+    margin-left: 2em;
+  }
 	
 	#contact-confirmation_message {
 		margin: 10% 35.25%;
@@ -1667,7 +1705,11 @@ h5,
 	
 	.display-wide {
 		width: 23%;
-	}
+  }
+  
+  #header-link-recorded {
+    margin-left: 3em;
+  }
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
@@ -1720,7 +1762,15 @@ h5,
     display: block;
     top: 12em;
   }
-	
+  
+  h4 {
+    margin: 0 0 0.5em 1.3em;
+  }
+
+  .recorded-date {
+    margin-left: 2em;
+  }
+
 	#contact-confirmation_message {
 		margin: 10% 36.5%;
   }
@@ -1753,6 +1803,10 @@ h5,
     padding-bottom: 0.75em;
   } */
   
+  #header-link-recorded {
+    width: 10.25%;
+  }
+
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
 	#show-agree.display-wide a:nth-child(2), 
@@ -1803,6 +1857,10 @@ h5,
   
   .nav-logo {
     height: 0.5em;
+  }
+
+  #header-link-recorded {
+    width: 9%;
   }
 /*   
   .header-show:last-child {
