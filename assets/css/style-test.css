@@ -23,7 +23,10 @@ h5,
 #archive h5, 
 #archive h6, 
 .recorded-date, 
-.recorded-link-show {
+.recorded-link-show, 
+#media_player-link-close, 
+#media_player-description span, 
+#media_player-description p {
   font-family: 'abril-text', serif;
 }
 
@@ -33,7 +36,8 @@ h5,
 .show_listing-description, 
 #archive-most_recent_ep-description span, 
 .archive-previous_eps-description span, 
-.archive-listen_now span {
+.archive-listen_now span, 
+#media_player-description h1 {
   font-family: 'los-feliz', sans-serif;
 }
 
@@ -177,11 +181,18 @@ nav > div {
 }
 
 .header-show a, 
-nav > div > a {
+nav > div > a, 
+#media_player-link-close {
   text-decoration: underline;
   text-decoration-style: dotted;
   letter-spacing: 0.6px;
   color: #384883;
+}
+
+#media_player-link-close {
+  margin: 0.75em 1em 1.25em 1em;
+  display: block;
+  text-align: right;
 }
 
 .display-wide {
@@ -676,18 +687,28 @@ h4 {
  * Sets the blocks which make up the footer 'lower' on the page than the logo using 
  * the selector '.footer-logo img'.
  */
-  
-.footer-border_top_sm {
+
+.footer-border_top_sm, 
+.media_player-border-top {
   height: 0.63em;
   background-color: #2b2c30;
 }
-/* Formats the line which appears at the top of the footer. */
+/* Formats the line which appears at the top of the footer and the top 
+   of the media player.
+ */
+
 
 .footer-border_top_med {
   height: 2.5em;
   background-color: #2f3e55;
 }
 /* Formats the line which appears second from the top in the footer. */
+
+.media_player-border-bottom {
+  height: 0.63em;
+  background-color: #2f3e55;
+}
+/* Formats the line which appears at the bottom of the media player. */
 
 .footer-border_mid {
   height: auto;
@@ -865,6 +886,58 @@ h4 {
 	padding: 0.25em 0;
 	font-size: 1.15em;
 	color: #2f3e55;
+}
+
+#media_player-body {
+  margin: 0;
+  background-image: url('/assets/img/backgrounds/media_player-mid.png');
+  background-repeat: repeat;
+}
+
+#media_player-images {
+  height: 109px;
+  margin: 0 1em;
+  clear: both;
+}
+
+#media_player-images > img {
+  display: block;
+}
+
+#media_player-images > img:first-of-type {
+  float: left;
+}
+
+#media_player-images > img:last-of-type {
+  float: right;
+}
+
+#media_player-description {
+  margin: 1.38em 1em;
+}
+
+#media_player-description h1 {
+  margin: 0 1em;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+#media_player-description span, 
+#media_player-description p {
+  margin: 0 1.25em;
+  display: block;
+}
+
+#media_player-description h1, 
+#media_player-description span, 
+#media_player-description p {
+  color: #2f3e55;
+}
+
+#media_player-line, 
+#media_player-audio {
+  margin: 0 auto 1.38em auto;
+  display: block;
 }
 
 

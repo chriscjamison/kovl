@@ -293,8 +293,18 @@ $(document).ready(
 				}
 			}
 		);
+
+		$(".recorded-link-show").click(
+			function ()	{
+				var link_element = {};
+
+				link_element = this;
+
+				loadRecordedShowContent(link_element);
+			}
+		)
   }
-);
+);	
 
 
 
@@ -337,8 +347,8 @@ function loadConfirmationMessage()	{
 	var div_selector_1;
 	var div_selector_2;
 	
-	var div_elements_1;
-	var div_elements_2;
+	var div_element_1;
+	var div_element_2;
 	
 	div_selector_1 =  "#contact-confirmation_message";
 	div_element_1 = $(div_selector_1);
@@ -600,4 +610,55 @@ function clearData(input_element, color_valid_css)	{
 function resetData(input_element, default_value_string, color_base_css) {
 	$(input_element).css(color_base_css);
 	$(input_element).val(default_value_string);	
+}
+
+function loadRecordedShowContent(link_element)	{
+	var media_player_window = window.open("/recorded-shows/media_player.htm", "media_player", "width=360,height=420,menubar=no,status=no");
+	
+	var link_id_info;
+	var link_data_Array = [];
+	
+	link_id_info = $(link_element).attr("id");
+	
+	link_data_Array = link_id_info.split("-");
+
+	var dir_info;
+
+	dir_info = link_data_Array[3];
+
+	dir_info = dir_info.replace(/_/g, "-");
+
+	var image_path;
+
+	image_path = "/assets/img/splash/";
+
+	if (dir_info.indexOf("raej") > -1)	{
+		image_path = image_path + "live_with_raej.jpg";
+	}
+
+	var date_of_show_Array;
+
+	date_of_show_Array = link_data_Array[4].split("_");
+
+	var show_path;
+
+	show_path = "/assets/recorded_shows/" + dir_info + "/" + date_of_show_Array[2] + "/" + date_of_show_Array[1] + "/" + date_of_show_Array[0];
+
+	var show_img_selector;
+	var show_img_element = {};
+
+	show_img_selector = "#media_player-img-show";
+	show_img_element = $(show_img_selector);
+
+	var media_player_window_element = {};
+
+	// media_player_html = media_player_window.$('body');
+
+	// show_img_element = media_player_window.$('body').children(show_img_selector);
+	
+	// $(media_player_html).getElementById("media_player-img-show").attr("src", image_path);
+	
+console.log("$(show_img_element).attr(\"src\") = " + media_player_window.$('body').html());
+	
+
 }
