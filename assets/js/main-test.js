@@ -293,16 +293,6 @@ $(document).ready(
 				}
 			}
 		);
-
-		$(".recorded-link-show").click(
-			function ()	{
-				var link_element = {};
-
-				link_element = this;
-
-				loadRecordedShowContent(link_element);
-			}
-		)
   }
 );	
 
@@ -612,53 +602,108 @@ function resetData(input_element, default_value_string, color_base_css) {
 	$(input_element).val(default_value_string);	
 }
 
-function loadRecordedShowContent(link_element)	{
+function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 	var media_player_window = window.open("/recorded-shows/media_player.htm", "media_player", "width=360,height=420,menubar=no,status=no");
+
+	setTimeout(
+		function ()	{
+			var show_data_Array = [];
 	
-	var link_id_info;
-	var link_data_Array = [];
-	
-	link_id_info = $(link_element).attr("id");
-	
-	link_data_Array = link_id_info.split("-");
+			show_data_Array = show_name.split("-");
+		
+			var image_path;
+		
+			image_path = "/assets/img/splash/";
 
-	var dir_info;
+			var audio_path;
 
-	dir_info = link_data_Array[3];
+			audio_path = "/assets/recorded-shows/" + show_name + "/" + show_date + "/" + show_title.toLowerCase();
 
-	dir_info = dir_info.replace(/_/g, "-");
+			switch (show_data_Array[0])	{
+				case "raej": 
+					image_path = image_path + "live_with_raej.jpg";
 
-	var image_path;
+					if (show_data_Array[3] === "morning")	{
+						show_name = "RaeJ in the Morning";
+					}				
+				break;
+			} // END of SWITCH statement
+		
+			show_title = show_title.replace(/-/g, " ");
+		
+			media_player_window.document.getElementById("media_player-img-show").setAttribute("src", image_path);
+			media_player_window.document.getElementById("media_player-img-show").setAttribute("alt", show_name);
+			
+			media_player_window.document.getElementsByTagName("h1")[0].innerHTML = show_name;
 
-	image_path = "/assets/img/splash/";
+			show_data_Array = show_date.split("/");
 
-	if (dir_info.indexOf("raej") > -1)	{
-		image_path = image_path + "live_with_raej.jpg";
-	}
+			switch (show_data_Array[1])	{
+				case "1":
+					show_date = "Jan.";
+				break;
 
-	var date_of_show_Array;
+				case "2":
+					show_date = "Feb.";
+				break;
 
-	date_of_show_Array = link_data_Array[4].split("_");
+				case "3":
+					show_date = "Mar.";
+				break;
 
-	var show_path;
+				case "4":
+					show_date = "Apr.";
+				break;
 
-	show_path = "/assets/recorded_shows/" + dir_info + "/" + date_of_show_Array[2] + "/" + date_of_show_Array[1] + "/" + date_of_show_Array[0];
+				case "5":
+					show_date = "May";
+				break;
 
-	var show_img_selector;
-	var show_img_element = {};
+				case "6":
+					show_date = "Jun.";
+				break;
 
-	show_img_selector = "#media_player-img-show";
-	show_img_element = $(show_img_selector);
+				case "7":
+					show_date = "Jul.";
+				break;
 
-	var media_player_window_element = {};
+				case "8":
+					show_date = "Aug.";
+				break;
 
-	// media_player_html = media_player_window.$('body');
+				case "9":
+					show_date = "Sep.";
+				break;
 
-	// show_img_element = media_player_window.$('body').children(show_img_selector);
-	
-	// $(media_player_html).getElementById("media_player-img-show").attr("src", image_path);
-	
-console.log("$(show_img_element).attr(\"src\") = " + media_player_window.$('body').html());
-	
+				case "10":
+					show_date = "Oct.";
+				break;
 
+				case "11":
+					show_date = "Nov.";
+					console.log("1");
+				break;
+
+				case "12":
+					show_date = "Dec.";
+				break;
+			}
+console.log("show_date = " + show_date);
+			show_date = show_date + show_data_Array[2] + ", 20" + show_data_Array[0];
+
+			audio_path = audio_path + "--" + show_data_Array[1] + "-";
+			
+			if (show_data_Array[2].length === 1)	{
+				show_data_Array[2] = "0" + show_data_Array[2];
+			}
+			
+			audio_path = audio_path + show_data_Array[2] + "-" + show_data_Array[0] + ".mp3";
+
+			media_player_window.document.getElementsByTagName("span")[0].innerHTML = show_date;
+
+			media_player_window.document.getElementsByTagName("p")[0].innerHTML = show_title;
+
+			media_player_window.document.getElementsByTagName("audio")[0].setAttribute("src", audio_path);
+		}, 250
+	);
 }
