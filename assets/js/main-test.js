@@ -688,7 +688,7 @@ function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 					show_date = "Dec.";
 				break;
 			}
-console.log("show_date = " + show_date);
+
 			show_date = show_date + show_data_Array[2] + ", 20" + show_data_Array[0];
 
 			audio_path = audio_path + "--" + show_data_Array[1] + "-";
