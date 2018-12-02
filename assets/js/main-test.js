@@ -38,12 +38,9 @@ $(document).ready(
       ['Live with RaeJ &amp; Brown Shuga Sunday Brunch', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
-			['The Twinz &rsquo;R Inn', 'the-twinz-r-inn', 'the_twinz'],			
       ['Agree to Disagree', 'agree-to-disagree', 'agree'],
 			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
-			['Truth Muzic &amp; The Table of Truth', 'truth-muzic', 'truth_muzic'], 
-			['Imagine That', 'imagine-that', 'imagine'],
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
 
@@ -601,11 +598,12 @@ function resetData(input_element, default_value_string, color_base_css) {
 	$(input_element).css(color_base_css);
 	$(input_element).val(default_value_string);	
 }
-
 function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
-	var media_player_window = window.open("/recorded-shows/media_player.htm", "media_player", "width=360,height=420,menubar=no,status=no");
+	var media_player_window = open("/recorded-shows/media_player.htm", "media_player", "width=360,height=420,menubar=no,status=no");
 
-	setTimeout(
+	media_player_window.focus();
+
+	media_player_window.onload = 
 		function ()	{
 			var show_data_Array = [];
 	
@@ -630,11 +628,18 @@ function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 			} // END of SWITCH statement
 		
 			show_title = show_title.replace(/-/g, " ");
+
+			var show_image_element = {};
+
+			show_image_element = media_player_window.document.getElementById("media_player-img-show");
 		
-			media_player_window.document.getElementById("media_player-img-show").setAttribute("src", image_path);
-			media_player_window.document.getElementById("media_player-img-show").setAttribute("alt", show_name);
+			show_image_element.setAttribute("src", image_path);
+			show_image_element.setAttribute("alt", show_name);
 			
-			media_player_window.document.getElementsByTagName("h1")[0].innerHTML = show_name;
+			var show_content_h1_element = {};
+
+			show_content_h1_element = media_player_window.document.getElementsByTagName("h1")[0];
+			show_content_h1_element.innerHTML = show_name;
 
 			show_data_Array = show_date.split("/");
 
@@ -699,11 +704,19 @@ function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 			
 			audio_path = audio_path + show_data_Array[2] + "-" + show_data_Array[0] + ".mp3";
 
-			media_player_window.document.getElementsByTagName("span")[0].innerHTML = show_date;
+			var show_date_element = {};
 
-			media_player_window.document.getElementsByTagName("p")[0].innerHTML = show_title;
+			show_date_element = media_player_window.document.getElementsByTagName("span")[0]
+			show_date_element.innerHTML = show_date;
 
-			media_player_window.document.getElementsByTagName("audio")[0].setAttribute("src", audio_path);
-		}, 250
-	);
+			var show_info_element = {};
+
+			show_info_element = media_player_window.document.getElementsByTagName("p")[0]
+			show_info_element.innerHTML = show_title;
+
+			var show_audio_element = {};
+
+			show_audio_element = media_player_window.document.getElementsByTagName("audio")[0]
+			show_audio_element.setAttribute("src", audio_path);
+	};
 }
