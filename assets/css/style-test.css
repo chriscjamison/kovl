@@ -5,13 +5,15 @@ nav,
 .carousel-listen_now > span, 
 .carousel-listen_archive > span, 
 .link-listen_now a, 
+.link-sponsor a, 
 #email_newsletter a, 
 h3, 
 h4, 
 h5, 
 #description p, 
 #show-description p,
-.show_listing-showtime,  
+.show_listing-showtime, 
+.container-about_kovl #show-description a, 
 .footer-archive, 
 .footer-actions, 
 #content-form-contact a, 
@@ -30,6 +32,8 @@ h5,
   font-family: 'abril-text', serif;
 }
 
+.desc-sponsor p, 
+.link-sponsor p, 
 #content-form-contact label, 
 #contact-confirmation_message p, 
 .carousel-item-content, 
@@ -235,8 +239,14 @@ iframe#iframe-media_player {
   color: #2f3e55;
 }
 
-.link-listen_now {
+.link-listen_now, 
+.desc-sponsor, 
+.link-sponsor {
   display: none;
+}
+
+#sponsor-schedule {
+  display: block;
 }
 
 .carousel-listen_now, 
@@ -278,6 +288,30 @@ iframe#iframe-media_player {
 
 .carousel-listen_archive a {
   margin: 0.5em 1em 0.5em 2.5em;
+}
+
+.link-sponsor {
+  width: 16em;
+  position: absolute;
+  top: 2.75em;
+  right: 6em;
+}
+
+.link-sponsor p, 
+.link-sponsor a {
+  font-size: 1.1em;
+}
+
+.link-sponsor p {
+  margin-bottom: 0.25em;
+  color: #f4f5f0;
+}
+
+.link-sponsor a {
+  display: block;
+  color: #a5bcbb;
+  text-align: center;
+  text-decoration: underline;
 }
 
 #carousel-live_with_raej {
@@ -424,6 +458,17 @@ h4 {
 
 #show-description {
   min-height: 250px;
+}
+
+.container-about_kovl #show-description h4 {
+  margin-top: 1.75em;
+  text-align: center;
+}
+
+.container-about_kovl #show-description a {
+  display: block;
+  margin-bottom: 2.25em;
+  text-align: center;
 }
 
 #description-border, 
@@ -778,7 +823,8 @@ h4 {
 }
 /* Formats paragraphs displayed on the About KOVL page. */
 
-.recorded-link-show {
+.recorded-link-show, 
+.container-about_kovl #show-description a {
   text-decoration: underline;
   text-decoration-style: dotted;
   color: #384883;
@@ -991,6 +1037,8 @@ h4 {
   #header-shows a, 
   nav > div > a, 
   .link-listen_now a, 
+  .desc-sponsor p, 
+  .link-sponsor a, 
   #email_newsletter a, 
   .footer-archive a, 
   .footer-actions a, 
@@ -1035,7 +1083,32 @@ h4 {
     height: 3.2em;
     display: block;
   }
+
+  .link-sponsor {
+    width: 9.25em;
+    top: 20.75em;
+    display: block;
+    border: 1px solid #2f3e55;
+  }
+
+  .link-sponsor .sponsor-p-desktop {
+    display: none;
+  }
+
+  .desc-sponsor {
+    position: absolute;
+    display: block;
+  }
   
+  .link-sponsor a {
+    padding: 0.75em 1em;
+    background-color: #a5bcbb;
+    border: 3px solid #f4f5f0;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2f3e55;
+  }
+
   #show_listings {
     margin: 0 auto;
     padding: 0;
@@ -1096,12 +1169,21 @@ h4 {
 		width: 85% !important;
 	}
 	
-	#show-desciption p.description-time {
+	#show-description p.description-time {
 		margin-bottom: 0;
   }
-  
+
   h4 {
     margin: 0 0 0.5em 1em;
+  }
+
+  .container-about_kovl #show-description h4 {
+    margin-top: 1.75em;
+  }
+
+  .container-about_kovl #show-description a {
+    display: block;
+    margin-left: 1.75em;
   }
 
   .recorded-date, 
@@ -1131,35 +1213,6 @@ h4 {
 	
 	#contact-confirmation_message p {
 		font-size: 0.9em;
-  }
-}
-
-
-@media screen and (width: 320px) {
-  .header-show:last-child {
-    padding-bottom: 2em;
-  }
-
-  .spacer-center {
-		width: 60% !important;
-	}
-
-  .container {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
-		
-  #carouselExampleControls {
-    left: 0 !important;
-  }
-
-  .link-listen_now {
-		left: 31% !important;
-  }
-  
-  .carousel-control-prev, 
-  .carousel-control-next {
-    height: 81%;
   }
 }
 
@@ -1196,7 +1249,7 @@ h4 {
   }
 
   .carousel-inner {
-    height: 16em;
+    height: 21em;
   }
 
   .img-fluid {
@@ -1207,7 +1260,17 @@ h4 {
   .link-listen_now, 
   #email_newsletter {
     top: 88%;
-    left: 32.75%;
+    left: 31.75%;
+  }
+
+  .desc-sponsor {
+    top: 15.5em;
+    right: 37.75%;
+  }
+
+  .link-sponsor {
+    top: 17.25em;
+    right: 30.5%;
   }
 
   #show-description {
@@ -1247,11 +1310,60 @@ h4 {
 }
 
 
+@media screen and (width: 320px) {
+  .header-show:last-child {
+    padding-bottom: 2em;
+  }
+
+  .spacer-center {
+		width: 60% !important;
+	}
+
+  .container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+		
+  #carouselExampleControls {
+    left: 0 !important;
+  }
+
+  .link-listen_now {
+		left: 31% !important;
+  }
+
+  .desc-sponsor {
+    right: 35.75%;
+  }
+
+  .link-sponsor {
+    right: 28%;
+  }
+  
+  .carousel-control-prev, 
+  .carousel-control-next {
+    height: 81%;
+  }
+  
+  .container-about_kovl #show-description h4 {
+    margin-left: 1.25em;
+  }
+}
+
+
 @media screen and (min-width: 360px) and (max-width: 375px) {
   .carousel-control-prev, 
   .carousel-control-next {
      height: 13em;
-   }
+  }
+
+  .container-about_kovl #show-description h4 {
+    margin-left: 1.25em;
+  }
+
+  .container-about_kovl #show-description a {
+    margin-left: 1.5em;
+  }
 }
 
 
@@ -1303,7 +1415,7 @@ h4 {
   }
   
   .carousel-inner {
-    height: 19em;
+    height: 25em;
   }
 
   .img-fluid {
@@ -1320,6 +1432,15 @@ h4 {
   #email_newsletter {
     top: 90%;
     left: 34.5%;
+  }
+
+  .desc-sponsor {
+    top: 19em;
+    right: 36.75%;
+  }
+
+  .link-sponsor {
+    left: 6.85em;
   }
 
   #description, 
@@ -1344,6 +1465,11 @@ h4 {
 	#show-desciption p.description-time {
 		margin-bottom: 0;
   }
+  
+  .container-about_kovl #show-description h4 {
+    margin-left: 1.25em;
+  }
+
   
   /* .footer-border_mid.landing_page {
     height: 35.5em;
@@ -1443,7 +1569,7 @@ h4 {
 	
   .carousel-inner {
 		width: 43em;
-    height: 27.75em;
+    height: 36.25em;
 		margin: 0 auto;
   }
 	
@@ -1454,6 +1580,34 @@ h4 {
   .link-listen_now {
     display: block;
 		left: 17.4em;
+  }
+
+  .link-sponsor {
+    width: 9.25em;
+    display: block;
+    top: 30.75em;
+    right: 17em;
+    border: 1px solid #2f3e55;
+  }
+
+  .link-sponsor .sponsor-p-desktop {
+    display: none;
+  }
+
+  .desc-sponsor {
+    position: absolute;
+    display: block;
+    left: 18em;
+    top: 29em;
+  }
+  
+  .link-sponsor a {
+    padding: 0.75em 1em;
+    background-color: #a5bcbb;
+    border: 3px solid #f4f5f0;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2f3e55;
   }
 
   .img-fluid {
@@ -1522,6 +1676,11 @@ h4 {
     right: 5em;
   }
 
+  .carousel-control-prev, 
+  .carousel-control-next {
+    height: 25em;
+  }
+  
   .carousel-control-prev {
     height: 90%;
     left: 0;
@@ -1580,6 +1739,17 @@ h4 {
   .description-bottom_border {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .container-about_kovl #show-description h4 {
+    margin: 1.5em 0 0.5em 0;
+    text-align: center;
+  }
+
+  .container-about_kovl #show-description a {
+    display: block;
+    margin-bottom: 1.25em;
+    text-align: center;
   }
 
   .show_listing-description {
@@ -1658,7 +1828,15 @@ h4 {
 @media screen and (min-width: 770px) and (max-width: 1024px) {
   .spacer-center {
     width: 35.75%;
-  }  
+  }
+
+  .carousel-control-prev {
+    left: 10%;
+  }
+
+  .carousel-control-next {
+    right: 10%;
+  }
 }
 
 @media screen and (min-width: 1044px) and (max-width: 1290px) {
