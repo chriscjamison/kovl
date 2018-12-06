@@ -137,7 +137,7 @@ $(document).ready(
 					footer_actions_html = footer_actions_html + "<a href=\"" + path_string + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";
 
 					if (index === 1)	{
-						footer_actions_html = footer_actions_html + "<br />\n";
+						footer_actions_html = footer_actions_html + "<br>\n";
 					}
 				}	else {
 					footer_actions_html = footer_actions_html + "<a href=\"" + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";

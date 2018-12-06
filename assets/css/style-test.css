@@ -291,7 +291,7 @@ iframe#iframe-media_player {
 }
 
 .link-sponsor {
-  width: 16em;
+  width: 22em;
   position: absolute;
   top: 2.75em;
   right: 6em;
@@ -304,7 +304,12 @@ iframe#iframe-media_player {
 
 .link-sponsor p {
   margin-bottom: 0.25em;
+  text-align: center;
   color: #f4f5f0;
+}
+
+.link-sponsor span {
+  text-decoration: underline;  
 }
 
 .link-sponsor a {
@@ -443,7 +448,6 @@ h4 {
   width: 60%;
   margin: 2.5em auto;
   font-size: 1.05em;
-  text-align: justify;
   line-height: 2em;
 }
 
@@ -461,7 +465,7 @@ h4 {
 }
 
 .container-about_kovl #show-description h4 {
-  margin-top: 1.75em;
+  margin: 1.75em auto 0.5em auto;
   text-align: center;
 }
 
@@ -819,7 +823,6 @@ h4 {
 .container-about_kovl p {
   width: 60% !important;
   font-weight: 400 !important;
-  text-align: justify !important;
 }
 /* Formats paragraphs displayed on the About KOVL page. */
 
@@ -1183,7 +1186,6 @@ h4 {
 
   .container-about_kovl #show-description a {
     display: block;
-    margin-left: 1.75em;
   }
 
   .recorded-date, 
@@ -1249,7 +1251,7 @@ h4 {
   }
 
   .carousel-inner {
-    height: 21em;
+    height: 20.5em;
   }
 
   .img-fluid {
@@ -1265,7 +1267,7 @@ h4 {
 
   .desc-sponsor {
     top: 15.5em;
-    right: 37.75%;
+    right: 42.75%;
   }
 
   .link-sponsor {
@@ -1333,7 +1335,7 @@ h4 {
   }
 
   .desc-sponsor {
-    right: 35.75%;
+    right: 41.75%;
   }
 
   .link-sponsor {
@@ -1342,7 +1344,7 @@ h4 {
   
   .carousel-control-prev, 
   .carousel-control-next {
-    height: 81%;
+    height: 64%;
   }
   
   .container-about_kovl #show-description h4 {
@@ -1355,14 +1357,6 @@ h4 {
   .carousel-control-prev, 
   .carousel-control-next {
      height: 13em;
-  }
-
-  .container-about_kovl #show-description h4 {
-    margin-left: 1.25em;
-  }
-
-  .container-about_kovl #show-description a {
-    margin-left: 1.5em;
   }
 }
 
@@ -1436,7 +1430,7 @@ h4 {
 
   .desc-sponsor {
     top: 19em;
-    right: 36.75%;
+    right: 42.75%;
   }
 
   .link-sponsor {
@@ -1597,7 +1591,7 @@ h4 {
   .desc-sponsor {
     position: absolute;
     display: block;
-    left: 18em;
+    left: 19.5em;
     top: 29em;
   }
   
@@ -1682,12 +1676,10 @@ h4 {
   }
   
   .carousel-control-prev {
-    height: 90%;
     left: 0;
   }
 
   .carousel-control-next {
-    height: 90%;
     right: 0;
   }
   
