@@ -1,3 +1,37 @@
+$(window).on("resize", 
+	function () {
+		var window_width;
+
+		window_width = $(window).width();
+
+		var nav_spacer_center_selector;
+		var nav_spacer_center_element = {};
+
+		nav_spacer_center_selector = ".spacer-center";
+		nav_spacer_center_element = $(nav_spacer_center_selector);
+
+		var nav_spacer_center_width;
+
+		nav_spacer_center_width = $(nav_spacer_center_element).width();
+
+		var nav_spacer_selector;
+		var nav_spacer_element = {};
+
+		nav_spacer_selector = ".nav_spacer";
+		nav_spacer_element = $(nav_spacer_selector);
+
+		var nav_spacer_width;
+
+		nav_spacer_width = $(nav_spacer_element).width();
+
+		var nav_link_to_width;
+
+		nav_link_to_width = Math.ceil((window_width - (nav_spacer_width * 2) - nav_spacer_center_width) / 2);
+console.log("nav_link_to_width = " + nav_link_to_width);
+	
+	}
+);
+
 $(document).ready( 
   function () {
 		var url_hash;
@@ -173,7 +207,6 @@ $(document).ready(
 
       $(lower_nav_logo_element).remove();
     }
-
 		
     $("#nav-link-shows").click(
       function () {
@@ -294,7 +327,6 @@ $(document).ready(
 );	
 
 
-
 function routeToShow()  {
   var player_html;
 
@@ -312,7 +344,6 @@ function routeToShow()  {
 								"<iframe src=\"" + path_string + "media-player/media_player.htm\" name=\"media_player\" id=\"iframe-media_player\"></iframe>";
 
   $(listen_now_element).append(player_html);
-
 }
 
 function determinePathofWebpage()  {
@@ -373,6 +404,7 @@ function closeConfirmationMessage()	{
 	
 	$(div_elements).css(visible_css);
 }
+
 function loadContactForm()	{
 	
 	var div_selector;
@@ -598,125 +630,13 @@ function resetData(input_element, default_value_string, color_base_css) {
 	$(input_element).css(color_base_css);
 	$(input_element).val(default_value_string);	
 }
+
 function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
-	var media_player_window = open("/recorded-shows/media_player.htm", "media_player", "width=360,height=420,menubar=no,status=no");
+	var media_player_filename;
+
+	media_player_filename = "/recorded-shows/media_player.php?show_name=" + show_name + "&show_date=" + show_date + "&show_title=" + show_title;
+
+	var media_player_window = open(media_player_filename, "media_player", "width=360,height=420,menubar=no,status=no");
 
 	media_player_window.focus();
-
-	media_player_window.onload = 
-		function ()	{
-			var show_data_Array = [];
-	
-			show_data_Array = show_name.split("-");
-		
-			var image_path;
-		
-			image_path = "/assets/img/splash/";
-
-			var audio_path;
-
-			audio_path = "/assets/recorded-shows/" + show_name + "/" + show_date + "/" + show_title.toLowerCase();
-
-			switch (show_data_Array[0])	{
-				case "raej": 
-					image_path = image_path + "live_with_raej.jpg";
-
-					if (show_data_Array[3] === "morning")	{
-						show_name = "RaeJ in the Morning";
-					}				
-				break;
-			} // END of SWITCH statement
-		
-			show_title = show_title.replace(/-/g, " ");
-
-			var show_image_element = {};
-
-			show_image_element = media_player_window.document.getElementById("media_player-img-show");
-		
-			show_image_element.setAttribute("src", image_path);
-			show_image_element.setAttribute("alt", show_name);
-			
-			var show_content_h1_element = {};
-
-			show_content_h1_element = media_player_window.document.getElementsByTagName("h1")[0];
-			show_content_h1_element.innerHTML = show_name;
-
-			show_data_Array = show_date.split("/");
-
-			switch (show_data_Array[1])	{
-				case "1":
-					show_date = "Jan.";
-				break;
-
-				case "2":
-					show_date = "Feb.";
-				break;
-
-				case "3":
-					show_date = "Mar.";
-				break;
-
-				case "4":
-					show_date = "Apr.";
-				break;
-
-				case "5":
-					show_date = "May";
-				break;
-
-				case "6":
-					show_date = "Jun.";
-				break;
-
-				case "7":
-					show_date = "Jul.";
-				break;
-
-				case "8":
-					show_date = "Aug.";
-				break;
-
-				case "9":
-					show_date = "Sep.";
-				break;
-
-				case "10":
-					show_date = "Oct.";
-				break;
-
-				case "11":
-					show_date = "Nov.";
-					console.log("1");
-				break;
-
-				case "12":
-					show_date = "Dec.";
-				break;
-			}
-
-			show_date = show_date + show_data_Array[2] + ", 20" + show_data_Array[0];
-
-			audio_path = audio_path + "--" + show_data_Array[1] + "-";
-			
-			if (show_data_Array[2].length === 1)	{
-				show_data_Array[2] = "0" + show_data_Array[2];
-			}
-			
-			audio_path = audio_path + show_data_Array[2] + "-" + show_data_Array[0] + ".mp3";
-
-			var show_date_element = {};
-
-			show_date_element = media_player_window.document.getElementsByTagName("span")[0]
-			show_date_element.innerHTML = show_date;
-
-			var show_info_element = {};
-
-			show_info_element = media_player_window.document.getElementsByTagName("p")[0]
-			show_info_element.innerHTML = show_title;
-
-			var show_audio_element = {};
-
-			show_audio_element = media_player_window.document.getElementsByTagName("audio")[0]
-			show_audio_element.setAttribute("src", audio_path);
-	};
 }

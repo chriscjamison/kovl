@@ -475,6 +475,11 @@ h4 {
   text-align: center;
 }
 
+.container-about_kovl #show-description span + a {
+  display: inline;
+  text-align: left;
+}
+
 #description-border, 
 #show_listing-border, 
 #social_media-border, 
@@ -1184,9 +1189,11 @@ h4 {
     margin-top: 1.75em;
   }
 
-  .container-about_kovl #show-description a {
+  .container-about_kovl #show-description a, 
+  .container-about_kovl #show-description span + a { 
     display: block;
   }
+
 
   .recorded-date, 
   .recorded-link-show {
@@ -1743,7 +1750,7 @@ h4 {
     margin-bottom: 1.25em;
     text-align: center;
   }
-
+  
   .show_listing-description {
     transform: translate(0, -10%);
   }
