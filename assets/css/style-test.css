@@ -1814,6 +1814,10 @@ h4 {
 	#contact-confirmation_message {
 		margin: 10% 25.5%;
   }
+
+  .recorded-date {
+    margin-left: 2.5em;
+  }
   
   #media_player-link-close, 
   #media_player-description > span, 
@@ -1859,6 +1863,16 @@ h4 {
 
   #media_player-images > img:last-of-type {
     width: 35em;
+  }
+}
+
+@media screen and (width: 1024px) {
+  .nav-link_to:nth-child(2) {
+    padding-left: 14.31em;
+  }
+
+  .nav-link_to:nth-child(4) {
+    padding-right: 11.88em;
   }
 }
 
