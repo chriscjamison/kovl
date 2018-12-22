@@ -1,34 +1,12 @@
 $(window).on("resize", 
-	function () {
-		var window_width;
+	function ()	{
+		resizeWindow();
+	}
+);
 
-		window_width = $(window).width();
-
-		var nav_spacer_center_selector;
-		var nav_spacer_center_element = {};
-
-		nav_spacer_center_selector = ".spacer-center";
-		nav_spacer_center_element = $(nav_spacer_center_selector);
-
-		var nav_spacer_center_width;
-
-		nav_spacer_center_width = $(nav_spacer_center_element).width();
-
-		var nav_spacer_selector;
-		var nav_spacer_element = {};
-
-		nav_spacer_selector = ".nav_spacer";
-		nav_spacer_element = $(nav_spacer_selector);
-
-		var nav_spacer_width;
-
-		nav_spacer_width = $(nav_spacer_element).width();
-
-		var nav_link_to_width;
-
-		nav_link_to_width = Math.ceil((window_width - (nav_spacer_width * 2) - nav_spacer_center_width) / 2);
-console.log("nav_link_to_width = " + nav_link_to_width);
-	
+$(window).on("load", 
+	function ()	{
+		setTimeout(resizeWindow, 250);
 	}
 );
 
@@ -82,7 +60,7 @@ $(document).ready(
 
     header_html = "<div class=\"header-show close_menu\">\n" + 
 									"  <a href=\"#\" title=\"Close Menu\">Close Menu</a>\n" + 
-									"  <a href=\"" + path_string + "/recorded-shows/recorded_shows.htm\" title=\"Recorded Shows\" id=\"header-link-recorded\">Recorded Shows</a>\n" + 
+									// "  <a href=\"" + path_string + "recorded-shows/recorded_shows.htm\" title=\"Recorded Shows\" id=\"header-link-recorded\">Recorded Shows</a>\n" + 
 
                   "</div>\n";
 
@@ -156,7 +134,7 @@ $(document).ready(
 		
 		footer_actions_Array = [
 			["#", "Listen Now"], 
-			["recorded-shows/recorded_shows.htm", "Recorded Shows"], 
+			// ["recorded-shows/recorded_shows.htm", "Recorded Shows"], 
 			["company/about-kovl.htm", "About KOVL"], 
 			["javascript:loadContactForm();", "Contact KOVL"] 
 		];
@@ -167,14 +145,13 @@ $(document).ready(
       function (value, index) {
 				var current_link = value;
 
-				if (index !== 3) {
-					footer_actions_html = footer_actions_html + "<a href=\"" + path_string + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";
-
-					if (index === 1)	{
-						footer_actions_html = footer_actions_html + "<br>\n";
-					}
-				}	else {
+				if (index !== 1) {
 					footer_actions_html = footer_actions_html + "<a href=\"" + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n";
+				}	else {
+					if (index === footer_actions_Array.length - 1)	{
+						footer_actions_html = footer_actions_html + "<a href=\"" + path_string + current_link[0] + "\" title=\"" + current_link[1] + "\" onclick=\"routeToShow();\">" + current_link[1] + "</a>\n<br>\n";
+					}
+					footer_actions_html = footer_actions_html + "<a href=\"" + path_string + current_link[0] + "\" title=\"" + current_link[1] + "\">" + current_link[1] + "</a>\n<br>\n";
 				}
 			}
 		);
@@ -182,32 +159,8 @@ $(document).ready(
 		footer_actions_selector = ".footer-actions";
 		footer_actions_element = $(footer_actions_selector);
 
-		$(footer_actions_element).html(footer_actions_html);        
+		$(footer_actions_element).html(footer_actions_html);   
 
-    if (window_width <= 1024)  {
-      var nav_logo_selector;
-      var nav_logo_element = {};
-
-      var lower_nav_logo_selector;
-      var lower_nav_logo_element = {};
-
-      nav_logo_selector = "nav > div.spacer-center > a > img";
-      nav_logo_element = $(nav_logo_selector);
-
-      lower_nav_logo_selector = ".nav-logo";
-      lower_nav_logo_element = $(lower_nav_logo_selector);
-
-      var src_string;
-
-      path_string = determinePathofWebpage();
-
-      src_string = path_string + "assets/img/logo/logo-top.png";
-
-      $(nav_logo_element).attr("src", src_string);
-
-      $(lower_nav_logo_element).remove();
-    }
-		
     $("#nav-link-shows").click(
       function () {
 
@@ -630,6 +583,91 @@ function resetData(input_element, default_value_string, color_base_css) {
 	$(input_element).css(color_base_css);
 	$(input_element).val(default_value_string);	
 }
+
+function resizeWindow()	{
+	var body_selector;
+	var body_element = {};
+
+	body_selector = "body";
+	body_element = $(body_selector);
+	
+	var body_width;
+	
+	body_width = $(body_element).width();
+
+	var nav_spacer_center_selector;
+	var nav_spacer_center_element = {};
+
+	nav_spacer_center_selector = ".spacer-center";
+	nav_spacer_center_element = $(nav_spacer_center_selector);
+
+	var nav_spacer_center_width;
+
+	nav_spacer_center_width = $(nav_spacer_center_element).width();
+
+	var nav_spacer_selector;
+	var nav_spacer_element = {};
+
+	nav_spacer_selector = ".nav-spacer";
+	nav_spacer_element = $(nav_spacer_selector);
+
+	var nav_spacer_width;
+
+	nav_spacer_width = $(nav_spacer_element).width() * 2;
+
+	var nav_link_to_width;
+
+	nav_link_to_width = Math.ceil((body_width - (nav_spacer_width + nav_spacer_center_width)) / 2);
+
+	var nav_link_to_left_selector;
+	var nav_link_to_left_element = {};
+
+	nav_link_to_left_selector = ".nav-link_to:nth-child(2)";
+	nav_link_to_left_element = $(nav_link_to_left_selector);
+
+	var nav_link_to_right_selector;
+	var nav_link_to_right_element = {};
+
+	nav_link_to_right_selector = ".nav-link_to:nth-child(4)";
+	nav_link_to_right_element = $(nav_link_to_right_selector);
+
+	var nav_link_to_a_left_selector;
+	var nav_link_to_a_left_element = {};
+
+	nav_link_to_a_left_selector = ".nav-link_to:nth-child(2) a";
+	nav_link_to_a_left_element = $(nav_link_to_a_left_selector)
+
+	var nav_link_to_a_right_selector;
+	var nav_link_to_a_right_element = {};
+
+	nav_link_to_a_right_selector = ".nav-link_to:nth-child(4) a";
+	nav_link_to_a_right_element = $(nav_link_to_a_right_selector)
+
+	var nav_link_to_a_left_width;
+	var nav_link_to_left_padding_left_value;
+	
+	nav_link_to_a_left_width = Math.ceil($(nav_link_to_a_left_element).width());
+	nav_link_to_left_padding_left_value = nav_link_to_width - nav_link_to_a_left_width;
+
+	var nav_link_to_a_right_width;
+	var nav_link_to_right_padding_right_value;
+
+	nav_link_to_a_right_width = Math.ceil($(nav_link_to_a_right_element).width());
+	nav_link_to_right_padding_right_value = nav_link_to_width - nav_link_to_a_right_width;
+/* 
+console.log("body_width = " + body_width);
+console.log("nav_spacer_center_width = " + nav_spacer_center_width);
+console.log("nav_spacer_width = " + nav_spacer_width);
+console.log("nav_link_to_width = " + nav_link_to_width);
+console.log("nav_link_to_a_left_width = " + nav_link_to_a_left_width);
+console.log("nav_link_to_a_left_padding_left_value = " + nav_link_to_left_padding_left_value);	
+console.log("nav_link_to_a_right_width = " + nav_link_to_a_right_width);
+console.log("nav_link_to_a_left_padding_right_value = " + nav_link_to_right_padding_right_value);	
+ */
+	$(nav_link_to_left_element).css("paddingLeft", nav_link_to_left_padding_left_value);
+	$(nav_link_to_right_element).css("paddingRight", nav_link_to_right_padding_right_value);
+}
+
 
 function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 	var media_player_filename;

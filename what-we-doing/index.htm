@@ -16,7 +16,7 @@
     <link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../assets/css/style.css?v=25" rel="stylesheet">
+    <link href="../assets/css/style.css?v=26" rel="stylesheet">
   </head>
   <body>
     <div id="header-shows">
@@ -24,13 +24,10 @@
     <nav>
       <div class="nav-spacer spacer-left">&nbsp;</div>
       <div class="nav-link_to"><a href="#shows" title="Shows" id="nav-link-shows">Shows</a></div>
-      <div class="nav-spacer spacer-center"><a href="../index.htm" title="KOVL Radio | kovlradio.com | Rulers Over the Land | St. Louis, MO"><img src="../assets/img/logo/logo-top_1.png" width="220" height="47" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" /></a></div>
+      <div class="nav-spacer spacer-center"><a href="../index.htm" title="KOVL Radio | kovlradio.com | Rulers Over the Land | St. Louis, MO"><img src="../assets/img/logo/logo.png" width="220" height="213" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" /></a></div>
       <div class="nav-link_to media_player"><a href="#" title="Listen Now" onclick="routeToShow();">Listen Now</a></div>
       <div class="nav-spacer spacer-right">&nbsp;</div>
     </nav>
-    <div class="nav-logo">
-      <a href="../index.htm" title="KOVL Radio | kovlradio.com | Rulers Over the Land | St. Louis, MO"><img src="../assets/img/logo/logo-top_2.png" width="220" height="173" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" /></a>
-    </div>
     <div class="container">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
         <div class="carousel-inner" role="listbox">
@@ -69,7 +66,7 @@
         </p>
       </div>
       <div class="footer-logo">
-        <a href="#top" title="Back to Top"><img src="../assets/img/logo/logo-footer.png" width="220" height="213" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" /></a>
+        <a href="#top" title="Back to Top"><img src="../assets/img/logo/logo.png" width="220" height="213" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" /></a>
       </div>
       <div id="footer">
         <div class="footer-border_top_sm">&nbsp;</div>
@@ -86,6 +83,20 @@
         <div class="footer-border_bot_sm"></div>
       </div>
     </div>
+    <div id="content-form-contact">
+      <a href="javascript:closeContactForm();" title="Go Back to Page">Go Back to Page</a> 
+      <form method="post" action="/assets/php/contact.php" name="form-contact" id="form-contact">
+        <label for="full_name">Please enter your full name below:</label>
+        <input type="text" value="First and Last Name" size="25" max-size="80" name="full_name" id="input-contact-full_name" />
+        <label for="email_address">Please enter your email address below:</label>
+        <input type="text" value="____@_______.___" size="25" max-size="80" name="email_address" id="input-contact-email_address" />
+        <label for="message">Please compose your message below:</label>
+        <textarea cols="27" rows="8" name="message" id="input-contact-message">Type your message here</textarea>
+        <input type="reset" value="Clear Information" name="input-reset" id="input-contact-reset" />
+        <input type="submit" value="Send Message" name="input-submit" id="input-contact-submit" />
+      </form>
+    </div>
+    <div id="contact-bkgrnd"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -94,7 +105,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- Contains the JS and jQuery to link to streams and animate the 'Shows' menu -->
-    <script src="../assets/js/main.js?v=18"></script>
+    <script src="../assets/js/main.js?v=19"></script>
     <!-- Typekit reference links -->
     <script src="https://use.typekit.net/zvs5kis.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>

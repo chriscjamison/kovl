@@ -100,7 +100,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Custom CSS -->
-    <link href="/assets/css/style.css?v=25" rel="stylesheet">
+    <link href="/assets/css/style.css?v=26" rel="stylesheet">
   </head>
   <body id="media_player-body">
     <header id="media_player-header">
@@ -108,7 +108,7 @@
       <a href="javascript:window.close();" title="Close Window" id="media_player-link-close">Close Window</a>
     </header>
     <div id="media_player-images">
-      <img src="/assets/img/logo/logo-footer.png" width="105" height="109" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" />
+      <img src="/assets/img/logo/logo.png" width="105" height="106" alt="KOVL Radio | kovlradio.com &ndash; kovlradio.com | Rulers Over the Land" />
       <img src="<?php print $image_path; ?>" width="204" height="109" alt="<?php print $show_name; ?>" id="media_player-img-show" />
     </div>
     <div id="media_player-description">
@@ -131,5 +131,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     
     <!-- Contains the JS and jQuery to link to streams and animate the 'Shows' menu -->
-    <script src="/assets/js/main.js?v=18"></script>
+    <script src="/assets/js/main.js?v=19"></script>
   </body>
