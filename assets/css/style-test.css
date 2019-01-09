@@ -608,20 +608,16 @@ h4 {
 
 #show_listing-agree + a, 
 #show_listing-food + a, 
-#show_listing-dressing + a {
-  background-image: url('../img/listings/row_2.jpg?v=4');
+#show_listing-what_we_doing + a {
+  background-image: url('../img/listings/row_2.jpg?v=5');
 }
 
 #show_listing-food + a {
   background-position-x: -300px;
 }
 
-#show_listing-dressing + a {
-  background-position-x: -600px;
-}
- 
 #show_listing-what_we_doing + a {
-  background-image: url('../img/listings/row_3.jpg?v=7');
+  background-position-x: -600px;
 }
 
 .show_listing-social_media {
@@ -1025,8 +1021,7 @@ h4 {
 
   #show-live_with_raej a:nth-child(1), 
   #show-easy_treatment a:nth-child(2), 
-  #show-food a:nth-child(2), 
-  #show-dressing a:nth-child(1) {
+  #show-food a:nth-child(1) {
     width: 46%;
     vertical-align: middle;
   }
@@ -1543,11 +1538,7 @@ h4 {
   }
 
   #header-shows {
-    height: 30em;
-  }
-
-  .header-show:last-child {
-    padding-bottom: 4em;
+    height: 24em;
   }
   
 	.show-left {
@@ -1587,8 +1578,7 @@ h4 {
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
 	#show-agree.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(2), 
-  #show-dressing.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(1) {
 		width: 8em;
 	}
 
@@ -1908,8 +1898,7 @@ h4 {
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
 	#show-agree.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(2), 
-  #show-dressing.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(1) {
 		width: 8em;
 	}
   
@@ -2038,8 +2027,7 @@ h4 {
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
 	#show-agree.display-wide a:nth-child(2),
-  #show-food.display-wide a:nth-child(2), 
-  #show-dressing.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -2127,8 +2115,7 @@ h4 {
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
 	#show-agree.display-wide a:nth-child(2),
-  #show-food.display-wide a:nth-child(2), 
-  #show-dressing.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 

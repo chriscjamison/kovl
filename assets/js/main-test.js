@@ -51,7 +51,6 @@ $(document).ready(
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
       ['Agree to Disagree', 'agree-to-disagree', 'agree'],
-			['The Dressing Room', 'the-dressing-room', 'dressing'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['What We Doing', 'what-we-doing', 'what_we_doing']
     ];
@@ -654,16 +653,7 @@ function resizeWindow()	{
 
 	nav_link_to_a_right_width = Math.ceil($(nav_link_to_a_right_element).width());
 	nav_link_to_right_padding_right_value = nav_link_to_width - nav_link_to_a_right_width;
-/* 
-console.log("body_width = " + body_width);
-console.log("nav_spacer_center_width = " + nav_spacer_center_width);
-console.log("nav_spacer_width = " + nav_spacer_width);
-console.log("nav_link_to_width = " + nav_link_to_width);
-console.log("nav_link_to_a_left_width = " + nav_link_to_a_left_width);
-console.log("nav_link_to_a_left_padding_left_value = " + nav_link_to_left_padding_left_value);	
-console.log("nav_link_to_a_right_width = " + nav_link_to_a_right_width);
-console.log("nav_link_to_a_left_padding_right_value = " + nav_link_to_right_padding_right_value);	
- */
+
 	$(nav_link_to_left_element).css("paddingLeft", nav_link_to_left_padding_left_value);
 	$(nav_link_to_right_element).css("paddingRight", nav_link_to_right_padding_right_value);
 }
