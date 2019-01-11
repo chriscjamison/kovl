@@ -606,18 +606,13 @@ h4 {
   background-position-x: -600px;
 }
 
-#show_listing-agree + a, 
-#show_listing-food + a, 
-#show_listing-what_we_doing + a {
-  background-image: url('../img/listings/row_2.jpg?v=5');
+#show_listing-what_we_doing + a, 
+#show_listing-food + a {
+  background-image: url('../img/listings/row_2.jpg?v=7');
 }
 
 #show_listing-food + a {
   background-position-x: -300px;
-}
-
-#show_listing-what_we_doing + a {
-  background-position-x: -600px;
 }
 
 .show_listing-social_media {
