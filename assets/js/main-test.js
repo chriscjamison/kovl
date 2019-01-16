@@ -667,3 +667,24 @@ function launchRecordedShowsPlayer(show_name, show_date, show_title)	{
 
 	media_player_window.focus();
 }
+
+function changeAffliateContent()	{
+	var window_width;
+
+	window_width = $(window).width();
+
+	if (window_width <= 1024)	{
+		var p_selector;
+		var p_element = {};
+
+		p_selector = ".div-sponsor-background p:last-of-type";
+
+		p_element = $(p_selector);
+
+		var p_content;
+
+		p_content = "Press the button below and complete the brief questionaire to take your first step towards better wellness.";
+
+		$(p_element).text(p_content);
+	}
+}
