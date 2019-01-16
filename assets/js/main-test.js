@@ -273,7 +273,9 @@ $(document).ready(
 					closeConfirmationMessage();
 				}
 			}
-		);
+    );
+    
+    changeAffliateContent();
   }
 );	
 
