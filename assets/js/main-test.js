@@ -50,7 +50,6 @@ $(document).ready(
       ['Live with RaeJ &amp; Brown Shuga Sunday Brunch', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
-      ['What We Doing', 'what-we-doing', 'what_we_doing'], 
       ['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food']
     ];
 

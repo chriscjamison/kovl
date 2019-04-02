@@ -1015,7 +1015,7 @@ h4 {
 
   #show-live_with_raej a:nth-child(1), 
   #show-easy_treatment a:nth-child(2), 
-  #show-food a:nth-child(1) {
+  #show-food a:nth-child(2) {
     width: 46%;
     vertical-align: middle;
   }
@@ -1527,7 +1527,7 @@ h4 {
   }
 
   #header-shows {
-    height: 24em;
+    height: 15.5em;
   }
   
 	.show-left {
@@ -1566,8 +1566,7 @@ h4 {
 
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
-	#show-agree.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(1) {
+  #show-food.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -1890,8 +1889,7 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
-	#show-agree.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(1) {
+  #show-food.display-wide a:nth-child(2) {
 		width: 8em;
   }
 
@@ -1980,7 +1978,6 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-agree.display-wide a:nth-child(2),
   #show-food.display-wide a:nth-child(2) {
 		width: 8em;
 	}
@@ -2072,7 +2069,6 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-	#show-agree.display-wide a:nth-child(2),
   #show-food.display-wide a:nth-child(2) {
 		width: 8em;
 	}
