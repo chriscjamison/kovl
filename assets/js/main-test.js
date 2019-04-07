@@ -50,7 +50,10 @@ $(document).ready(
       ['Live with RaeJ &amp; Brown Shuga Sunday Brunch', 'live-with-raej', 'live_with_raej'], 
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
-      ['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food']
+			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
+			['Make My Music', 'make-my-music', 'make_my_music'], 
+			['My Uncle&rsquo;s Back Room', 'my-uncles-back-room', 'back_room']
+			
     ];
 
 		path_string = determinePathofWebpage();
