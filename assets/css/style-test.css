@@ -335,63 +335,19 @@ iframe#iframe-media_player {
   right: 6.52em;
 }
 
-#carousel-the_twinz {
-  width: 24em;
-  bottom: 2.25em;
-  left: 4.5em;
-}
-
-#carousel-agree {
-  bottom: 3em;
-  right: 44.25%;
-}
-
-#carousel-monday {
-	width: 20.75em;
-	bottom: 1.5em;
-	left: 7em;
-}
-
 #carousel-food {
   bottom: 2.25em;
   left: 12.25em;
 }
 
-#carousel-dressing {
-  bottom: 2em;
-  left: 11.25em;
+#carousel-music_my_way {
+  bottom: 11.5em;
+  right: 11.5em;
 }
 
-#carousel-imagine {
-  top: 15.5em;
-  left: 13.25em;
-}
-
-#carousel-lets {
-  top: 15em;
-  right: 12.5em;
-}
-
-#carousel-meleka {
-  bottom: 5em;
-  right: 11em;
-}
-
-#carousel-truth_muzic {
-  width: 15em;
-  bottom: 6.25em;
-  right: 6.75em;
-}
-
-#carousel-truth_muzic .carousel-listen_now, 
-#carousel-what_we_doing .carousel-listen_now {
-  margin: 1em auto 0 auto;
-}
-
-#carousel-what_we_doing {
-  width: 18em;
-  top: 10em;
-  right: 6.75em;
+#carousel-back_room {
+  top: 11.25em;
+  left: 11.75em;
 }
 
 .link-listen_now, 
@@ -605,13 +561,18 @@ h4 {
   background-position-x: -600px;
 }
 
-#show_listing-what_we_doing + a, 
-#show_listing-food + a {
-  background-image: url('../img/listings/row_2.jpg?v=7');
+#show_listing-food + a, 
+#show_listing-music_my_way + a, 
+#show_listing-back_room + a {
+  background-image: url('../img/listings/row_2.jpg?v=8');
 }
 
-#show_listing-food + a {
+#show_listing-music_my_way + a {
   background-position-x: -300px;
+}
+
+#show_listing-back_room + a {
+  background-position-x: -600px;
 }
 
 .show_listing-social_media {
@@ -1015,7 +976,8 @@ h4 {
 
   #show-live_with_raej a:nth-child(1), 
   #show-easy_treatment a:nth-child(2), 
-  #show-food a:nth-child(2) {
+  #show-food a:nth-child(2), 
+  #show-back_room a:nth-child(2) {
     width: 46%;
     vertical-align: middle;
   }
@@ -1420,6 +1382,7 @@ h4 {
   
   .carousel-inner {
     height: auto;
+    min-height: 264px;
   }
 
   #carousel-item-schedule {
@@ -1527,7 +1490,7 @@ h4 {
   }
 
   #header-shows {
-    height: 15.5em;
+    height: 21.25em;
   }
   
 	.show-left {
@@ -1566,7 +1529,8 @@ h4 {
 
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
-  #show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-back_room.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -1889,7 +1853,8 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2),
-  #show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-back_room.display-wide a:nth-child(2) {
 		width: 8em;
   }
 
@@ -1978,7 +1943,8 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-back_room.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -2069,7 +2035,8 @@ h4 {
   
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-back_room.display-wide a:nth-child(2) {
 		width: 8em;
 	}
 
@@ -2119,7 +2086,8 @@ h4 {
 
   #show-live_with_raej.display-wide a:nth-child(2), 
 	#show-easy_treatment.display-wide a:nth-child(2), 
-  #show-food.display-wide a:nth-child(2) {
+  #show-food.display-wide a:nth-child(2), 
+  #show-back_room.display-wide a:nth-child(2) {
 		width: 10em;
   }
   

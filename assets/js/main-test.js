@@ -51,9 +51,8 @@ $(document).ready(
       ['The Easy Treatment Lounge', 'the-easy-treatment-lounge', 'easy_treatment'], 
       ['Private Times', 'private-times', 'private_times'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
-			['Make My Music', 'make-my-music', 'make_my_music'], 
+			['Music My Way', 'music-my-way', 'music_my_way'], 
 			['My Uncle&rsquo;s Back Room', 'my-uncles-back-room', 'back_room']
-			
     ];
 
 		path_string = determinePathofWebpage();
