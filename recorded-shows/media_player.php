@@ -100,7 +100,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Custom CSS -->
-    <link href="/assets/css/style.css?v=32" rel="stylesheet">
+    <link href="/assets/css/style.css?v=33" rel="stylesheet">
   </head>
   <body id="media_player-body">
     <header id="media_player-header">

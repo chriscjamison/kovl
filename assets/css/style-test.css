@@ -341,8 +341,8 @@ iframe#iframe-media_player {
 }
 
 #carousel-music_my_way {
-  bottom: 11.5em;
-  right: 11.5em;
+  top: 0em;
+  right: 11.75em;
 }
 
 #carousel-back_room {
