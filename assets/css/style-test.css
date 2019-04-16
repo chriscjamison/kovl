@@ -341,13 +341,18 @@ iframe#iframe-media_player {
 }
 
 #carousel-music_my_way {
-  top: 0em;
-  right: 11.75em;
+  bottom: 8em;
+  right: 10em;
 }
 
 #carousel-back_room {
   top: 11.25em;
   left: 11.75em;
+}
+
+#carousel-face_to_face {
+  bottom: 10em;
+  right: 13.25rem;
 }
 
 .link-listen_now, 
@@ -573,6 +578,10 @@ h4 {
 
 #show_listing-back_room + a {
   background-position-x: -600px;
+}
+
+#show_listing-face_to_face + a {
+  background-image: url('../img/listings/row_3.jpg?v=8');
 }
 
 .show_listing-social_media {
@@ -1490,7 +1499,8 @@ h4 {
   }
 
   #header-shows {
-    height: 21.25em;
+    height: 30em;
+    padding: 1em 1em 4em 1em;
   }
   
 	.show-left {

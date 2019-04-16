@@ -52,7 +52,8 @@ $(document).ready(
       ['Private Times', 'private-times', 'private_times'], 
 			['Food for your Soul &amp; Friday Forum...', 'food-for-your-soul', 'food'], 
 			['Music My Way', 'music-my-way', 'music_my_way'], 
-			['My Uncle&rsquo;s Back Room', 'my-uncles-back-room', 'back_room']
+      ['My Uncle&rsquo;s Back Room', 'my-uncles-back-room', 'back_room'], 
+      ['Face to Face', 'face-to-face', 'face_to_face']
     ];
 
 		path_string = determinePathofWebpage();
