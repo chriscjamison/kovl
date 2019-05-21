@@ -307,10 +307,10 @@ function determinePathofWebpage()  {
 
   url_string = window.location.pathname;
   
-  if (url_string === "/" || url_string === "/index.htm")  {
-    path_string = "";
+  if (url_string === "/kovl/" || url_string === "/kovl/index.htm")  {
+    path_string = "/kovl/";
   } else {
-    path_string = "../";
+    path_string = "../kovl/";
   }
 
   return path_string;
